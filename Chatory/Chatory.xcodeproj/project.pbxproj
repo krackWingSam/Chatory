@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5664F3E4C8928B533E1E3B8A /* libPods-Chatory.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8662A7E38F8F05551FF3934A /* libPods-Chatory.a */; };
+		A65FDA2248AABCAC42D4081B /* libPods-ChatoryTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 16D6A10C2C280FF7FE97B978 /* libPods-ChatoryTests.a */; };
 		CA0A268C1F70AC4D00209E05 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CA0A268B1F70AC4D00209E05 /* main.m */; };
 		CA0A268F1F70AC4D00209E05 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CA0A268E1F70AC4D00209E05 /* AppDelegate.m */; };
 		CA0A26951F70AC4E00209E05 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA0A26931F70AC4E00209E05 /* Main.storyboard */; };
@@ -15,6 +17,8 @@
 		CA0A26A51F70AC4E00209E05 /* ChatoryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CA0A26A41F70AC4E00209E05 /* ChatoryTests.m */; };
 		CA0A26B21F70F12A00209E05 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA0A26B11F70F12A00209E05 /* ViewController.m */; };
 		CA0A26B71F70F16400209E05 /* _DevViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA0A26B61F70F16400209E05 /* _DevViewController.m */; };
+		CA0A26BC1F7113E600209E05 /* TeacherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA0A26BB1F7113E600209E05 /* TeacherViewController.m */; };
+		CA0A26BE1F71263900209E05 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = CA0A26BD1F71263900209E05 /* Podfile */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,6 +32,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0F8386A899253588B7A75932 /* Pods-ChatoryTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChatoryTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ChatoryTests/Pods-ChatoryTests.release.xcconfig"; sourceTree = "<group>"; };
+		16D6A10C2C280FF7FE97B978 /* libPods-ChatoryTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ChatoryTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		20F52252E8A76E65DF45364D /* Pods-Chatory.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chatory.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Chatory/Pods-Chatory.debug.xcconfig"; sourceTree = "<group>"; };
+		5CA7A44A4D0C1113D48C12F4 /* Pods-Chatory.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chatory.release.xcconfig"; path = "Pods/Target Support Files/Pods-Chatory/Pods-Chatory.release.xcconfig"; sourceTree = "<group>"; };
+		8662A7E38F8F05551FF3934A /* libPods-Chatory.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Chatory.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA0A26871F70AC4D00209E05 /* Chatory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chatory.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA0A268B1F70AC4D00209E05 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		CA0A268D1F70AC4D00209E05 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -44,6 +53,10 @@
 		CA0A26B51F70F16400209E05 /* _DevViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _DevViewController.h; sourceTree = "<group>"; };
 		CA0A26B61F70F16400209E05 /* _DevViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _DevViewController.m; sourceTree = "<group>"; };
 		CA0A26B91F70F41D00209E05 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		CA0A26BA1F7113E600209E05 /* TeacherViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TeacherViewController.h; sourceTree = "<group>"; };
+		CA0A26BB1F7113E600209E05 /* TeacherViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TeacherViewController.m; sourceTree = "<group>"; };
+		CA0A26BD1F71263900209E05 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		DB5CBA1496E1B953F9510377 /* Pods-ChatoryTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChatoryTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ChatoryTests/Pods-ChatoryTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5664F3E4C8928B533E1E3B8A /* libPods-Chatory.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,18 +72,33 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A65FDA2248AABCAC42D4081B /* libPods-ChatoryTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3376AABC155F9960419FEF44 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				20F52252E8A76E65DF45364D /* Pods-Chatory.debug.xcconfig */,
+				5CA7A44A4D0C1113D48C12F4 /* Pods-Chatory.release.xcconfig */,
+				DB5CBA1496E1B953F9510377 /* Pods-ChatoryTests.debug.xcconfig */,
+				0F8386A899253588B7A75932 /* Pods-ChatoryTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		CA0A267E1F70AC4D00209E05 = {
 			isa = PBXGroup;
 			children = (
+				CA0A26BD1F71263900209E05 /* Podfile */,
 				CA0A26891F70AC4D00209E05 /* Chatory */,
 				CA0A26A31F70AC4E00209E05 /* ChatoryTests */,
 				CA0A26881F70AC4D00209E05 /* Products */,
+				3376AABC155F9960419FEF44 /* Pods */,
+				F0DDC1FA4FA5F50BEC4ADDCF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -120,10 +149,12 @@
 		CA0A26AF1F70F12A00209E05 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				CA0A26B01F70F12A00209E05 /* ViewController.h */,
-				CA0A26B11F70F12A00209E05 /* ViewController.m */,
 				CA0A26B51F70F16400209E05 /* _DevViewController.h */,
 				CA0A26B61F70F16400209E05 /* _DevViewController.m */,
+				CA0A26B01F70F12A00209E05 /* ViewController.h */,
+				CA0A26B11F70F12A00209E05 /* ViewController.m */,
+				CA0A26BA1F7113E600209E05 /* TeacherViewController.h */,
+				CA0A26BB1F7113E600209E05 /* TeacherViewController.m */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -150,6 +181,15 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
+		F0DDC1FA4FA5F50BEC4ADDCF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8662A7E38F8F05551FF3934A /* libPods-Chatory.a */,
+				16D6A10C2C280FF7FE97B978 /* libPods-ChatoryTests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -157,9 +197,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CA0A26A91F70AC4E00209E05 /* Build configuration list for PBXNativeTarget "Chatory" */;
 			buildPhases = (
+				88A664652072ECF8C202CFBF /* [CP] Check Pods Manifest.lock */,
 				CA0A26831F70AC4D00209E05 /* Sources */,
 				CA0A26841F70AC4D00209E05 /* Frameworks */,
 				CA0A26851F70AC4D00209E05 /* Resources */,
+				4FCA672B319BEAED5BB2C03A /* [CP] Embed Pods Frameworks */,
+				CD0A2295DCD1FBEB1CF0BDF7 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -174,9 +217,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CA0A26AC1F70AC4E00209E05 /* Build configuration list for PBXNativeTarget "ChatoryTests" */;
 			buildPhases = (
+				FC86594038D930D80782F146 /* [CP] Check Pods Manifest.lock */,
 				CA0A269C1F70AC4E00209E05 /* Sources */,
 				CA0A269D1F70AC4E00209E05 /* Frameworks */,
 				CA0A269E1F70AC4E00209E05 /* Resources */,
+				B139EBAFE117323A864AA52D /* [CP] Embed Pods Frameworks */,
+				8FC606060B8D3790B5400CD8 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -236,6 +282,7 @@
 			files = (
 				CA0A269A1F70AC4E00209E05 /* LaunchScreen.storyboard in Resources */,
 				CA0A26971F70AC4E00209E05 /* Assets.xcassets in Resources */,
+				CA0A26BE1F71263900209E05 /* Podfile in Resources */,
 				CA0A26951F70AC4E00209E05 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -249,6 +296,105 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		4FCA672B319BEAED5BB2C03A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Chatory/Pods-Chatory-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		88A664652072ECF8C202CFBF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Chatory-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8FC606060B8D3790B5400CD8 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ChatoryTests/Pods-ChatoryTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B139EBAFE117323A864AA52D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ChatoryTests/Pods-ChatoryTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CD0A2295DCD1FBEB1CF0BDF7 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Chatory/Pods-Chatory-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FC86594038D930D80782F146 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ChatoryTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		CA0A26831F70AC4D00209E05 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -258,6 +404,7 @@
 				CA0A26B21F70F12A00209E05 /* ViewController.m in Sources */,
 				CA0A268F1F70AC4D00209E05 /* AppDelegate.m in Sources */,
 				CA0A268C1F70AC4D00209E05 /* main.m in Sources */,
+				CA0A26BC1F7113E600209E05 /* TeacherViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -393,6 +540,7 @@
 		};
 		CA0A26AA1F70AC4E00209E05 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 20F52252E8A76E65DF45364D /* Pods-Chatory.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = HXU23UYV46;
@@ -407,6 +555,7 @@
 		};
 		CA0A26AB1F70AC4E00209E05 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5CA7A44A4D0C1113D48C12F4 /* Pods-Chatory.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = HXU23UYV46;
@@ -421,6 +570,7 @@
 		};
 		CA0A26AD1F70AC4E00209E05 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DB5CBA1496E1B953F9510377 /* Pods-ChatoryTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = HXU23UYV46;
@@ -434,6 +584,7 @@
 		};
 		CA0A26AE1F70AC4E00209E05 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0F8386A899253588B7A75932 /* Pods-ChatoryTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = HXU23UYV46;

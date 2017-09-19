@@ -42,6 +42,24 @@
             </objects>
             <point key="canvasLocation" x="142" y="225"/>
         </scene>
+        <!--Teacher View Controller-->
+        <scene sceneID="rz4-d6-Ehj">
+            <objects>
+                <viewController id="LHx-gx-36s" customClass="TeacherViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="bXS-hx-LLp"/>
+                        <viewControllerLayoutGuide type="bottom" id="d2d-ak-EYk"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="quN-xO-OBm">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="H3C-8i-jXP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="996" y="224"/>
+        </scene>
         <!--Dev View Controller-->
         <scene sceneID="vdo-hX-CyG">
             <objects>
