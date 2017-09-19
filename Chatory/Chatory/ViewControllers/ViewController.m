@@ -19,6 +19,14 @@
     // Do any additional setup after loading the view, typically from a nib.
 }
 
+-(void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    
+#ifdef DEV_MODE
+    [self performSegueWithIdentifier:@"ShowDevModeSegue" sender:nil];
+#endif
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
