@@ -1,0 +1,607 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		134FFD3521BA6EF5C44524DA632D8FD9 /* UIImageView+AnimatedGif.h in Headers */ = {isa = PBXBuildFile; fileRef = C45ABB0D2E4B2BFC2EE02E82B9B65AD9 /* UIImageView+AnimatedGif.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1549B488E7B0AAA78A031C69F0979BEE /* Animated-Gif-iOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E1683B8CE9A6EE8795BABC14FFBADF0B /* Animated-Gif-iOS-dummy.m */; };
+		1589A4ED0672FC0E34D094971681110B /* UIImageView+AnimatedGif.m in Sources */ = {isa = PBXBuildFile; fileRef = 453317FD4D67E537CE1AD782AB9CF499 /* UIImageView+AnimatedGif.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		54D4B33BA2E433124031D1D80A8DD9F5 /* Pods-Chatory-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C5EC9A810F611D368C7D23EFA955C7B7 /* Pods-Chatory-dummy.m */; };
+		565ED407E50251A937D5D18A7ACF0AE9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B63C6A64CF66340668996F78DA6BB482 /* UIKit.framework */; };
+		9E059EDFC3F429E6ED149D0FF928E348 /* AnimatedGif.h in Headers */ = {isa = PBXBuildFile; fileRef = ADB047C77ECD9A250062F8A43651F01E /* AnimatedGif.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A070B3CC2ADE25154BFE840CB3C4F336 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */; };
+		B849DC72025F99201CA1A8E2E3522B2A /* AnimatedGif.m in Sources */ = {isa = PBXBuildFile; fileRef = 31A4C3AAD39154FADBA1C4BA44306392 /* AnimatedGif.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		C904B91A43C643DCD65236E97ABCFA18 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */; };
+		E09D74764915DFC7C518AB05D5F5AA12 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */; };
+		ECBB328073651B3761BB0463A9E84747 /* Pods-ChatoryTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 05F1E95B62B7A7A94F17544C5D06ABC6 /* Pods-ChatoryTests-dummy.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3CA9981BF30CD352B8628CF83034D53C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1CE1BD983B2D9C53A867F6F5AE720E93;
+			remoteInfo = "Animated-Gif-iOS";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		05F1E95B62B7A7A94F17544C5D06ABC6 /* Pods-ChatoryTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ChatoryTests-dummy.m"; sourceTree = "<group>"; };
+		132E4984556E07ED2B0804D7DBA22611 /* Pods-Chatory-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Chatory-resources.sh"; sourceTree = "<group>"; };
+		1358CAE9689520E31889D66DCE8F35CD /* Pods-Chatory-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Chatory-acknowledgements.plist"; sourceTree = "<group>"; };
+		31A4C3AAD39154FADBA1C4BA44306392 /* AnimatedGif.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AnimatedGif.m; path = AnimatedGif/AnimatedGif.m; sourceTree = "<group>"; };
+		43247C5A67ED110ACCBA03EA97F48DBD /* Pods-Chatory-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Chatory-acknowledgements.markdown"; sourceTree = "<group>"; };
+		453317FD4D67E537CE1AD782AB9CF499 /* UIImageView+AnimatedGif.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImageView+AnimatedGif.m"; path = "AnimatedGif/UIImageView+AnimatedGif.m"; sourceTree = "<group>"; };
+		4980BAAD793F18879C5C35C89263A7F8 /* libPods-ChatoryTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ChatoryTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4B614AB92D85EC80FD79B5631E309F12 /* Animated-Gif-iOS.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Animated-Gif-iOS.xcconfig"; sourceTree = "<group>"; };
+		58FCD72ED9374E31F9B4140E5968274C /* Pods-Chatory-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Chatory-frameworks.sh"; sourceTree = "<group>"; };
+		65FDDC9995D2BAF816F2B4973F06E082 /* Pods-ChatoryTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ChatoryTests.release.xcconfig"; sourceTree = "<group>"; };
+		8768AE70C9AEE78162E921DB99CCD73D /* Pods-ChatoryTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ChatoryTests-resources.sh"; sourceTree = "<group>"; };
+		87E0BEB1C9995AE74973E54C1E30C411 /* libPods-Chatory.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Chatory.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		90742D55A924116368B330AA99882834 /* Pods-ChatoryTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ChatoryTests-frameworks.sh"; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; };
+		ADB047C77ECD9A250062F8A43651F01E /* AnimatedGif.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AnimatedGif.h; path = AnimatedGif/AnimatedGif.h; sourceTree = "<group>"; };
+		B63C6A64CF66340668996F78DA6BB482 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		B6DA9DE7509D605BDDC8CE38F5BFFF7C /* Pods-ChatoryTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ChatoryTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		C45ABB0D2E4B2BFC2EE02E82B9B65AD9 /* UIImageView+AnimatedGif.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImageView+AnimatedGif.h"; path = "AnimatedGif/UIImageView+AnimatedGif.h"; sourceTree = "<group>"; };
+		C5EC9A810F611D368C7D23EFA955C7B7 /* Pods-Chatory-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Chatory-dummy.m"; sourceTree = "<group>"; };
+		C91D4049FB5DD0D848126A94286F6097 /* Pods-Chatory.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Chatory.release.xcconfig"; sourceTree = "<group>"; };
+		D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		DBDFF25DE7DB15CCB77F56E667061FA2 /* libAnimated-Gif-iOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libAnimated-Gif-iOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E1683B8CE9A6EE8795BABC14FFBADF0B /* Animated-Gif-iOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Animated-Gif-iOS-dummy.m"; sourceTree = "<group>"; };
+		E414588E17E0B06B8B06857069960519 /* Animated-Gif-iOS-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Animated-Gif-iOS-prefix.pch"; sourceTree = "<group>"; };
+		EA46395E7BF61A10FA69055062B96B08 /* Pods-ChatoryTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ChatoryTests.debug.xcconfig"; sourceTree = "<group>"; };
+		ED735E5D56B1488D69F5AE30ED48748C /* Pods-Chatory.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Chatory.debug.xcconfig"; sourceTree = "<group>"; };
+		F7995313A07C37C18F4B57D005B311A0 /* Pods-ChatoryTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ChatoryTests-acknowledgements.plist"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2EEF77E8A6E1487DE26079F653A12309 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A070B3CC2ADE25154BFE840CB3C4F336 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		935F0D007132EE68F5B9A3C73F83CAF0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E09D74764915DFC7C518AB05D5F5AA12 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC2CFA7580014F0F5AF6F4938FFDC388 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C904B91A43C643DCD65236E97ABCFA18 /* Foundation.framework in Frameworks */,
+				565ED407E50251A937D5D18A7ACF0AE9 /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2881C97D6208AD29C85CC315C09991EC /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				4B614AB92D85EC80FD79B5631E309F12 /* Animated-Gif-iOS.xcconfig */,
+				E1683B8CE9A6EE8795BABC14FFBADF0B /* Animated-Gif-iOS-dummy.m */,
+				E414588E17E0B06B8B06857069960519 /* Animated-Gif-iOS-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Animated-Gif-iOS";
+			sourceTree = "<group>";
+		};
+		433CD3331B6C3787F473C941B61FC68F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				438B396F6B4147076630CAEFE34282C1 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		438B396F6B4147076630CAEFE34282C1 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */,
+				B63C6A64CF66340668996F78DA6BB482 /* UIKit.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				433CD3331B6C3787F473C941B61FC68F /* Frameworks */,
+				A887A3CE3786AA90958F2FA06DE166F9 /* Pods */,
+				E554F5D2FBB28BC40348330EA64BB18D /* Products */,
+				DFC3319A900A2E1F694C2E7FDDF601D7 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		A887A3CE3786AA90958F2FA06DE166F9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FE4CA8B5A53494F5238FF16731576BD3 /* Animated-Gif-iOS */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		CCE0F62B1D8221881D88E300BD51E8C0 /* Pods-ChatoryTests */ = {
+			isa = PBXGroup;
+			children = (
+				B6DA9DE7509D605BDDC8CE38F5BFFF7C /* Pods-ChatoryTests-acknowledgements.markdown */,
+				F7995313A07C37C18F4B57D005B311A0 /* Pods-ChatoryTests-acknowledgements.plist */,
+				05F1E95B62B7A7A94F17544C5D06ABC6 /* Pods-ChatoryTests-dummy.m */,
+				90742D55A924116368B330AA99882834 /* Pods-ChatoryTests-frameworks.sh */,
+				8768AE70C9AEE78162E921DB99CCD73D /* Pods-ChatoryTests-resources.sh */,
+				EA46395E7BF61A10FA69055062B96B08 /* Pods-ChatoryTests.debug.xcconfig */,
+				65FDDC9995D2BAF816F2B4973F06E082 /* Pods-ChatoryTests.release.xcconfig */,
+			);
+			name = "Pods-ChatoryTests";
+			path = "Target Support Files/Pods-ChatoryTests";
+			sourceTree = "<group>";
+		};
+		DFC3319A900A2E1F694C2E7FDDF601D7 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				F344C2179DA68B3B3CA188B177A27BF7 /* Pods-Chatory */,
+				CCE0F62B1D8221881D88E300BD51E8C0 /* Pods-ChatoryTests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		E554F5D2FBB28BC40348330EA64BB18D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DBDFF25DE7DB15CCB77F56E667061FA2 /* libAnimated-Gif-iOS.a */,
+				87E0BEB1C9995AE74973E54C1E30C411 /* libPods-Chatory.a */,
+				4980BAAD793F18879C5C35C89263A7F8 /* libPods-ChatoryTests.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F344C2179DA68B3B3CA188B177A27BF7 /* Pods-Chatory */ = {
+			isa = PBXGroup;
+			children = (
+				43247C5A67ED110ACCBA03EA97F48DBD /* Pods-Chatory-acknowledgements.markdown */,
+				1358CAE9689520E31889D66DCE8F35CD /* Pods-Chatory-acknowledgements.plist */,
+				C5EC9A810F611D368C7D23EFA955C7B7 /* Pods-Chatory-dummy.m */,
+				58FCD72ED9374E31F9B4140E5968274C /* Pods-Chatory-frameworks.sh */,
+				132E4984556E07ED2B0804D7DBA22611 /* Pods-Chatory-resources.sh */,
+				ED735E5D56B1488D69F5AE30ED48748C /* Pods-Chatory.debug.xcconfig */,
+				C91D4049FB5DD0D848126A94286F6097 /* Pods-Chatory.release.xcconfig */,
+			);
+			name = "Pods-Chatory";
+			path = "Target Support Files/Pods-Chatory";
+			sourceTree = "<group>";
+		};
+		FE4CA8B5A53494F5238FF16731576BD3 /* Animated-Gif-iOS */ = {
+			isa = PBXGroup;
+			children = (
+				ADB047C77ECD9A250062F8A43651F01E /* AnimatedGif.h */,
+				31A4C3AAD39154FADBA1C4BA44306392 /* AnimatedGif.m */,
+				C45ABB0D2E4B2BFC2EE02E82B9B65AD9 /* UIImageView+AnimatedGif.h */,
+				453317FD4D67E537CE1AD782AB9CF499 /* UIImageView+AnimatedGif.m */,
+				2881C97D6208AD29C85CC315C09991EC /* Support Files */,
+			);
+			path = "Animated-Gif-iOS";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		100C7AF7D1BC36B7C3DA5190018AF10E /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9E059EDFC3F429E6ED149D0FF928E348 /* AnimatedGif.h in Headers */,
+				134FFD3521BA6EF5C44524DA632D8FD9 /* UIImageView+AnimatedGif.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		1CE1BD983B2D9C53A867F6F5AE720E93 /* Animated-Gif-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BE1665899D884756BA1E66340BE685A0 /* Build configuration list for PBXNativeTarget "Animated-Gif-iOS" */;
+			buildPhases = (
+				85FCC577012720EEF7827D0B7D7CBCE4 /* Sources */,
+				CC2CFA7580014F0F5AF6F4938FFDC388 /* Frameworks */,
+				100C7AF7D1BC36B7C3DA5190018AF10E /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Animated-Gif-iOS";
+			productName = "Animated-Gif-iOS";
+			productReference = DBDFF25DE7DB15CCB77F56E667061FA2 /* libAnimated-Gif-iOS.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		666D7814E8FA8553BA61E616EE9CD88C /* Pods-Chatory */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A61105F2B0267ECAE64B6397417296D9 /* Build configuration list for PBXNativeTarget "Pods-Chatory" */;
+			buildPhases = (
+				0DBC282D10FAF3F6C7B56ED6A684287F /* Sources */,
+				2EEF77E8A6E1487DE26079F653A12309 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3A861A2596ABEB562EE4C75C41F0B477 /* PBXTargetDependency */,
+			);
+			name = "Pods-Chatory";
+			productName = "Pods-Chatory";
+			productReference = 87E0BEB1C9995AE74973E54C1E30C411 /* libPods-Chatory.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		A35FB0320E3FADFAFBA022C8C63D2696 /* Pods-ChatoryTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F0000BC95674D03DEE454657CC16C667 /* Build configuration list for PBXNativeTarget "Pods-ChatoryTests" */;
+			buildPhases = (
+				BB940B937C3BF0C170591AABAD454888 /* Sources */,
+				935F0D007132EE68F5B9A3C73F83CAF0 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-ChatoryTests";
+			productName = "Pods-ChatoryTests";
+			productReference = 4980BAAD793F18879C5C35C89263A7F8 /* libPods-ChatoryTests.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = E554F5D2FBB28BC40348330EA64BB18D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1CE1BD983B2D9C53A867F6F5AE720E93 /* Animated-Gif-iOS */,
+				666D7814E8FA8553BA61E616EE9CD88C /* Pods-Chatory */,
+				A35FB0320E3FADFAFBA022C8C63D2696 /* Pods-ChatoryTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0DBC282D10FAF3F6C7B56ED6A684287F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				54D4B33BA2E433124031D1D80A8DD9F5 /* Pods-Chatory-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		85FCC577012720EEF7827D0B7D7CBCE4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1549B488E7B0AAA78A031C69F0979BEE /* Animated-Gif-iOS-dummy.m in Sources */,
+				B849DC72025F99201CA1A8E2E3522B2A /* AnimatedGif.m in Sources */,
+				1589A4ED0672FC0E34D094971681110B /* UIImageView+AnimatedGif.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BB940B937C3BF0C170591AABAD454888 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ECBB328073651B3761BB0463A9E84747 /* Pods-ChatoryTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3A861A2596ABEB562EE4C75C41F0B477 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Animated-Gif-iOS";
+			target = 1CE1BD983B2D9C53A867F6F5AE720E93 /* Animated-Gif-iOS */;
+			targetProxy = 3CA9981BF30CD352B8628CF83034D53C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		43C2039117DA5591A97A3089823392BC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4B614AB92D85EC80FD79B5631E309F12 /* Animated-Gif-iOS.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Animated-Gif-iOS/Animated-Gif-iOS-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+			};
+			name = Debug;
+		};
+		44370CD31B6AFFEAF5B7C0BA50CD3AAB /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 65FDDC9995D2BAF816F2B4973F06E082 /* Pods-ChatoryTests.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		5598727608AF0AB0621FA2D58C78C3E3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = ED735E5D56B1488D69F5AE30ED48748C /* Pods-Chatory.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		6C9D66AED5D1A17B8D48674BB10A9FCD /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C91D4049FB5DD0D848126A94286F6097 /* Pods-Chatory.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		806AD67B4366ECA919C845A7A7A88CED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EA46395E7BF61A10FA69055062B96B08 /* Pods-ChatoryTests.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		9BFC9E4A7AAD7A607ACE06D95A401A5A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		C03B8870130C98D1B02B59D003687524 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F47F5E0627759C5FA8C4381634EF58A8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4B614AB92D85EC80FD79B5631E309F12 /* Animated-Gif-iOS.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Animated-Gif-iOS/Animated-Gif-iOS-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9BFC9E4A7AAD7A607ACE06D95A401A5A /* Debug */,
+				C03B8870130C98D1B02B59D003687524 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A61105F2B0267ECAE64B6397417296D9 /* Build configuration list for PBXNativeTarget "Pods-Chatory" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5598727608AF0AB0621FA2D58C78C3E3 /* Debug */,
+				6C9D66AED5D1A17B8D48674BB10A9FCD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BE1665899D884756BA1E66340BE685A0 /* Build configuration list for PBXNativeTarget "Animated-Gif-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				43C2039117DA5591A97A3089823392BC /* Debug */,
+				F47F5E0627759C5FA8C4381634EF58A8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F0000BC95674D03DEE454657CC16C667 /* Build configuration list for PBXNativeTarget "Pods-ChatoryTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				806AD67B4366ECA919C845A7A7A88CED /* Debug */,
+				44370CD31B6AFFEAF5B7C0BA50CD3AAB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}
