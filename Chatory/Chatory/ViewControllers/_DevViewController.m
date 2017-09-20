@@ -22,7 +22,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    array_TableCellTitles = @[@"vc1", @"vc2", @"vc3"];
+    array_TableCellTitles = @[@"ChattingViewController", @"vc2", @"vc3"];
     [table_DevList reloadData];
 }
 
@@ -47,6 +47,24 @@
 #pragma mark - UITableViewDelegate
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     NSLog(@"table view cell selected : %ld", (long)indexPath.row);
+    
+    switch (indexPath.row) {
+        case 0:     //Chatting View Controller
+            [self performSegueWithIdentifier:@"ShowChattingSegue" sender:nil];
+            break;
+            
+        case 1:
+            break;
+            
+        case 2:
+            break;
+            
+        case 3:
+            break;
+            
+        default:
+            break;
+    }
 }
 
 
