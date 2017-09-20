@@ -19,6 +19,7 @@
 		CA0A26B71F70F16400209E05 /* _DevViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA0A26B61F70F16400209E05 /* _DevViewController.m */; };
 		CA0A26BC1F7113E600209E05 /* TeacherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA0A26BB1F7113E600209E05 /* TeacherViewController.m */; };
 		CA0A26C21F71EA6000209E05 /* ChattingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA0A26C11F71EA6000209E05 /* ChattingViewController.m */; };
+		CA0A26C51F71F30900209E05 /* QuestionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CA0A26C41F71F30900209E05 /* QuestionTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,8 @@
 		CA0A26BB1F7113E600209E05 /* TeacherViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TeacherViewController.m; sourceTree = "<group>"; };
 		CA0A26C01F71EA6000209E05 /* ChattingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChattingViewController.h; sourceTree = "<group>"; };
 		CA0A26C11F71EA6000209E05 /* ChattingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChattingViewController.m; sourceTree = "<group>"; };
+		CA0A26C31F71F30900209E05 /* QuestionTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuestionTableViewCell.h; sourceTree = "<group>"; };
+		CA0A26C41F71F30900209E05 /* QuestionTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionTableViewCell.m; sourceTree = "<group>"; };
 		DB5CBA1496E1B953F9510377 /* Pods-ChatoryTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChatoryTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ChatoryTests/Pods-ChatoryTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -187,6 +190,8 @@
 			children = (
 				CA0A26C01F71EA6000209E05 /* ChattingViewController.h */,
 				CA0A26C11F71EA6000209E05 /* ChattingViewController.m */,
+				CA0A26C31F71F30900209E05 /* QuestionTableViewCell.h */,
+				CA0A26C41F71F30900209E05 /* QuestionTableViewCell.m */,
 			);
 			path = Chattings;
 			sourceTree = "<group>";
@@ -413,6 +418,7 @@
 				CA0A26B21F70F12A00209E05 /* ViewController.m in Sources */,
 				CA0A268F1F70AC4D00209E05 /* AppDelegate.m in Sources */,
 				CA0A268C1F70AC4D00209E05 /* main.m in Sources */,
+				CA0A26C51F71F30900209E05 /* QuestionTableViewCell.m in Sources */,
 				CA0A26C21F71EA6000209E05 /* ChattingViewController.m in Sources */,
 				CA0A26BC1F7113E600209E05 /* TeacherViewController.m in Sources */,
 			);
