@@ -37,14 +37,14 @@
 		31A4C3AAD39154FADBA1C4BA44306392 /* AnimatedGif.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AnimatedGif.m; path = AnimatedGif/AnimatedGif.m; sourceTree = "<group>"; };
 		43247C5A67ED110ACCBA03EA97F48DBD /* Pods-Chatory-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Chatory-acknowledgements.markdown"; sourceTree = "<group>"; };
 		453317FD4D67E537CE1AD782AB9CF499 /* UIImageView+AnimatedGif.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImageView+AnimatedGif.m"; path = "AnimatedGif/UIImageView+AnimatedGif.m"; sourceTree = "<group>"; };
-		4980BAAD793F18879C5C35C89263A7F8 /* libPods-ChatoryTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-ChatoryTests.a"; path = "libPods-ChatoryTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4980BAAD793F18879C5C35C89263A7F8 /* libPods-ChatoryTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ChatoryTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B614AB92D85EC80FD79B5631E309F12 /* Animated-Gif-iOS.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Animated-Gif-iOS.xcconfig"; sourceTree = "<group>"; };
 		58FCD72ED9374E31F9B4140E5968274C /* Pods-Chatory-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Chatory-frameworks.sh"; sourceTree = "<group>"; };
 		65FDDC9995D2BAF816F2B4973F06E082 /* Pods-ChatoryTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ChatoryTests.release.xcconfig"; sourceTree = "<group>"; };
 		8768AE70C9AEE78162E921DB99CCD73D /* Pods-ChatoryTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ChatoryTests-resources.sh"; sourceTree = "<group>"; };
-		87E0BEB1C9995AE74973E54C1E30C411 /* libPods-Chatory.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-Chatory.a"; path = "libPods-Chatory.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		87E0BEB1C9995AE74973E54C1E30C411 /* libPods-Chatory.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Chatory.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		90742D55A924116368B330AA99882834 /* Pods-ChatoryTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ChatoryTests-frameworks.sh"; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; };
 		ADB047C77ECD9A250062F8A43651F01E /* AnimatedGif.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AnimatedGif.h; path = AnimatedGif/AnimatedGif.h; sourceTree = "<group>"; };
 		B63C6A64CF66340668996F78DA6BB482 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		B6DA9DE7509D605BDDC8CE38F5BFFF7C /* Pods-ChatoryTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ChatoryTests-acknowledgements.markdown"; sourceTree = "<group>"; };
@@ -52,7 +52,7 @@
 		C5EC9A810F611D368C7D23EFA955C7B7 /* Pods-Chatory-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Chatory-dummy.m"; sourceTree = "<group>"; };
 		C91D4049FB5DD0D848126A94286F6097 /* Pods-Chatory.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Chatory.release.xcconfig"; sourceTree = "<group>"; };
 		D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		DBDFF25DE7DB15CCB77F56E667061FA2 /* libAnimated-Gif-iOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libAnimated-Gif-iOS.a"; path = "libAnimated-Gif-iOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DBDFF25DE7DB15CCB77F56E667061FA2 /* libAnimated-Gif-iOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libAnimated-Gif-iOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1683B8CE9A6EE8795BABC14FFBADF0B /* Animated-Gif-iOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Animated-Gif-iOS-dummy.m"; sourceTree = "<group>"; };
 		E414588E17E0B06B8B06857069960519 /* Animated-Gif-iOS-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Animated-Gif-iOS-prefix.pch"; sourceTree = "<group>"; };
 		EA46395E7BF61A10FA69055062B96B08 /* Pods-ChatoryTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ChatoryTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -194,7 +194,6 @@
 				453317FD4D67E537CE1AD782AB9CF499 /* UIImageView+AnimatedGif.m */,
 				2881C97D6208AD29C85CC315C09991EC /* Support Files */,
 			);
-			name = "Animated-Gif-iOS";
 			path = "Animated-Gif-iOS";
 			sourceTree = "<group>";
 		};
