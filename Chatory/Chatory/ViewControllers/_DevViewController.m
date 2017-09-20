@@ -23,6 +23,7 @@
     // Do any additional setup after loading the view.
     
     array_TableCellTitles = @[@"vc1", @"vc2", @"vc3"];
+    [table_DevList reloadData];
 }
 
 - (void)didReceiveMemoryWarning {
