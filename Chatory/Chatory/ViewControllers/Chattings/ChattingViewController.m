@@ -8,11 +8,11 @@
 
 #import "ChattingViewController.h"
 
-@interface ChattingViewController () <UITableViewDataSource, UITableViewDelegate> {
-    IBOutlet UIView *view_Navigation;
-    IBOutlet UIView *view_Navigation_Upper;
+@interface ChattingViewController () <UITextFieldDelegate> {
+    IBOutlet UIScrollView *scroll_Chat;
+    IBOutlet UITextField *textField;
     
-    NSMutableArray *array_Contents;
+    NSMutableArray *array_Chat;
 }
 
 @end
@@ -22,9 +22,20 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    array_Chat = [[NSMutableArray alloc] init];
+}
+
+-(void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
     
-    array_Contents = [[NSMutableArray alloc] init];
-    [self initUI];
+    [self registNotification];
+}
+
+-(void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    
+    [textField resignFirstResponder];
+    [self removeNotification];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -32,45 +43,50 @@
     // Dispose of any resources that can be recreated.
 }
 
--(void)initUI {
-    //TODO: initializing view controller's contents
+
+#pragma mark - Notifications
+-(void)registNotification {
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(willShowKeyboard:) name:UIKeyboardWillShowNotification object:nil];
+}
+
+-(void)removeNotification {
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:UITextFieldTextDidEndEditingNotification object:nil];
+}
+
+-(void)willShowKeyboard:(NSNotification *)noti {
+    dispatch_async(dispatch_get_main_queue(), ^{
+        UIWindow *mainWindow = [[[UIApplication sharedApplication] delegate] window];
+        CGRect frame = [[UIScreen mainScreen] bounds];
+        CGRect keyboardFrame = [(NSValue *)[noti.userInfo objectForKey:@"UIKeyboardFrameEndUserInfoKey"] CGRectValue];
+        CGFloat animationDuration = [[noti.userInfo objectForKey:@"UIKeyboardAnimationDurationUserInfoKey"] floatValue];
     
-//    [view_Navigation.layer setMasksToBounds:YES];
-//    [view_Navigation.layer setCornerRadius:20.f];
+        frame.size.height -= keyboardFrame.size.height;
     
-    view_Navigation.layer.cornerRadius = 20;
-    view_Navigation.layer.shadowColor = [UIColor blackColor].CGColor;
-    view_Navigation.layer.shadowOffset = CGSizeMake(0, 4.0);
-    view_Navigation.layer.shadowOpacity = 0.05;
-    view_Navigation.layer.shadowRadius = 5.0;
+        [UIView animateWithDuration:animationDuration animations:^{
+            [mainWindow setFrame:frame];
+        }];
+    });
 }
 
 
-#pragma mark - Properties
--(void)setContentDic:(NSDictionary *)contentDic {
-    _contentDic = contentDic;
-    //TODO: set contents for character, questions, answers or etc
+#pragma mark - UITextFieldDelegate
+-(BOOL)textFieldShouldReturn:(UITextField *)_textField {
+    [_textField resignFirstResponder];
+    return YES;
 }
 
 
-#pragma mark - UITableViewDataSource
--(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"QuestionCell"];
-    
-    return cell;
-}
 
--(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [array_Contents count];
-}
+#pragma mark - ScrollView Content
 
 
-#pragma mark - UITableViewDelegate
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    NSDictionary *dic = [array_Contents objectAtIndex:indexPath.row];
-    
-    return 368.f;
+
+#pragma mark - IBActions
+-(IBAction)action_Back:(id)sender {
+    [self.navigationController popViewControllerAnimated:YES];
 }
+
+
 
 
 @end
