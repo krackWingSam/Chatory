@@ -42,7 +42,7 @@
                                     <action selector="action_Back:" destination="SNQ-sq-eLi" eventType="touchUpInside" id="IsZ-hA-OlW"/>
                                 </connections>
                             </button>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zIT-LY-vmY">
+                            <scrollView autoresizesSubviews="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zIT-LY-vmY">
                                 <rect key="frame" x="0.0" y="60" width="375" height="550"/>
                             </scrollView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nBv-JP-MRX">

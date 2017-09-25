@@ -7,15 +7,17 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Teacher.h"
+
+#define QUESTION_KEY_01 @"question_key_01"
+
 
 @interface Question : NSObject
 
--(id)initWithDictionary:(NSDictionary *)dic;
++(id)getQuestionWithKey:(NSString *)questionKey withTeacherKey:(Teacher *)teacher;
 
-
-@property (nonatomic, readonly) NSDictionary *dic;
-
-@property NSString *string_Question;
-@property NSString *string_Answer;
+@property (readonly) NSString *key;
+@property (readonly) Teacher *teacher;
+@property (readonly) UIViewController *questionViewController;
 
 @end

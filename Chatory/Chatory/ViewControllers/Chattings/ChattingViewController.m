@@ -23,6 +23,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     array_Chat = [[NSMutableArray alloc] init];
+    
+    _content = [ContentManager getContentWithContentKey:CONTENT_KEY_01 withTeacherKey:TEACHER_KEY_TIGER];
 }
 
 -(void)viewWillAppear:(BOOL)animated {
@@ -78,6 +80,17 @@
 
 
 #pragma mark - ScrollView Content
+
+
+#pragma mark - Load VC
+-(void)loadNextQuestion {
+    if (_content.currentQuestion == nil) {
+        Question *currentQuestion = [_content.array_Question objectAtIndex:0];
+        [_content setCurrentQuestion:currentQuestion];
+        
+        
+    }
+}
 
 
 

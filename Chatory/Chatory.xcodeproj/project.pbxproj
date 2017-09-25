@@ -24,14 +24,10 @@
 		CA5C89491F748F50009431D6 /* ChatBot.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA5C89481F748F50009431D6 /* ChatBot.storyboard */; };
 		CA5C89C91F74A8E1009431D6 /* Chat_QuestionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA5C89C71F74A8E1009431D6 /* Chat_QuestionViewController.m */; };
 		CA5C89CA1F74A8E1009431D6 /* Chat_QuestionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA5C89C81F74A8E1009431D6 /* Chat_QuestionViewController.xib */; };
-		CA5C8A251F777624009431D6 /* Q01_correct_gif@2x.gif in Resources */ = {isa = PBXBuildFile; fileRef = CA5C89CD1F777073009431D6 /* Q01_correct_gif@2x.gif */; };
-		CA5C8A261F777624009431D6 /* Q01_wrong01_gif@2x.gif in Resources */ = {isa = PBXBuildFile; fileRef = CA5C89CE1F777073009431D6 /* Q01_wrong01_gif@2x.gif */; };
-		CA5C8A271F777624009431D6 /* Q01_wrong02_gif@2x.gif in Resources */ = {isa = PBXBuildFile; fileRef = CA5C89CF1F777073009431D6 /* Q01_wrong02_gif@2x.gif */; };
-		CA5C8A281F777624009431D6 /* Q01_wrong03_gif@2x.gif in Resources */ = {isa = PBXBuildFile; fileRef = CA5C89D01F777073009431D6 /* Q01_wrong03_gif@2x.gif */; };
-		CA5C8A291F777624009431D6 /* Q02_correct_gif@2x.gif in Resources */ = {isa = PBXBuildFile; fileRef = CA5C89D11F777073009431D6 /* Q02_correct_gif@2x.gif */; };
-		CA5C8A2A1F777624009431D6 /* Q02_wrong01_gif@2x.gif in Resources */ = {isa = PBXBuildFile; fileRef = CA5C89D21F777073009431D6 /* Q02_wrong01_gif@2x.gif */; };
-		CA5C8A2B1F777624009431D6 /* Q03_correct_gif@2x.gif in Resources */ = {isa = PBXBuildFile; fileRef = CA5C89D31F777073009431D6 /* Q03_correct_gif@2x.gif */; };
-		CA5C8A2C1F777624009431D6 /* Q03_wrong01_gif@2x.gif in Resources */ = {isa = PBXBuildFile; fileRef = CA5C89D41F777073009431D6 /* Q03_wrong01_gif@2x.gif */; };
+		CA5C8A251F777624009431D6 /* Q01_correct.gif in Resources */ = {isa = PBXBuildFile; fileRef = CA5C89CD1F777073009431D6 /* Q01_correct.gif */; };
+		CA5C8A261F777624009431D6 /* Q01_wrong01.gif in Resources */ = {isa = PBXBuildFile; fileRef = CA5C89CE1F777073009431D6 /* Q01_wrong01.gif */; };
+		CA5C8A271F777624009431D6 /* Q01_wrong02.gif in Resources */ = {isa = PBXBuildFile; fileRef = CA5C89CF1F777073009431D6 /* Q01_wrong02.gif */; };
+		CA5C8A281F777624009431D6 /* Q01_wrong03.gif in Resources */ = {isa = PBXBuildFile; fileRef = CA5C89D01F777073009431D6 /* Q01_wrong03.gif */; };
 		CA5C8A2D1F777624009431D6 /* giphy.gif in Resources */ = {isa = PBXBuildFile; fileRef = CA5C89D61F777073009431D6 /* giphy.gif */; };
 		CA5C8A2E1F777624009431D6 /* Chatting_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CA5C89D91F777073009431D6 /* Chatting_bg@2x.png */; };
 		CA5C8A2F1F777624009431D6 /* dot01.png in Resources */ = {isa = PBXBuildFile; fileRef = CA5C89DA1F777073009431D6 /* dot01.png */; };
@@ -94,6 +90,8 @@
 		CA5C8A681F777624009431D6 /* Q03_text01@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CA5C8A211F777073009431D6 /* Q03_text01@2x.png */; };
 		CA5C8A691F777624009431D6 /* Q03_wrong01_gif@2x.gif in Resources */ = {isa = PBXBuildFile; fileRef = CA5C8A231F777073009431D6 /* Q03_wrong01_gif@2x.gif */; };
 		CA5C8A6A1F777624009431D6 /* Q03_wrong01_text@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CA5C8A241F777073009431D6 /* Q03_wrong01_text@2x.png */; };
+		CA8C37371F78CC6300FDCB58 /* ContentManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CA8C37361F78CC6300FDCB58 /* ContentManager.m */; };
+		CA8C373A1F78CC7B00FDCB58 /* Content.m in Sources */ = {isa = PBXBuildFile; fileRef = CA8C37391F78CC7B00FDCB58 /* Content.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -140,14 +138,10 @@
 		CA5C89C61F74A8E1009431D6 /* Chat_QuestionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Chat_QuestionViewController.h; sourceTree = "<group>"; };
 		CA5C89C71F74A8E1009431D6 /* Chat_QuestionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Chat_QuestionViewController.m; sourceTree = "<group>"; };
 		CA5C89C81F74A8E1009431D6 /* Chat_QuestionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Chat_QuestionViewController.xib; sourceTree = "<group>"; };
-		CA5C89CD1F777073009431D6 /* Q01_correct_gif@2x.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "Q01_correct_gif@2x.gif"; sourceTree = "<group>"; };
-		CA5C89CE1F777073009431D6 /* Q01_wrong01_gif@2x.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "Q01_wrong01_gif@2x.gif"; sourceTree = "<group>"; };
-		CA5C89CF1F777073009431D6 /* Q01_wrong02_gif@2x.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "Q01_wrong02_gif@2x.gif"; sourceTree = "<group>"; };
-		CA5C89D01F777073009431D6 /* Q01_wrong03_gif@2x.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "Q01_wrong03_gif@2x.gif"; sourceTree = "<group>"; };
-		CA5C89D11F777073009431D6 /* Q02_correct_gif@2x.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "Q02_correct_gif@2x.gif"; sourceTree = "<group>"; };
-		CA5C89D21F777073009431D6 /* Q02_wrong01_gif@2x.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "Q02_wrong01_gif@2x.gif"; sourceTree = "<group>"; };
-		CA5C89D31F777073009431D6 /* Q03_correct_gif@2x.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "Q03_correct_gif@2x.gif"; sourceTree = "<group>"; };
-		CA5C89D41F777073009431D6 /* Q03_wrong01_gif@2x.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "Q03_wrong01_gif@2x.gif"; sourceTree = "<group>"; };
+		CA5C89CD1F777073009431D6 /* Q01_correct.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = Q01_correct.gif; sourceTree = "<group>"; };
+		CA5C89CE1F777073009431D6 /* Q01_wrong01.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = Q01_wrong01.gif; sourceTree = "<group>"; };
+		CA5C89CF1F777073009431D6 /* Q01_wrong02.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = Q01_wrong02.gif; sourceTree = "<group>"; };
+		CA5C89D01F777073009431D6 /* Q01_wrong03.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = Q01_wrong03.gif; sourceTree = "<group>"; };
 		CA5C89D61F777073009431D6 /* giphy.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = giphy.gif; sourceTree = "<group>"; };
 		CA5C89D91F777073009431D6 /* Chatting_bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Chatting_bg@2x.png"; sourceTree = "<group>"; };
 		CA5C89DA1F777073009431D6 /* dot01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dot01.png; sourceTree = "<group>"; };
@@ -210,6 +204,10 @@
 		CA5C8A211F777073009431D6 /* Q03_text01@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Q03_text01@2x.png"; sourceTree = "<group>"; };
 		CA5C8A231F777073009431D6 /* Q03_wrong01_gif@2x.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "Q03_wrong01_gif@2x.gif"; sourceTree = "<group>"; };
 		CA5C8A241F777073009431D6 /* Q03_wrong01_text@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Q03_wrong01_text@2x.png"; sourceTree = "<group>"; };
+		CA8C37351F78CC6300FDCB58 /* ContentManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ContentManager.h; sourceTree = "<group>"; };
+		CA8C37361F78CC6300FDCB58 /* ContentManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ContentManager.m; sourceTree = "<group>"; };
+		CA8C37381F78CC7B00FDCB58 /* Content.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Content.h; sourceTree = "<group>"; };
+		CA8C37391F78CC7B00FDCB58 /* Content.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Content.m; sourceTree = "<group>"; };
 		DB5CBA1496E1B953F9510377 /* Pods-ChatoryTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChatoryTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ChatoryTests/Pods-ChatoryTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -268,8 +266,8 @@
 			isa = PBXGroup;
 			children = (
 				CA5C89471F748F0C009431D6 /* StoryBoards */,
+				CA8C37341F78CC4D00FDCB58 /* Managers */,
 				CA0A26B31F70F14200209E05 /* DataModel */,
-				CA0A26B41F70F14300209E05 /* Objects */,
 				CA0A26AF1F70F12A00209E05 /* ViewControllers */,
 				CA0A268D1F70AC4D00209E05 /* AppDelegate.h */,
 				CA0A268E1F70AC4D00209E05 /* AppDelegate.m */,
@@ -321,15 +319,10 @@
 				CA0A26C71F71FAA100209E05 /* Question.m */,
 				CA0A26C91F71FB9600209E05 /* Teacher.h */,
 				CA0A26CA1F71FB9600209E05 /* Teacher.m */,
+				CA8C37381F78CC7B00FDCB58 /* Content.h */,
+				CA8C37391F78CC7B00FDCB58 /* Content.m */,
 			);
 			path = DataModel;
-			sourceTree = "<group>";
-		};
-		CA0A26B41F70F14300209E05 /* Objects */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Objects;
 			sourceTree = "<group>";
 		};
 		CA0A26B81F70F40A00209E05 /* Utils */ = {
@@ -384,14 +377,10 @@
 		CA5C89CC1F777073009431D6 /* character_gif */ = {
 			isa = PBXGroup;
 			children = (
-				CA5C89CD1F777073009431D6 /* Q01_correct_gif@2x.gif */,
-				CA5C89CE1F777073009431D6 /* Q01_wrong01_gif@2x.gif */,
-				CA5C89CF1F777073009431D6 /* Q01_wrong02_gif@2x.gif */,
-				CA5C89D01F777073009431D6 /* Q01_wrong03_gif@2x.gif */,
-				CA5C89D11F777073009431D6 /* Q02_correct_gif@2x.gif */,
-				CA5C89D21F777073009431D6 /* Q02_wrong01_gif@2x.gif */,
-				CA5C89D31F777073009431D6 /* Q03_correct_gif@2x.gif */,
-				CA5C89D41F777073009431D6 /* Q03_wrong01_gif@2x.gif */,
+				CA5C89CD1F777073009431D6 /* Q01_correct.gif */,
+				CA5C89CE1F777073009431D6 /* Q01_wrong01.gif */,
+				CA5C89CF1F777073009431D6 /* Q01_wrong02.gif */,
+				CA5C89D01F777073009431D6 /* Q01_wrong03.gif */,
 			);
 			path = character_gif;
 			sourceTree = "<group>";
@@ -598,6 +587,15 @@
 			path = wrong;
 			sourceTree = "<group>";
 		};
+		CA8C37341F78CC4D00FDCB58 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				CA8C37351F78CC6300FDCB58 /* ContentManager.h */,
+				CA8C37361F78CC6300FDCB58 /* ContentManager.m */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
 		F0DDC1FA4FA5F50BEC4ADDCF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -697,14 +695,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CA5C8A251F777624009431D6 /* Q01_correct_gif@2x.gif in Resources */,
-				CA5C8A261F777624009431D6 /* Q01_wrong01_gif@2x.gif in Resources */,
-				CA5C8A271F777624009431D6 /* Q01_wrong02_gif@2x.gif in Resources */,
-				CA5C8A281F777624009431D6 /* Q01_wrong03_gif@2x.gif in Resources */,
-				CA5C8A291F777624009431D6 /* Q02_correct_gif@2x.gif in Resources */,
-				CA5C8A2A1F777624009431D6 /* Q02_wrong01_gif@2x.gif in Resources */,
-				CA5C8A2B1F777624009431D6 /* Q03_correct_gif@2x.gif in Resources */,
-				CA5C8A2C1F777624009431D6 /* Q03_wrong01_gif@2x.gif in Resources */,
+				CA5C8A251F777624009431D6 /* Q01_correct.gif in Resources */,
+				CA5C8A261F777624009431D6 /* Q01_wrong01.gif in Resources */,
+				CA5C8A271F777624009431D6 /* Q01_wrong02.gif in Resources */,
+				CA5C8A281F777624009431D6 /* Q01_wrong03.gif in Resources */,
 				CA5C8A2D1F777624009431D6 /* giphy.gif in Resources */,
 				CA5C8A2E1F777624009431D6 /* Chatting_bg@2x.png in Resources */,
 				CA5C8A2F1F777624009431D6 /* dot01.png in Resources */,
@@ -891,10 +885,12 @@
 				CA0A26B71F70F16400209E05 /* _DevViewController.m in Sources */,
 				CA0A26B21F70F12A00209E05 /* ViewController.m in Sources */,
 				CA0A268F1F70AC4D00209E05 /* AppDelegate.m in Sources */,
+				CA8C373A1F78CC7B00FDCB58 /* Content.m in Sources */,
 				CA0A268C1F70AC4D00209E05 /* main.m in Sources */,
 				CA5C89C91F74A8E1009431D6 /* Chat_QuestionViewController.m in Sources */,
 				CA0A26C81F71FAA100209E05 /* Question.m in Sources */,
 				CA0A26CB1F71FB9600209E05 /* Teacher.m in Sources */,
+				CA8C37371F78CC6300FDCB58 /* ContentManager.m in Sources */,
 				CA0A26C21F71EA6000209E05 /* ChattingViewController.m in Sources */,
 				CA0A26BC1F7113E600209E05 /* TeacherViewController.m in Sources */,
 			);

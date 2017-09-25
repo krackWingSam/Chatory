@@ -8,6 +8,17 @@
 
 #import <UIKit/UIKit.h>
 
+
+@protocol Chat_QuestionViewControllerDelegate
+
+-(void)showViewsDone;
+
+@end
+
+
 @interface Chat_QuestionViewController : UIViewController
+
+@property Question *question;
+@property id <Chat_QuestionViewControllerDelegate> delegate;
 
 @end

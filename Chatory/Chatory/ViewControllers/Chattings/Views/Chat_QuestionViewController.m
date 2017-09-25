@@ -10,7 +10,11 @@
 
 @interface Chat_QuestionViewController () {
     IBOutlet UIView *view_Loading;
-    IBOutlet UIView *view_Question;
+    IBOutlet UIView *view_Question_01_01a;
+    IBOutlet UIView *view_Question_01_01b;
+    
+    NSArray *array_Views;
+    int currentIndex;
 }
 
 @end
@@ -27,14 +31,90 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+-(void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    [self initUI];
 }
-*/
+
+-(void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    
+    [self showLoading];
+}
+
+-(void)initUI {
+    if ([_question.key isEqualToString:QUESTION_KEY_01]) {
+        CGRect frame = [[UIScreen mainScreen] bounds];
+        [view_Loading setFrame:CGRectMake(0, 0, frame.size.width, view_Loading.frame.size.height)];
+        [view_Question_01_01a setFrame:CGRectMake(0, 0, frame.size.width, view_Question_01_01a.frame.size.height)];
+        [view_Question_01_01b setFrame:CGRectMake(0, 0, frame.size.width, view_Question_01_01b.frame.size.height)];
+        array_Views = @[view_Question_01_01a, view_Question_01_01b];
+    }
+}
+
+
+#pragma mark - Animations
+-(void)showLoading {
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [view_Loading setAlpha:0.f];
+        [view_Loading setFrame:CGRectMake(self.view.frame.size.width/2, 0, view_Loading.frame.size.width, view_Loading.frame.size.height)];
+        
+        [UIView animateWithDuration:AnimationDuration animations:^{
+            CGRect frame = [view_Loading frame];
+            frame.origin.x = 0;
+            
+            [view_Loading setFrame:frame];
+            [view_Loading setAlpha:1.f];
+        } completion:^(BOOL finished) {
+            currentIndex = 0;
+            [self showFirstView];
+        }];
+    });
+}
+
+-(void)showFirstView {
+    dispatch_async(dispatch_get_main_queue(), ^{
+        UIView *currentView = [array_Views objectAtIndex:0];
+        [currentView setAlpha:0.f];
+        [self.view addSubview:currentView];
+        [UIView animateWithDuration:AnimationDuration animations:^{
+            [currentView setAlpha:1.f];
+        } completion:^(BOOL finished) {
+            [view_Loading removeFromSuperview];
+            currentIndex++;
+            [self showViewWithIndex:currentIndex];
+        }];
+    });
+}
+
+-(void)showViewWithIndex:(int)index {
+    dispatch_async(dispatch_get_main_queue(), ^{
+        UIView *currentView = [array_Views objectAtIndex:index];
+        UIView *beforeView = [array_Views objectAtIndex:index-1];
+        CGRect frame = [currentView frame];
+        
+        frame.origin.y = beforeView.frame.origin.y + beforeView.frame.size.height;
+        [currentView setFrame:frame];
+        
+        [currentView setAlpha:0.f];
+        
+        [UIView animateWithDuration:AnimationDuration animations:^{
+            [currentView setAlpha:1.f];
+            CGRect frame = [self.view frame];
+            
+            frame.size.height = currentView.frame.origin.y + currentView.frame.size.height;
+            [self.view setFrame:frame];
+            
+        } completion:^(BOOL finished) {
+            if (index < [array_Views count]) {
+                currentIndex++;
+                [self showViewWithIndex:currentIndex];
+            }
+            else
+                [self.delegate showViewsDone];
+        }];
+    });
+}
 
 @end

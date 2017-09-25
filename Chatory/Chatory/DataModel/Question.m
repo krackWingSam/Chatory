@@ -10,12 +10,19 @@
 
 @implementation Question
 
--(id)initWithDictionary:(NSDictionary *)dic {
++(id)getQuestionWithKey:(NSString *)questionKey withTeacherKey:(Teacher *)teacher {
+    return [[Question alloc] initWithQuestionKey:questionKey withTeacher:teacher];
+}
+
+-(id)initWithQuestionKey:(NSString *)key withTeacher:(Teacher *)teacher {
     if (self = [super init]) {
-        _dic = dic;
+        if ([key isEqualToString:QUESTION_KEY_01]) {
+            _key = key;
+            _teacher = teacher;
+        }
     }
-    
     return self;
 }
+
 
 @end

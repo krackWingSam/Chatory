@@ -7,13 +7,17 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <Animated-Gif-iOS/AnimatedGif.h>
+
+#define TEACHER_KEY_TIGER @"teacher_tiger"
 
 @interface Teacher : NSObject
 
--(id)initWithDictionary:(NSDictionary *)dic;
++(id)getTeacherWithKey:(NSString *)key;
 
-@property (nonatomic, readonly) NSDictionary *dic;
-
-
+@property (readonly) NSString *key;
+@property (readonly) UIImage *icon;
+@property (readonly) AnimatedGif *currectImage;
+@property (readonly) NSArray *array_WrongImage;
 
 @end

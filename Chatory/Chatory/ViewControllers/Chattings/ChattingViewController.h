@@ -10,6 +10,6 @@
 
 @interface ChattingViewController : UIViewController
 
-@property (nonatomic) NSDictionary *contentDic;
+@property Content *content;
 
 @end
