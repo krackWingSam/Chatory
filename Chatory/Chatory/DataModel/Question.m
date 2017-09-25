@@ -29,9 +29,19 @@
             Chat_AnswerSheetViewController *aVC = [[Chat_AnswerSheetViewController alloc] initWithNibName:@"Chat_AnswerSheetViewController" bundle:nil];
             [aVC setQuestion:self];
             _answerViewController = aVC;
+            
+            _string_Answer = @"hop";
         }
     }
     return self;
+}
+
+-(BOOL)isAnswer:(NSString *)string_Answer {
+    BOOL isAnswer = NO;
+    if ([_string_Answer isEqualToString:string_Answer])
+        isAnswer = YES;
+    
+    return isAnswer;
 }
 
 

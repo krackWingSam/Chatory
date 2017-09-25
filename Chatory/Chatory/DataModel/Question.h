@@ -16,9 +16,12 @@
 
 +(id)getQuestionWithKey:(NSString *)questionKey withTeacherKey:(Teacher *)teacher;
 
+-(BOOL)isAnswer:(NSString *)string_Answer;
+
 @property (readonly) NSString *key;
 @property (readonly) Teacher *teacher;
 @property (readonly) UIViewController *questionViewController;
 @property (readonly) UIViewController *answerViewController;
+@property (readonly) NSString *string_Answer;
 
 @end

@@ -10,7 +10,6 @@
 
 @protocol Chat_AnswerSheetViewControllerDelegate
 
--(void)selectAnswerViewController:(UIViewController *)userAnswerVC;
 -(void)isRightAnswer:(NSString *)string_Answer;
 
 @end

@@ -96,6 +96,8 @@
 		CA8C373F1F78D3EA00FDCB58 /* Chat_AnswerSheetViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA8C373D1F78D3EA00FDCB58 /* Chat_AnswerSheetViewController.xib */; };
 		CADB75691F78E5CE00B84433 /* UserAnswerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CADB75671F78E5CE00B84433 /* UserAnswerViewController.m */; };
 		CADB756A1F78E5CE00B84433 /* UserAnswerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CADB75681F78E5CE00B84433 /* UserAnswerViewController.xib */; };
+		CADB75731F78EBBA00B84433 /* Chat_AnswerReactionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CADB75711F78EBBA00B84433 /* Chat_AnswerReactionViewController.m */; };
+		CADB75741F78EBBA00B84433 /* Chat_AnswerReactionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CADB75721F78EBBA00B84433 /* Chat_AnswerReactionViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -218,6 +220,9 @@
 		CADB75661F78E5CE00B84433 /* UserAnswerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserAnswerViewController.h; sourceTree = "<group>"; };
 		CADB75671F78E5CE00B84433 /* UserAnswerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserAnswerViewController.m; sourceTree = "<group>"; };
 		CADB75681F78E5CE00B84433 /* UserAnswerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserAnswerViewController.xib; sourceTree = "<group>"; };
+		CADB75701F78EBBA00B84433 /* Chat_AnswerReactionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Chat_AnswerReactionViewController.h; sourceTree = "<group>"; };
+		CADB75711F78EBBA00B84433 /* Chat_AnswerReactionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Chat_AnswerReactionViewController.m; sourceTree = "<group>"; };
+		CADB75721F78EBBA00B84433 /* Chat_AnswerReactionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Chat_AnswerReactionViewController.xib; sourceTree = "<group>"; };
 		DB5CBA1496E1B953F9510377 /* Pods-ChatoryTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChatoryTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ChatoryTests/Pods-ChatoryTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -374,6 +379,9 @@
 				CADB75661F78E5CE00B84433 /* UserAnswerViewController.h */,
 				CADB75671F78E5CE00B84433 /* UserAnswerViewController.m */,
 				CADB75681F78E5CE00B84433 /* UserAnswerViewController.xib */,
+				CADB75701F78EBBA00B84433 /* Chat_AnswerReactionViewController.h */,
+				CADB75711F78EBBA00B84433 /* Chat_AnswerReactionViewController.m */,
+				CADB75721F78EBBA00B84433 /* Chat_AnswerReactionViewController.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -758,6 +766,7 @@
 				CA5C8A531F777624009431D6 /* Q02_sound_icon@2x.png in Resources */,
 				CA5C8A541F777624009431D6 /* Q02_text01@2x.png in Resources */,
 				CA5C8A551F777624009431D6 /* Q02_textbox@2x.png in Resources */,
+				CADB75741F78EBBA00B84433 /* Chat_AnswerReactionViewController.xib in Resources */,
 				CA5C8A561F777624009431D6 /* Q02_textbox_frame@2x.png in Resources */,
 				CA5C8A571F777624009431D6 /* Q02_textbox_text@2x.png in Resources */,
 				CA5C8A581F777624009431D6 /* Voise_bg@2x.png in Resources */,
@@ -905,6 +914,7 @@
 				CA0A26B21F70F12A00209E05 /* ViewController.m in Sources */,
 				CA0A268F1F70AC4D00209E05 /* AppDelegate.m in Sources */,
 				CA8C373A1F78CC7B00FDCB58 /* Content.m in Sources */,
+				CADB75731F78EBBA00B84433 /* Chat_AnswerReactionViewController.m in Sources */,
 				CADB75691F78E5CE00B84433 /* UserAnswerViewController.m in Sources */,
 				CA0A268C1F70AC4D00209E05 /* main.m in Sources */,
 				CA5C89C91F74A8E1009431D6 /* Chat_QuestionViewController.m in Sources */,

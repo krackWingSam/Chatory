@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Chat_AnswerReactionViewController">
+            <connections>
+                <outlet property="imageView_Emotion" destination="P79-KO-fpe" id="5Lt-xw-pHj"/>
+                <outlet property="imageView_Icon" destination="MOw-FO-q4X" id="VzT-qL-pon"/>
+                <outlet property="imageView_Reaction" destination="WUN-fS-ELG" id="kRN-Xv-HgS"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="view_Reaction" destination="JDe-ux-sdc" id="v76-H7-Vb4"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="212"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
+            <point key="canvasLocation" x="33.5" y="-174"/>
+        </view>
+        <view contentMode="scaleToFill" id="JDe-ux-sdc">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="390"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="P79-KO-fpe">
+                    <rect key="frame" x="78" y="5" width="150" height="150"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="150" id="Dxi-5Y-uBs"/>
+                        <constraint firstAttribute="height" constant="150" id="RiM-eh-Zu7"/>
+                    </constraints>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="MOw-FO-q4X">
+                    <rect key="frame" x="20" y="165" width="48" height="48"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="48" id="hgc-90-bCJ"/>
+                        <constraint firstAttribute="width" constant="48" id="p1y-SU-6Sx"/>
+                    </constraints>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Q01_correct_text01.png" translatesAutoresizingMaskIntoConstraints="NO" id="WUN-fS-ELG">
+                    <rect key="frame" x="78" y="165" width="198" height="189"/>
+                </imageView>
+            </subviews>
+            <constraints>
+                <constraint firstItem="P79-KO-fpe" firstAttribute="leading" secondItem="MOw-FO-q4X" secondAttribute="trailing" constant="10" id="33K-9k-fDL"/>
+                <constraint firstItem="MOw-FO-q4X" firstAttribute="top" secondItem="P79-KO-fpe" secondAttribute="bottom" constant="10" id="4dm-k3-7Dd"/>
+                <constraint firstItem="WUN-fS-ELG" firstAttribute="top" secondItem="MOw-FO-q4X" secondAttribute="top" id="GVv-4h-DFn"/>
+                <constraint firstItem="P79-KO-fpe" firstAttribute="top" secondItem="tym-2a-DJ9" secondAttribute="top" constant="5" id="GsP-Sr-6xr"/>
+                <constraint firstItem="MOw-FO-q4X" firstAttribute="leading" secondItem="tym-2a-DJ9" secondAttribute="leading" constant="20" id="r67-N2-Ry3"/>
+                <constraint firstItem="WUN-fS-ELG" firstAttribute="leading" secondItem="P79-KO-fpe" secondAttribute="leading" id="taL-xA-gG2"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="tym-2a-DJ9"/>
+            <point key="canvasLocation" x="54.5" y="201"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Q01_correct_text01.png" width="198" height="189"/>
+    </resources>
+</document>

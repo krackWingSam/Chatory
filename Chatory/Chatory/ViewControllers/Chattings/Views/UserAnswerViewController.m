@@ -8,7 +8,9 @@
 
 #import "UserAnswerViewController.h"
 
-@interface UserAnswerViewController ()
+@interface UserAnswerViewController () {
+    IBOutlet UIImageView *imageView;
+}
 
 @end
 
@@ -17,11 +19,27 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    
+    [self initUI];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(void)initUI {
+    UIImage *image;
+    if ([_string_Answer isEqualToString:@"hop"])
+        image = [UIImage imageNamed:@"Q01_correct_answer"];
+    if ([_string_Answer isEqualToString:@"crawl"])
+        image = [UIImage imageNamed:@"Q01_wrong01_answer"];
+    if ([_string_Answer isEqualToString:@"waddle"])
+        image = [UIImage imageNamed:@"Q01_wrong02_answer"];
+    if ([_string_Answer isEqualToString:@"flap"])
+        image = [UIImage imageNamed:@"Q01_wrong03_answer"];
+    
+    [imageView setImage:image];
 }
 
 

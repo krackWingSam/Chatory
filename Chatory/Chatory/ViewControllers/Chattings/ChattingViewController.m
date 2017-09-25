@@ -9,6 +9,7 @@
 #import "ChattingViewController.h"
 #import "Chat_QuestionViewController.h"
 #import "Chat_AnswerSheetViewController.h"
+#import "UserAnswerViewController.h"
 
 @interface ChattingViewController () <UITextFieldDelegate, Chat_QuestionViewControllerDelegate, Chat_AnswerSheetViewControllerDelegate> {
     IBOutlet UIScrollView *scroll_Chat;
@@ -166,12 +167,20 @@
 
 
 #pragma mark - Chat_AnswerSheetViewControllerDelegate
--(void)selectAnswerViewController:(UIViewController *)userAnswerVC {
-    
-}
-
 -(void)isRightAnswer:(NSString *)string_Answer {
+    UserAnswerViewController *answerVC = [[UserAnswerViewController alloc] initWithNibName:@"UserAnswerViewController" bundle:nil];
+    [answerVC setString_Answer:string_Answer];
     
+    [array_Chat addObject:answerVC];
+    
+    [self reloadScrollView];
+    
+    if ([_content.currentQuestion isAnswer:string_Answer]) {
+        
+    }
+    else {
+        
+    }
 }
 
 
