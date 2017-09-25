@@ -58,7 +58,7 @@
 -(void)showLoading {
     dispatch_async(dispatch_get_main_queue(), ^{
         [view_Loading setAlpha:0.f];
-        [view_Loading setFrame:CGRectMake(self.view.frame.size.width/2, 0, view_Loading.frame.size.width, view_Loading.frame.size.height)];
+        [view_Loading setFrame:CGRectMake(-self.view.frame.size.width/2, 0, view_Loading.frame.size.width, view_Loading.frame.size.height)];
         [self.view addSubview:view_Loading];
         
         [UIView animateWithDuration:AnimationDuration animations:^{

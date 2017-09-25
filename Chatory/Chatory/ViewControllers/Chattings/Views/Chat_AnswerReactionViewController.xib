@@ -45,8 +45,8 @@
                         <constraint firstAttribute="width" constant="48" id="p1y-SU-6Sx"/>
                     </constraints>
                 </imageView>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Q01_correct_text01.png" translatesAutoresizingMaskIntoConstraints="NO" id="WUN-fS-ELG">
-                    <rect key="frame" x="78" y="165" width="198" height="189"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Q01_wrong03_text.png" translatesAutoresizingMaskIntoConstraints="NO" id="WUN-fS-ELG">
+                    <rect key="frame" x="78" y="165" width="181" height="98"/>
                 </imageView>
             </subviews>
             <constraints>
@@ -63,6 +63,6 @@
         </view>
     </objects>
     <resources>
-        <image name="Q01_correct_text01.png" width="198" height="189"/>
+        <image name="Q01_wrong03_text.png" width="181" height="98"/>
     </resources>
 </document>

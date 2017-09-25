@@ -15,6 +15,9 @@
 
 +(id)getTeacherWithKey:(NSString *)key;
 
+
+-(AnimatedGif *)getWrongImage;
+
 @property (readonly) NSString *key;
 @property (readonly) UIImage *icon;
 @property (readonly) AnimatedGif *currectImage;

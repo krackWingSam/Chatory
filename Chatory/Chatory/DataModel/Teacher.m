@@ -40,5 +40,10 @@
     return self;
 }
 
+-(AnimatedGif *)getWrongImage {
+    int randNumber = rand() % [_array_WrongImage count];
+    return [_array_WrongImage objectAtIndex:randNumber];
+}
+
 
 @end

@@ -10,11 +10,12 @@
 #import "Chat_QuestionViewController.h"
 #import "Chat_AnswerSheetViewController.h"
 #import "UserAnswerViewController.h"
+#import "Chat_AnswerReactionViewController.h"
 
-@interface ChattingViewController () <UITextFieldDelegate, Chat_QuestionViewControllerDelegate, Chat_AnswerSheetViewControllerDelegate> {
+@interface ChattingViewController () <Chat_QuestionViewControllerDelegate, Chat_AnswerSheetViewControllerDelegate, Chat_AnswerReactionViewControllerDelegate> {
     IBOutlet UIScrollView *scroll_Chat;
-    IBOutlet UITextField *textField;
     
+    UIViewController *currentAnswerSheetVC;
     NSMutableArray *array_Chat;
     int questionIndex;
 }
@@ -40,7 +41,6 @@
 -(void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
     
-    [textField resignFirstResponder];
     [self removeNotification];
 }
 
@@ -100,20 +100,19 @@
             if (i == 0)
                 lastYPosition = 20;
             
-            if ([vc class] == [Chat_QuestionViewController class]) {
-                CGRect frame = [vc.view frame];
-                frame.origin.y = lastYPosition;
-                [vc.view setFrame:frame];
-                [scroll_Chat addSubview:vc.view];
-            }
+            
+            CGRect frame = [vc.view frame];
+            frame.origin.y = lastYPosition;
+            [vc.view setFrame:frame];
+            [scroll_Chat addSubview:vc.view];
             
             lastYPosition += vc.view.frame.size.height;
         }
         
         [scroll_Chat setContentSize:CGSizeMake(frame.size.width, lastYPosition)];
         
-        if (lastYPosition > frame.size.height)
-            [scroll_Chat setContentOffset:CGPointMake(0, lastYPosition - frame.size.height)];
+        if (lastYPosition > scroll_Chat.frame.size.height)
+            [scroll_Chat setContentOffset:CGPointMake(0, lastYPosition - scroll_Chat.frame.size.height)];
     });
 }
 
@@ -123,7 +122,6 @@
     if (_content.currentQuestion == nil) {
         Question *currentQuestion = [_content.array_Question objectAtIndex:0];
         [_content setCurrentQuestion:currentQuestion];
-        
         
         [array_Chat addObject:currentQuestion.questionViewController];
         questionIndex = 0;
@@ -148,10 +146,29 @@
     [self.navigationController popViewControllerAnimated:YES];
 }
 
+-(IBAction)action_TextField:(id)sender {
+    dispatch_async(dispatch_get_main_queue(), ^{
+        UIViewController *currentQuestionVC = _content.currentQuestion.questionViewController;
+        CGFloat yPosition = [currentQuestionVC.view frame].origin.y;
+        
+        [self.view addSubview:currentAnswerSheetVC.view];
+        [currentAnswerSheetVC.view setAlpha:0.f];
+        
+        [UIView animateWithDuration:AnimationDuration animations:^{
+            [scroll_Chat setContentOffset:CGPointMake(0, yPosition - 40)];
+        } completion:^(BOOL finished) {
+            [UIView animateWithDuration:AnimationDuration animations:^{
+                [currentAnswerSheetVC.view setAlpha:1.f];
+            }];
+        }];
+    });
+}
+
 
 #pragma mark - Chat_QuestionViewControllerDelegate
 -(void)showViewsDone {
     UIViewController *currentAnswerVC = _content.currentQuestion.answerViewController;
+    currentAnswerSheetVC = currentAnswerVC;
     
     if ([currentAnswerVC class] == [Chat_AnswerSheetViewController class]) {
         [(Chat_AnswerSheetViewController *)currentAnswerVC setDelegate:self];
@@ -168,19 +185,41 @@
 
 #pragma mark - Chat_AnswerSheetViewControllerDelegate
 -(void)isRightAnswer:(NSString *)string_Answer {
-    UserAnswerViewController *answerVC = [[UserAnswerViewController alloc] initWithNibName:@"UserAnswerViewController" bundle:nil];
-    [answerVC setString_Answer:string_Answer];
-    
-    [array_Chat addObject:answerVC];
-    
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [UIView animateWithDuration:AnimationDuration animations:^{
+            [currentAnswerSheetVC.view setAlpha:0.f];
+        } completion:^(BOOL finished) {
+            [currentAnswerSheetVC.view removeFromSuperview];
+        }];
+        
+        UserAnswerViewController *answerVC = [[UserAnswerViewController alloc] initWithNibName:@"UserAnswerViewController" bundle:nil];
+        [answerVC setString_Answer:string_Answer];
+        
+        [array_Chat addObject:answerVC];
+        
+        [self reloadScrollView];
+        
+        Chat_AnswerReactionViewController *vc = [[Chat_AnswerReactionViewController alloc] initWithNibName:@"Chat_AnswerReactionViewController" bundle:nil];
+        [vc setDelegate:self];
+        [vc setTeacher:_content.teacher];
+        
+        if ([_content.currentQuestion isAnswer:string_Answer]) {
+            [vc setString_RightAnswer:string_Answer];
+        }
+        else {
+            [vc setString_WrongAnswer:string_Answer];
+        }
+        
+        [array_Chat addObject:vc];
+        
+        [self reloadScrollView];
+    });
+}
+
+
+#pragma mark - Chat_AnswerReactionViewControllerDelegate
+-(void)changedViewHeight {
     [self reloadScrollView];
-    
-    if ([_content.currentQuestion isAnswer:string_Answer]) {
-        
-    }
-    else {
-        
-    }
 }
 
 
