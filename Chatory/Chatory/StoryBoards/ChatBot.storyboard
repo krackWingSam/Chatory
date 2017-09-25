@@ -25,7 +25,7 @@
                                     <constraint firstAttribute="height" constant="30" id="ZE9-NK-quE"/>
                                 </constraints>
                             </view>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Top_bar.png" translatesAutoresizingMaskIntoConstraints="NO" id="se2-XJ-sRl" customClass="Top_bar">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Top_bar.png" translatesAutoresizingMaskIntoConstraints="NO" id="se2-XJ-sRl">
                                 <rect key="frame" x="0.0" y="20" width="375" height="58"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="58" id="u4W-7f-BXK"/>

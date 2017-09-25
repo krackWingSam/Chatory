@@ -46,7 +46,7 @@
         <scene sceneID="Cxq-4p-PpQ">
             <objects>
                 <navigationController navigationBarHidden="YES" id="AcC-uB-XBY" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" backIndicatorImage="Top_bar_back.png" id="hpU-mM-bEw">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="hpU-mM-bEw">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Bef-xq-yPU">
@@ -134,7 +134,4 @@
             <point key="canvasLocation" x="727" y="-547"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="Top_bar_back.png" width="12" height="19"/>
-    </resources>
 </document>

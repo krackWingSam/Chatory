@@ -59,6 +59,7 @@
     dispatch_async(dispatch_get_main_queue(), ^{
         [view_Loading setAlpha:0.f];
         [view_Loading setFrame:CGRectMake(self.view.frame.size.width/2, 0, view_Loading.frame.size.width, view_Loading.frame.size.height)];
+        [self.view addSubview:view_Loading];
         
         [UIView animateWithDuration:AnimationDuration animations:^{
             CGRect frame = [view_Loading frame];
@@ -99,6 +100,8 @@
         
         [currentView setAlpha:0.f];
         
+        [self.view addSubview:currentView];
+        
         [UIView animateWithDuration:AnimationDuration animations:^{
             [currentView setAlpha:1.f];
             CGRect frame = [self.view frame];
@@ -107,12 +110,11 @@
             [self.view setFrame:frame];
             
         } completion:^(BOOL finished) {
-            if (index < [array_Views count]) {
-                currentIndex++;
-                [self showViewWithIndex:currentIndex];
-            }
-            else
+            currentIndex += 1;
+            if (currentIndex == [array_Views count])
                 [self.delegate showViewsDone];
+            else
+                [self showViewWithIndex:currentIndex];
         }];
     });
 }

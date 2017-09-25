@@ -19,5 +19,6 @@
 @property (readonly) NSString *key;
 @property (readonly) Teacher *teacher;
 @property (readonly) UIViewController *questionViewController;
+@property (readonly) UIViewController *answerViewController;
 
 @end

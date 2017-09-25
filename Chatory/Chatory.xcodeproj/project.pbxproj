@@ -92,6 +92,10 @@
 		CA5C8A6A1F777624009431D6 /* Q03_wrong01_text@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CA5C8A241F777073009431D6 /* Q03_wrong01_text@2x.png */; };
 		CA8C37371F78CC6300FDCB58 /* ContentManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CA8C37361F78CC6300FDCB58 /* ContentManager.m */; };
 		CA8C373A1F78CC7B00FDCB58 /* Content.m in Sources */ = {isa = PBXBuildFile; fileRef = CA8C37391F78CC7B00FDCB58 /* Content.m */; };
+		CA8C373E1F78D3EA00FDCB58 /* Chat_AnswerSheetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA8C373C1F78D3EA00FDCB58 /* Chat_AnswerSheetViewController.m */; };
+		CA8C373F1F78D3EA00FDCB58 /* Chat_AnswerSheetViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA8C373D1F78D3EA00FDCB58 /* Chat_AnswerSheetViewController.xib */; };
+		CADB75691F78E5CE00B84433 /* UserAnswerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CADB75671F78E5CE00B84433 /* UserAnswerViewController.m */; };
+		CADB756A1F78E5CE00B84433 /* UserAnswerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CADB75681F78E5CE00B84433 /* UserAnswerViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -208,6 +212,12 @@
 		CA8C37361F78CC6300FDCB58 /* ContentManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ContentManager.m; sourceTree = "<group>"; };
 		CA8C37381F78CC7B00FDCB58 /* Content.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Content.h; sourceTree = "<group>"; };
 		CA8C37391F78CC7B00FDCB58 /* Content.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Content.m; sourceTree = "<group>"; };
+		CA8C373B1F78D3EA00FDCB58 /* Chat_AnswerSheetViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Chat_AnswerSheetViewController.h; sourceTree = "<group>"; };
+		CA8C373C1F78D3EA00FDCB58 /* Chat_AnswerSheetViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Chat_AnswerSheetViewController.m; sourceTree = "<group>"; };
+		CA8C373D1F78D3EA00FDCB58 /* Chat_AnswerSheetViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Chat_AnswerSheetViewController.xib; sourceTree = "<group>"; };
+		CADB75661F78E5CE00B84433 /* UserAnswerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserAnswerViewController.h; sourceTree = "<group>"; };
+		CADB75671F78E5CE00B84433 /* UserAnswerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserAnswerViewController.m; sourceTree = "<group>"; };
+		CADB75681F78E5CE00B84433 /* UserAnswerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserAnswerViewController.xib; sourceTree = "<group>"; };
 		DB5CBA1496E1B953F9510377 /* Pods-ChatoryTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChatoryTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ChatoryTests/Pods-ChatoryTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -358,6 +368,12 @@
 				CA5C89C61F74A8E1009431D6 /* Chat_QuestionViewController.h */,
 				CA5C89C71F74A8E1009431D6 /* Chat_QuestionViewController.m */,
 				CA5C89C81F74A8E1009431D6 /* Chat_QuestionViewController.xib */,
+				CA8C373B1F78D3EA00FDCB58 /* Chat_AnswerSheetViewController.h */,
+				CA8C373C1F78D3EA00FDCB58 /* Chat_AnswerSheetViewController.m */,
+				CA8C373D1F78D3EA00FDCB58 /* Chat_AnswerSheetViewController.xib */,
+				CADB75661F78E5CE00B84433 /* UserAnswerViewController.h */,
+				CADB75671F78E5CE00B84433 /* UserAnswerViewController.m */,
+				CADB75681F78E5CE00B84433 /* UserAnswerViewController.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -699,6 +715,7 @@
 				CA5C8A261F777624009431D6 /* Q01_wrong01.gif in Resources */,
 				CA5C8A271F777624009431D6 /* Q01_wrong02.gif in Resources */,
 				CA5C8A281F777624009431D6 /* Q01_wrong03.gif in Resources */,
+				CADB756A1F78E5CE00B84433 /* UserAnswerViewController.xib in Resources */,
 				CA5C8A2D1F777624009431D6 /* giphy.gif in Resources */,
 				CA5C8A2E1F777624009431D6 /* Chatting_bg@2x.png in Resources */,
 				CA5C8A2F1F777624009431D6 /* dot01.png in Resources */,
@@ -729,6 +746,7 @@
 				CA5C8A481F777624009431D6 /* Q01_wrong01_gif@2x.gif in Resources */,
 				CA5C8A491F777624009431D6 /* Q01_wrong01_text@2x.png in Resources */,
 				CA5C8A4A1F777624009431D6 /* Q01_wrong02_answer@2x.png in Resources */,
+				CA8C373F1F78D3EA00FDCB58 /* Chat_AnswerSheetViewController.xib in Resources */,
 				CA5C8A4B1F777624009431D6 /* Q01_wrong02_description_gif@2x.png in Resources */,
 				CA5C8A4C1F777624009431D6 /* Q01_wrong02_gif@2x.gif in Resources */,
 				CA5C8A4D1F777624009431D6 /* Q01_wrong02_text@2x.png in Resources */,
@@ -882,10 +900,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CA8C373E1F78D3EA00FDCB58 /* Chat_AnswerSheetViewController.m in Sources */,
 				CA0A26B71F70F16400209E05 /* _DevViewController.m in Sources */,
 				CA0A26B21F70F12A00209E05 /* ViewController.m in Sources */,
 				CA0A268F1F70AC4D00209E05 /* AppDelegate.m in Sources */,
 				CA8C373A1F78CC7B00FDCB58 /* Content.m in Sources */,
+				CADB75691F78E5CE00B84433 /* UserAnswerViewController.m in Sources */,
 				CA0A268C1F70AC4D00209E05 /* main.m in Sources */,
 				CA5C89C91F74A8E1009431D6 /* Chat_QuestionViewController.m in Sources */,
 				CA0A26C81F71FAA100209E05 /* Question.m in Sources */,

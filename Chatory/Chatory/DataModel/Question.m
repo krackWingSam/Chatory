@@ -7,6 +7,8 @@
 //
 
 #import "Question.h"
+#import "Chat_QuestionViewController.h"
+#import "Chat_AnswerSheetViewController.h"
 
 @implementation Question
 
@@ -19,6 +21,14 @@
         if ([key isEqualToString:QUESTION_KEY_01]) {
             _key = key;
             _teacher = teacher;
+            
+            Chat_QuestionViewController *qVC = [[Chat_QuestionViewController alloc] initWithNibName:@"Chat_QuestionViewController" bundle:nil];
+            [qVC setQuestion:self];
+            _questionViewController = qVC;
+            
+            Chat_AnswerSheetViewController *aVC = [[Chat_AnswerSheetViewController alloc] initWithNibName:@"Chat_AnswerSheetViewController" bundle:nil];
+            [aVC setQuestion:self];
+            _answerViewController = aVC;
         }
     }
     return self;
