@@ -93,6 +93,7 @@
                         <viewLayoutGuide key="safeArea" id="a22-fF-mlf"/>
                     </view>
                     <connections>
+                        <outlet property="constraint_ScrollBottom" destination="K1v-w7-ORB" id="uYs-6I-LJG"/>
                         <outlet property="scroll_Chat" destination="zIT-LY-vmY" id="VgV-gA-sZN"/>
                     </connections>
                 </viewController>

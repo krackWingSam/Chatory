@@ -18,19 +18,23 @@
 
 -(id)initWithQuestionKey:(NSString *)key withTeacher:(Teacher *)teacher {
     if (self = [super init]) {
+        _key = key;
+        _teacher = teacher;
+        
+        Chat_QuestionViewController *qVC = [[Chat_QuestionViewController alloc] initWithNibName:@"Chat_QuestionViewController" bundle:nil];
+        [qVC setQuestion:self];
+        _questionViewController = qVC;
+        
+        Chat_AnswerSheetViewController *aVC = [[Chat_AnswerSheetViewController alloc] initWithNibName:@"Chat_AnswerSheetViewController" bundle:nil];
+        [aVC setQuestion:self];
+        _answerViewController = aVC;
+        
         if ([key isEqualToString:QUESTION_KEY_01]) {
-            _key = key;
-            _teacher = teacher;
-            
-            Chat_QuestionViewController *qVC = [[Chat_QuestionViewController alloc] initWithNibName:@"Chat_QuestionViewController" bundle:nil];
-            [qVC setQuestion:self];
-            _questionViewController = qVC;
-            
-            Chat_AnswerSheetViewController *aVC = [[Chat_AnswerSheetViewController alloc] initWithNibName:@"Chat_AnswerSheetViewController" bundle:nil];
-            [aVC setQuestion:self];
-            _answerViewController = aVC;
-            
             _string_Answer = @"hop";
+        }
+        
+        if ([key isEqualToString:QUESTION_KEY_02]) {
+            _string_Answer = @"forest";
         }
     }
     return self;

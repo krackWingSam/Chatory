@@ -15,6 +15,8 @@
 @interface ChattingViewController () <Chat_QuestionViewControllerDelegate, Chat_AnswerSheetViewControllerDelegate, Chat_AnswerReactionViewControllerDelegate> {
     IBOutlet UIScrollView *scroll_Chat;
     
+    IBOutlet NSLayoutConstraint *constraint_ScrollBottom;
+    
     UIViewController *currentAnswerSheetVC;
     NSMutableArray *array_Chat;
     int questionIndex;
@@ -176,16 +178,20 @@
         [currentAnswerVC.view setAlpha:0.f];
         [self.view addSubview:currentAnswerVC.view];
         
+        [constraint_ScrollBottom setConstant:currentAnswerVC.view.frame.size.height - 57];
         [UIView animateWithDuration:AnimationDuration animations:^{
             [currentAnswerVC.view setAlpha:1.f];
         }];
     }
+    
+    [self reloadScrollView];
 }
 
 
 #pragma mark - Chat_AnswerSheetViewControllerDelegate
 -(void)isRightAnswer:(NSString *)string_Answer {
     dispatch_async(dispatch_get_main_queue(), ^{
+        [constraint_ScrollBottom setConstant:0.f];
         [UIView animateWithDuration:AnimationDuration animations:^{
             [currentAnswerSheetVC.view setAlpha:0.f];
         } completion:^(BOOL finished) {

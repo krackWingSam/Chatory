@@ -11,6 +11,7 @@
 @protocol Chat_AnswerReactionViewControllerDelegate
 
 -(void)changedViewHeight;
+-(void)loadNextQuestion;
 
 @end
 

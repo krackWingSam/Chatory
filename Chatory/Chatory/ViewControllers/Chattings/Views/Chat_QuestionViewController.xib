@@ -17,6 +17,7 @@
                 <outlet property="view_Loading" destination="UBY-iv-C66" id="GmK-J2-hqj"/>
                 <outlet property="view_Question_01_01a" destination="xS9-Xn-aTP" id="CZt-ek-jtn"/>
                 <outlet property="view_Question_01_01b" destination="RE0-mG-c3r" id="LfH-wW-vVP"/>
+                <outlet property="view_Question_02" destination="zZt-hf-zSh" id="Ne2-dB-kGg"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -175,11 +176,49 @@
             <viewLayoutGuide key="safeArea" id="pRU-pX-pH3"/>
             <point key="canvasLocation" x="158.5" y="155"/>
         </view>
+        <view contentMode="scaleToFill" id="zZt-hf-zSh">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="242"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BuU-Hh-x4U">
+                    <rect key="frame" x="20" y="5" width="48" height="48"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="48" id="5nJ-Ya-LLq"/>
+                        <constraint firstAttribute="width" constant="48" id="7sz-B9-Vlh"/>
+                    </constraints>
+                </view>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Q02_text01.png" translatesAutoresizingMaskIntoConstraints="NO" id="ObS-Cu-m41">
+                    <rect key="frame" x="78" y="5" width="246" height="72"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Q02_Gif.png" translatesAutoresizingMaskIntoConstraints="NO" id="bk3-Pm-8Sv">
+                    <rect key="frame" x="78" y="87" width="150" height="150"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="150" id="1Wb-yu-wSj"/>
+                        <constraint firstAttribute="width" constant="150" id="EHn-Ig-y4P"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" red="0.93333333330000001" green="0.93333333330000001" blue="0.93333333330000001" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="ObS-Cu-m41" firstAttribute="top" secondItem="BuU-Hh-x4U" secondAttribute="top" id="387-y9-NJ1"/>
+                <constraint firstItem="BuU-Hh-x4U" firstAttribute="leading" secondItem="ffw-Nu-NiE" secondAttribute="leading" constant="20" id="7bP-cG-ufa"/>
+                <constraint firstItem="ObS-Cu-m41" firstAttribute="leading" secondItem="BuU-Hh-x4U" secondAttribute="trailing" constant="10" id="NZi-Xj-eJO"/>
+                <constraint firstItem="BuU-Hh-x4U" firstAttribute="top" secondItem="ffw-Nu-NiE" secondAttribute="top" constant="5" id="Pc8-0t-3uu"/>
+                <constraint firstItem="bk3-Pm-8Sv" firstAttribute="leading" secondItem="ObS-Cu-m41" secondAttribute="leading" id="afr-8R-rMk"/>
+                <constraint firstItem="bk3-Pm-8Sv" firstAttribute="top" secondItem="ObS-Cu-m41" secondAttribute="bottom" constant="10" id="yuf-DG-K3V"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="ffw-Nu-NiE"/>
+            <point key="canvasLocation" x="594.5" y="170"/>
+        </view>
     </objects>
     <resources>
         <image name="Q01_Gif.png" width="150" height="150"/>
         <image name="Q01_text01.png" width="228" height="63"/>
         <image name="Q01_text02.png" width="219" height="41"/>
+        <image name="Q02_Gif.png" width="150" height="150"/>
+        <image name="Q02_text01.png" width="246" height="72"/>
         <image name="Teacher_icon.png" width="48" height="48"/>
         <image name="dot01.png" width="24" height="24"/>
         <image name="text_loading_box.png" width="114" height="42"/>

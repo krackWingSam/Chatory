@@ -12,6 +12,7 @@
     IBOutlet UIView *view_Loading;
     IBOutlet UIView *view_Question_01_01a;
     IBOutlet UIView *view_Question_01_01b;
+    IBOutlet UIView *view_Question_02;
     
     NSArray *array_Views;
     int currentIndex;
@@ -44,12 +45,17 @@
 }
 
 -(void)initUI {
+    CGRect frame = [[UIScreen mainScreen] bounds];
+    [view_Loading setFrame:CGRectMake(0, 0, frame.size.width, view_Loading.frame.size.height)];
+    
     if ([_question.key isEqualToString:QUESTION_KEY_01]) {
-        CGRect frame = [[UIScreen mainScreen] bounds];
-        [view_Loading setFrame:CGRectMake(0, 0, frame.size.width, view_Loading.frame.size.height)];
         [view_Question_01_01a setFrame:CGRectMake(0, 0, frame.size.width, view_Question_01_01a.frame.size.height)];
         [view_Question_01_01b setFrame:CGRectMake(0, 0, frame.size.width, view_Question_01_01b.frame.size.height)];
         array_Views = @[view_Question_01_01a, view_Question_01_01b];
+    }
+    if ([_question.key isEqualToString:QUESTION_KEY_02]) {
+        [view_Question_02 setFrame:CGRectMake(0, 0, frame.size.width, view_Question_02.frame.size.height)];
+        array_Views = @[view_Question_02];
     }
 }
 
@@ -91,6 +97,13 @@
 
 -(void)showViewWithIndex:(int)index {
     dispatch_async(dispatch_get_main_queue(), ^{
+        if (index >= [array_Views count]) {
+            UIView *currentView = [array_Views objectAtIndex:index - 1];
+            [self.view setFrame:CGRectMake(self.view.frame.origin.x, self.view.frame.origin.y, currentView.frame.size.width, currentView.frame.size.height)];
+            [self.delegate showViewsDone];
+            return;
+        }
+        
         UIView *currentView = [array_Views objectAtIndex:index];
         UIView *beforeView = [array_Views objectAtIndex:index-1];
         CGRect frame = [currentView frame];

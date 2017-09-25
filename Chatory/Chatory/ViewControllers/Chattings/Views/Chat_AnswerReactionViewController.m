@@ -67,16 +67,19 @@
             }
         }
         
-        [view_Reaction setFrame:CGRectMake(0, 0, frame.size.width, imageView_Reaction.frame.origin.y +  imageView_Reaction.frame.size.height)];
+        [view_Reaction setFrame:CGRectMake(0, 0, frame.size.width, imageView_Reaction.frame.origin.y +  imageView_Reaction.image.size.height)];
         
-        [self.view setFrame:CGRectMake(self.view.frame.origin.x, self.view.frame.origin.y, view_Reaction.frame.size.width, view_Reaction.frame.size.height + 5)];
+        [self.view setFrame:CGRectMake(self.view.frame.origin.x, self.view.frame.origin.y, view_Reaction.frame.size.width, imageView_Reaction.frame.origin.y + imageView_Reaction.image.size.height + 5)];
         
-        [self performSelector:@selector(requestReload) withObject:nil afterDelay:0.25f];
+        [self performSelector:@selector(requestReload) withObject:nil afterDelay:0.0f];
     });
 }
 
 -(void)requestReload {
     [self.delegate changedViewHeight];
+    if (_string_RightAnswer)
+        [self.delegate loadNextQuestion];
 }
+
 
 @end

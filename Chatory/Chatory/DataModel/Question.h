@@ -10,6 +10,7 @@
 #import "Teacher.h"
 
 #define QUESTION_KEY_01 @"question_key_01"
+#define QUESTION_KEY_02 @"question_key_02"
 
 
 @interface Question : NSObject

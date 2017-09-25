@@ -13,9 +13,11 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Chat_AnswerSheetViewController">
             <connections>
                 <outlet property="tf_Question_01_01" destination="XX7-cj-yol" id="5oN-af-CIZ"/>
+                <outlet property="tf_Speak" destination="YCo-26-dtw" id="Fia-k2-8YS"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
                 <outlet property="view_Question_01_01" destination="got-ZO-GZc" id="47p-t2-1qq"/>
                 <outlet property="view_Select" destination="Ylp-2e-AJO" id="WnL-PB-fQj"/>
+                <outlet property="view_Speak" destination="IMp-ry-ELZ" id="KSj-NE-ylw"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -123,6 +125,56 @@
             <viewLayoutGuide key="safeArea" id="GTT-fi-EEH"/>
             <point key="canvasLocation" x="27" y="120.5"/>
         </view>
+        <view contentMode="scaleToFill" id="IMp-ry-ELZ">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="183"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Q02_textbox.png" translatesAutoresizingMaskIntoConstraints="NO" id="109-ep-XKH">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="183"/>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Z0-Y2-HpI">
+                    <rect key="frame" x="144.5" y="25" width="86" height="86"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="86" id="4ZM-Hc-AJW"/>
+                        <constraint firstAttribute="width" constant="86" id="nIX-D9-pzQ"/>
+                    </constraints>
+                    <state key="normal" image="Voise_icon.png" backgroundImage="Voise_bg.png"/>
+                    <state key="selected" backgroundImage="Voise_bg.png"/>
+                    <connections>
+                        <action selector="action_Speak:" destination="-1" eventType="touchUpInside" id="EBe-73-Pm2"/>
+                    </connections>
+                </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Q02_textbox_frame.png" translatesAutoresizingMaskIntoConstraints="NO" id="stl-cq-cwU">
+                    <rect key="frame" x="20" y="136" width="335" height="37"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="37" id="5QI-51-erv"/>
+                    </constraints>
+                </imageView>
+                <textField opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="따라 읽어보세요!" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YCo-26-dtw">
+                    <rect key="frame" x="40" y="145.5" width="295" height="17"/>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+            </subviews>
+            <constraints>
+                <constraint firstItem="rLc-32-wGd" firstAttribute="bottom" secondItem="109-ep-XKH" secondAttribute="bottom" id="06N-Ch-2Gn"/>
+                <constraint firstAttribute="bottom" secondItem="stl-cq-cwU" secondAttribute="bottom" constant="10" id="4q1-GJ-CT7"/>
+                <constraint firstItem="rLc-32-wGd" firstAttribute="trailing" secondItem="stl-cq-cwU" secondAttribute="trailing" constant="20" id="8Xr-Zr-LLH"/>
+                <constraint firstItem="2Z0-Y2-HpI" firstAttribute="top" secondItem="rLc-32-wGd" secondAttribute="top" constant="25" id="Dq0-qU-0wy"/>
+                <constraint firstItem="rLc-32-wGd" firstAttribute="trailing" secondItem="109-ep-XKH" secondAttribute="trailing" id="K9z-zf-iPl"/>
+                <constraint firstItem="109-ep-XKH" firstAttribute="top" secondItem="rLc-32-wGd" secondAttribute="top" id="QIk-5K-g7V"/>
+                <constraint firstItem="2Z0-Y2-HpI" firstAttribute="centerX" secondItem="IMp-ry-ELZ" secondAttribute="centerX" id="TDg-Z6-yZN"/>
+                <constraint firstItem="YCo-26-dtw" firstAttribute="leading" secondItem="stl-cq-cwU" secondAttribute="leading" constant="20" id="Ufc-vi-Ldg"/>
+                <constraint firstItem="YCo-26-dtw" firstAttribute="trailing" secondItem="stl-cq-cwU" secondAttribute="trailing" constant="-20" id="ZWW-qf-qdW"/>
+                <constraint firstItem="109-ep-XKH" firstAttribute="leading" secondItem="rLc-32-wGd" secondAttribute="leading" id="euP-Pm-SG6"/>
+                <constraint firstItem="stl-cq-cwU" firstAttribute="leading" secondItem="rLc-32-wGd" secondAttribute="leading" constant="20" id="ojX-bw-EZB"/>
+                <constraint firstItem="YCo-26-dtw" firstAttribute="centerY" secondItem="stl-cq-cwU" secondAttribute="centerY" id="zsF-G2-gFO"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="rLc-32-wGd"/>
+            <point key="canvasLocation" x="482" y="45"/>
+        </view>
     </objects>
     <resources>
         <image name="Q01_selection01.png" width="59" height="33"/>
@@ -132,5 +184,9 @@
         <image name="Q01_sendE.png" width="30" height="30"/>
         <image name="Q01_textbox.png" width="375" height="111"/>
         <image name="Q01_textbox_frame.png" width="335" height="37"/>
+        <image name="Q02_textbox.png" width="375" height="184"/>
+        <image name="Q02_textbox_frame.png" width="335" height="37"/>
+        <image name="Voise_bg.png" width="86" height="86"/>
+        <image name="Voise_icon.png" width="31" height="51"/>
     </resources>
 </document>
