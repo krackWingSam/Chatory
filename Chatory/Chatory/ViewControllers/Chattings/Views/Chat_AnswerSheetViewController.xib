@@ -141,7 +141,9 @@
                     <state key="normal" image="Voise_icon.png" backgroundImage="Voise_bg.png"/>
                     <state key="selected" backgroundImage="Voise_bg.png"/>
                     <connections>
-                        <action selector="action_Speak:" destination="-1" eventType="touchUpInside" id="EBe-73-Pm2"/>
+                        <action selector="action_StartSpeak:" destination="-1" eventType="touchDown" id="We0-64-zjJ"/>
+                        <action selector="action_StopSpeak:" destination="-1" eventType="touchUpOutside" id="Bad-r0-gdx"/>
+                        <action selector="action_StopSpeak:" destination="-1" eventType="touchUpInside" id="dBR-cO-dVo"/>
                     </connections>
                 </button>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Q02_textbox_frame.png" translatesAutoresizingMaskIntoConstraints="NO" id="stl-cq-cwU">

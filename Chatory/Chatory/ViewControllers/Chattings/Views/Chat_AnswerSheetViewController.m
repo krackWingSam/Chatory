@@ -7,14 +7,17 @@
 //
 
 #import "Chat_AnswerSheetViewController.h"
+#import "CTSpeechRecognizer.h"
 
-@interface Chat_AnswerSheetViewController () {
+@interface Chat_AnswerSheetViewController () <CTSpeechRecognizerDelegate> {
     IBOutlet UIView *view_Select;
     IBOutlet UITextField *tf_Question_01_01;
     IBOutlet UIView *view_Question_01_01;
     
     IBOutlet UIView *view_Speak;
     IBOutlet UITextField *tf_Speak;
+    
+    CTSpeechRecognizer *speechRecognizer;
     
     NSString *currentAnswer;
 }
@@ -40,6 +43,9 @@
 }
 
 -(void)initUI {
+    speechRecognizer = [CTSpeechRecognizer sharedRecognizer];
+    [speechRecognizer setDelegate:self];
+    
     CGRect frame = [[UIScreen mainScreen] bounds];
     
     if ([_question.key isEqualToString:QUESTION_KEY_01]) {
@@ -59,6 +65,7 @@
 -(IBAction)action_Send:(id)sender {
     [self.delegate isRightAnswer:currentAnswer];
     [tf_Question_01_01 setText:nil];
+    [tf_Speak setText:nil];
 }
 
 -(IBAction)action_Select:(UIButton *)sender {
@@ -68,8 +75,25 @@
     }
 }
 
--(IBAction)action_Speak:(id)sender {
+-(IBAction)action_StartSpeak:(id)sender {
+    [speechRecognizer start];
+}
+
+-(IBAction)action_StopSpeak:(id)sender {
+    [speechRecognizer stop];
+}
+
+
+#pragma mark - CTSpeechRecognizer
+-(void)speechedText:(NSString *)string {
+    [tf_Speak setText:string];
+    currentAnswer = string;
     
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [UIView animateWithDuration:AnimationDuration animations:^{
+            
+        }];
+    });
 }
 
 

@@ -113,8 +113,11 @@
         
         [scroll_Chat setContentSize:CGSizeMake(frame.size.width, lastYPosition)];
         
-        if (lastYPosition > scroll_Chat.frame.size.height)
-            [scroll_Chat setContentOffset:CGPointMake(0, lastYPosition - scroll_Chat.frame.size.height)];
+        if (lastYPosition > scroll_Chat.frame.size.height) {
+            [UIView animateWithDuration:AnimationDuration animations:^{
+                [scroll_Chat setContentOffset:CGPointMake(0, lastYPosition - scroll_Chat.frame.size.height)];
+            }];
+        }
     });
 }
 

@@ -54,6 +54,7 @@
             break;
             
         case 1:
+            [self performSegueWithIdentifier:@"ShowSTTSegue" sender:nil];
             break;
             
         case 2:

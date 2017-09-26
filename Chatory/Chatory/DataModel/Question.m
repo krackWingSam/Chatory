@@ -34,7 +34,7 @@
         }
         
         if ([key isEqualToString:QUESTION_KEY_02]) {
-            _string_Answer = @"forest";
+            _string_Answer = @"Forest";
         }
     }
     return self;
