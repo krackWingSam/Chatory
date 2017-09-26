@@ -7,12 +7,15 @@
 //
 
 #import "Chat_QuestionViewController.h"
+#import <AVFoundation/AVFoundation.h>
 
 @interface Chat_QuestionViewController () {
     IBOutlet UIView *view_Loading;
     IBOutlet UIView *view_Question_01_01a;
     IBOutlet UIView *view_Question_01_01b;
     IBOutlet UIView *view_Question_02;
+    
+    AVAudioPlayer *player;
     
     NSArray *array_Views;
     int currentIndex;
@@ -56,6 +59,10 @@
     if ([_question.key isEqualToString:QUESTION_KEY_02]) {
         [view_Question_02 setFrame:CGRectMake(0, 0, frame.size.width, view_Question_02.frame.size.height)];
         array_Views = @[view_Question_02];
+        
+        NSString *path = [[NSBundle mainBundle] pathForResource:@"forest-1" ofType:@"m4a"];
+        NSURL *url = [NSURL URLWithString:path];
+        player = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:nil];
     }
 }
 
@@ -130,6 +137,12 @@
                 [self showViewWithIndex:currentIndex];
         }];
     });
+}
+
+
+#pragma mark - IBActions
+-(IBAction)action_PlayQuestion02:(id)sender {
+    [player play];
 }
 
 @end

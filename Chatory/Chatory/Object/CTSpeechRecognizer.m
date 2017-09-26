@@ -63,7 +63,7 @@
 -(void)start {
     [self initSTT];
     
-    if (task && speechRecognizer.isAvailable == NO)
+    if (task || speechRecognizer.isAvailable == NO)
         return;
     
     NSError *error = nil;

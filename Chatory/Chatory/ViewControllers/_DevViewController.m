@@ -58,6 +58,7 @@
             break;
             
         case 2:
+            [self performSegueWithIdentifier:@"ShowSoundSegue" sender:nil];
             break;
             
         case 3:

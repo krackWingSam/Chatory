@@ -86,10 +86,11 @@
 
 #pragma mark - CTSpeechRecognizer
 -(void)speechedText:(NSString *)string {
-    [tf_Speak setText:string];
-    currentAnswer = string;
-    
     dispatch_async(dispatch_get_main_queue(), ^{
+        
+        [tf_Speak setText:string];
+        currentAnswer = string;
+        
         [UIView animateWithDuration:AnimationDuration animations:^{
             
         }];

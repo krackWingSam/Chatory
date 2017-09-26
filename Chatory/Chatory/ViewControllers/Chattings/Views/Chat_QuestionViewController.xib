@@ -198,14 +198,29 @@
                         <constraint firstAttribute="width" constant="150" id="EHn-Ig-y4P"/>
                     </constraints>
                 </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Q02_sound_icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="lfO-4q-6sL">
+                    <rect key="frame" x="189" y="97" width="29" height="29"/>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K28-nL-fbJ">
+                    <rect key="frame" x="78" y="87" width="150" height="150"/>
+                    <connections>
+                        <action selector="action_PlayQuestion02:" destination="-1" eventType="touchUpInside" id="Po9-l2-kyI"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" red="0.93333333330000001" green="0.93333333330000001" blue="0.93333333330000001" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
                 <constraint firstItem="ObS-Cu-m41" firstAttribute="top" secondItem="BuU-Hh-x4U" secondAttribute="top" id="387-y9-NJ1"/>
+                <constraint firstItem="bk3-Pm-8Sv" firstAttribute="top" secondItem="lfO-4q-6sL" secondAttribute="top" constant="-10" id="3rE-5C-IjC"/>
                 <constraint firstItem="BuU-Hh-x4U" firstAttribute="leading" secondItem="ffw-Nu-NiE" secondAttribute="leading" constant="20" id="7bP-cG-ufa"/>
+                <constraint firstItem="K28-nL-fbJ" firstAttribute="top" secondItem="bk3-Pm-8Sv" secondAttribute="top" id="JPo-4q-lgf"/>
                 <constraint firstItem="ObS-Cu-m41" firstAttribute="leading" secondItem="BuU-Hh-x4U" secondAttribute="trailing" constant="10" id="NZi-Xj-eJO"/>
                 <constraint firstItem="BuU-Hh-x4U" firstAttribute="top" secondItem="ffw-Nu-NiE" secondAttribute="top" constant="5" id="Pc8-0t-3uu"/>
+                <constraint firstItem="K28-nL-fbJ" firstAttribute="bottom" secondItem="bk3-Pm-8Sv" secondAttribute="bottom" id="Wck-CR-gD3"/>
                 <constraint firstItem="bk3-Pm-8Sv" firstAttribute="leading" secondItem="ObS-Cu-m41" secondAttribute="leading" id="afr-8R-rMk"/>
+                <constraint firstItem="K28-nL-fbJ" firstAttribute="trailing" secondItem="bk3-Pm-8Sv" secondAttribute="trailing" id="h1V-N3-Oaz"/>
+                <constraint firstItem="bk3-Pm-8Sv" firstAttribute="trailing" secondItem="lfO-4q-6sL" secondAttribute="trailing" constant="10" id="k2Y-L6-LYT"/>
+                <constraint firstItem="K28-nL-fbJ" firstAttribute="leading" secondItem="bk3-Pm-8Sv" secondAttribute="leading" id="lOy-bG-ikb"/>
                 <constraint firstItem="bk3-Pm-8Sv" firstAttribute="top" secondItem="ObS-Cu-m41" secondAttribute="bottom" constant="10" id="yuf-DG-K3V"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
@@ -218,6 +233,7 @@
         <image name="Q01_text01.png" width="228" height="63"/>
         <image name="Q01_text02.png" width="219" height="41"/>
         <image name="Q02_Gif.png" width="150" height="150"/>
+        <image name="Q02_sound_icon.png" width="29" height="29"/>
         <image name="Q02_text01.png" width="246" height="72"/>
         <image name="Teacher_icon.png" width="48" height="48"/>
         <image name="dot01.png" width="24" height="24"/>

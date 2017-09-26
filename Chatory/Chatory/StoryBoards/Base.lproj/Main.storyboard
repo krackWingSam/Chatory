@@ -61,6 +61,52 @@
             </objects>
             <point key="canvasLocation" x="-540" y="-546"/>
         </scene>
+        <!--Sound View Controller-->
+        <scene sceneID="vRo-aT-ahQ">
+            <objects>
+                <viewController id="OmG-6j-XGj" customClass="SoundViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="yKa-Qf-GKZ"/>
+                        <viewControllerLayoutGuide type="bottom" id="YzL-AA-jvv"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="4I7-dH-Df4">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8N6-Cq-uFl">
+                                <rect key="frame" x="16" y="20" width="40" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="oMi-Vp-BfU"/>
+                                </constraints>
+                                <state key="normal" title="BACK"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Klo-c8-0zd">
+                                <rect key="frame" x="16" y="90" width="80" height="80"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="80" id="1N8-cu-MTK"/>
+                                    <constraint firstAttribute="height" constant="80" id="Rbc-Fn-7nI"/>
+                                </constraints>
+                                <state key="normal" title="Play">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Klo-c8-0zd" firstAttribute="leading" secondItem="4I7-dH-Df4" secondAttribute="leadingMargin" id="3gL-Jk-yxf"/>
+                            <constraint firstItem="8N6-Cq-uFl" firstAttribute="leading" secondItem="4I7-dH-Df4" secondAttribute="leadingMargin" id="9w8-vD-gFQ"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Klo-c8-0zd" secondAttribute="trailingMargin" id="LQ1-P2-Aa3"/>
+                            <constraint firstItem="Klo-c8-0zd" firstAttribute="top" secondItem="8N6-Cq-uFl" secondAttribute="bottom" constant="20" id="M3y-HJ-QNW"/>
+                            <constraint firstItem="8N6-Cq-uFl" firstAttribute="top" secondItem="yKa-Qf-GKZ" secondAttribute="bottom" id="roS-sJ-616"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="8N6-Cq-uFl" secondAttribute="trailingMargin" id="wQX-I0-9O6"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="B3S-w1-LLW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-567" y="-1226"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="Bjb-5v-erX">
             <objects>
@@ -216,6 +262,7 @@
                         <outlet property="table_DevList" destination="Aah-55-e3G" id="yq5-Ow-DpN"/>
                         <segue destination="5Wn-0Q-WEb" kind="show" identifier="ShowChattingSegue" id="QNj-3y-Gus"/>
                         <segue destination="RBg-OA-edl" kind="show" identifier="ShowSTTSegue" id="dV6-nv-GjO"/>
+                        <segue destination="OmG-6j-XGj" kind="show" identifier="ShowSoundSegue" id="nji-qV-6dG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TDN-9Y-Su6" userLabel="First Responder" sceneMemberID="firstResponder"/>
