@@ -17,6 +17,7 @@
     
     AVAudioPlayer *player;
     
+    CGPoint position_Loading;
     NSArray *array_Views;
     int currentIndex;
 }
@@ -49,7 +50,7 @@
 
 -(void)initUI {
     CGRect frame = [[UIScreen mainScreen] bounds];
-    [view_Loading setFrame:CGRectMake(0, 0, frame.size.width, view_Loading.frame.size.height)];
+    position_Loading = CGPointMake(0, 0);
     
     if ([_question.key isEqualToString:QUESTION_KEY_01]) {
         [view_Question_01_01a setFrame:CGRectMake(0, 0, frame.size.width, view_Question_01_01a.frame.size.height)];
@@ -70,6 +71,8 @@
 #pragma mark - Animations
 -(void)showLoading {
     dispatch_async(dispatch_get_main_queue(), ^{
+        [view_Loading setFrame:CGRectMake(position_Loading.x, position_Loading.y, self.view.frame.size.width, view_Loading.frame.size.height)];
+        
         [view_Loading setAlpha:0.f];
         [view_Loading setFrame:CGRectMake(-self.view.frame.size.width/2, 0, view_Loading.frame.size.width, view_Loading.frame.size.height)];
         [self.view addSubview:view_Loading];

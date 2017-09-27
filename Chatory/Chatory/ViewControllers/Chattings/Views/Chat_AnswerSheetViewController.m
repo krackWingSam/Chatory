@@ -90,10 +90,6 @@
         
         [tf_Speak setText:string];
         currentAnswer = string;
-        
-        [UIView animateWithDuration:AnimationDuration animations:^{
-            
-        }];
     });
 }
 
