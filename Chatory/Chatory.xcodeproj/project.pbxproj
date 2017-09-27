@@ -25,6 +25,7 @@
 		CA3900381F79E29400343521 /* TSSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA3900371F79E29400343521 /* TSSViewController.m */; };
 		CA39003B1F79FA1B00343521 /* forest-1.m4a in Resources */ = {isa = PBXBuildFile; fileRef = CA39003A1F79F7C100343521 /* forest-1.m4a */; };
 		CA39003E1F7A082E00343521 /* SoundViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA39003D1F7A082E00343521 /* SoundViewController.m */; };
+		CA4FCBF51F7B306F005B97AF /* TestAnswerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA4FCBF41F7B306F005B97AF /* TestAnswerViewController.m */; };
 		CA5C89491F748F50009431D6 /* ChatBot.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA5C89481F748F50009431D6 /* ChatBot.storyboard */; };
 		CA5C89C91F74A8E1009431D6 /* Chat_QuestionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA5C89C71F74A8E1009431D6 /* Chat_QuestionViewController.m */; };
 		CA5C89CA1F74A8E1009431D6 /* Chat_QuestionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA5C89C81F74A8E1009431D6 /* Chat_QuestionViewController.xib */; };
@@ -151,6 +152,8 @@
 		CA39003A1F79F7C100343521 /* forest-1.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "forest-1.m4a"; sourceTree = "<group>"; };
 		CA39003C1F7A082E00343521 /* SoundViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SoundViewController.h; sourceTree = "<group>"; };
 		CA39003D1F7A082E00343521 /* SoundViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SoundViewController.m; sourceTree = "<group>"; };
+		CA4FCBF31F7B306F005B97AF /* TestAnswerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestAnswerViewController.h; sourceTree = "<group>"; };
+		CA4FCBF41F7B306F005B97AF /* TestAnswerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestAnswerViewController.m; sourceTree = "<group>"; };
 		CA5C89481F748F50009431D6 /* ChatBot.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ChatBot.storyboard; sourceTree = "<group>"; };
 		CA5C89C61F74A8E1009431D6 /* Chat_QuestionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Chat_QuestionViewController.h; sourceTree = "<group>"; };
 		CA5C89C71F74A8E1009431D6 /* Chat_QuestionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Chat_QuestionViewController.m; sourceTree = "<group>"; };
@@ -388,6 +391,8 @@
 				CA3900371F79E29400343521 /* TSSViewController.m */,
 				CA39003C1F7A082E00343521 /* SoundViewController.h */,
 				CA39003D1F7A082E00343521 /* SoundViewController.m */,
+				CA4FCBF31F7B306F005B97AF /* TestAnswerViewController.h */,
+				CA4FCBF41F7B306F005B97AF /* TestAnswerViewController.m */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -958,6 +963,7 @@
 				CA0A268F1F70AC4D00209E05 /* AppDelegate.m in Sources */,
 				CA39003E1F7A082E00343521 /* SoundViewController.m in Sources */,
 				CA8C373A1F78CC7B00FDCB58 /* Content.m in Sources */,
+				CA4FCBF51F7B306F005B97AF /* TestAnswerViewController.m in Sources */,
 				CADB75731F78EBBA00B84433 /* Chat_AnswerReactionViewController.m in Sources */,
 				CADB75691F78E5CE00B84433 /* UserAnswerViewController.m in Sources */,
 				CA3900381F79E29400343521 /* TSSViewController.m in Sources */,
