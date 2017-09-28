@@ -51,21 +51,39 @@
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Textbox_frame.png" translatesAutoresizingMaskIntoConstraints="NO" id="w9G-lN-775">
                                         <rect key="frame" x="20" y="10" width="335" height="37"/>
                                     </imageView>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EnO-Q3-bYG">
+                                        <rect key="frame" x="30" y="19.5" width="315" height="17"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PGt-Xy-Sln">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="57"/>
                                         <connections>
                                             <action selector="action_TextField:" destination="SNQ-sq-eLi" eventType="touchUpInside" id="iul-Dl-3xs"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Nv-d2-yJf">
+                                        <rect key="frame" x="315" y="13" width="30" height="30"/>
+                                        <state key="normal" image="Q01_sendE.png"/>
+                                        <connections>
+                                            <action selector="action_SendAnswer:" destination="SNQ-sq-eLi" eventType="touchUpInside" id="e5e-L6-Lmq"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
+                                    <constraint firstItem="EnO-Q3-bYG" firstAttribute="leading" secondItem="w9G-lN-775" secondAttribute="leading" constant="10" id="0LL-6i-mID"/>
                                     <constraint firstAttribute="bottom" secondItem="PGt-Xy-Sln" secondAttribute="bottom" id="9q3-Ua-z3W"/>
+                                    <constraint firstItem="3Nv-d2-yJf" firstAttribute="trailing" secondItem="EnO-Q3-bYG" secondAttribute="trailing" id="J6b-QT-Lsd"/>
                                     <constraint firstAttribute="bottom" secondItem="w9G-lN-775" secondAttribute="bottom" constant="10" id="JaJ-pW-KLH"/>
                                     <constraint firstAttribute="trailing" secondItem="w9G-lN-775" secondAttribute="trailing" constant="20" id="L77-5a-BdI"/>
                                     <constraint firstItem="w9G-lN-775" firstAttribute="leading" secondItem="nBv-JP-MRX" secondAttribute="leading" constant="20" id="MSe-xJ-S4E"/>
                                     <constraint firstItem="PGt-Xy-Sln" firstAttribute="leading" secondItem="nBv-JP-MRX" secondAttribute="leading" id="Poq-FK-bYG"/>
                                     <constraint firstItem="w9G-lN-775" firstAttribute="top" secondItem="nBv-JP-MRX" secondAttribute="top" constant="10" id="PrD-hb-sZS"/>
+                                    <constraint firstItem="3Nv-d2-yJf" firstAttribute="centerY" secondItem="EnO-Q3-bYG" secondAttribute="centerY" id="WG1-53-vlH"/>
+                                    <constraint firstItem="EnO-Q3-bYG" firstAttribute="centerY" secondItem="w9G-lN-775" secondAttribute="centerY" id="XPZ-2W-W0d"/>
+                                    <constraint firstItem="EnO-Q3-bYG" firstAttribute="trailing" secondItem="w9G-lN-775" secondAttribute="trailing" constant="-10" id="a0D-gT-qrK"/>
                                     <constraint firstAttribute="trailing" secondItem="PGt-Xy-Sln" secondAttribute="trailing" id="cBO-YC-U6j"/>
                                     <constraint firstItem="PGt-Xy-Sln" firstAttribute="top" secondItem="nBv-JP-MRX" secondAttribute="top" id="jRT-W9-IOm"/>
                                     <constraint firstAttribute="height" constant="57" id="kD0-9f-q3P"/>
@@ -93,8 +111,11 @@
                         <viewLayoutGuide key="safeArea" id="a22-fF-mlf"/>
                     </view>
                     <connections>
-                        <outlet property="constraint_ScrollBottom" destination="K1v-w7-ORB" id="uYs-6I-LJG"/>
+                        <outlet property="button_Send" destination="3Nv-d2-yJf" id="Pv5-4K-BgX"/>
+                        <outlet property="button_TextField" destination="PGt-Xy-Sln" id="Hsk-vP-0yU"/>
                         <outlet property="scroll_Chat" destination="zIT-LY-vmY" id="VgV-gA-sZN"/>
+                        <outlet property="tf_Answer" destination="EnO-Q3-bYG" id="B19-fj-8cI"/>
+                        <outlet property="view_TFBackground" destination="nBv-JP-MRX" id="Wh4-xQ-1hP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RfC-Uy-PSs" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -103,6 +124,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Q01_sendE.png" width="30" height="30"/>
         <image name="Textbox_frame.png" width="335" height="37"/>
         <image name="Top_bar.png" width="375" height="56"/>
         <image name="Top_bar_back.png" width="12" height="19"/>

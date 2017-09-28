@@ -11,6 +11,7 @@
 
 @interface TestChatLoadingViewController () {
     Chat_LoadingViewController *loadingVC;
+    Chat_LoadingViewController *moveLoadingVC;
     
     Content *_content;
 }
@@ -32,10 +33,33 @@
 -(void)viewDidAppear:(BOOL)animated {
     _content = [ContentManager getContentWithContentKey:CONTENT_KEY_01 withTeacherKey:TEACHER_KEY_TIGER];
     loadingVC = [[Chat_LoadingViewController alloc] initWithNibName:@"Chat_LoadingViewController" bundle:nil];
-    [loadingVC setQuestion:[[_content array_Question] objectAtIndex:0]];
+    [loadingVC setTeacher:_content.teacher];
     
     [loadingVC.view setFrame:CGRectMake(0, 100, loadingVC.view.frame.size.width, loadingVC.view.frame.size.height)];
     [self.view addSubview:loadingVC.view];
+    
+    moveLoadingVC = [[Chat_LoadingViewController alloc] initWithNibName:@"Chat_LoadingViewController" bundle:nil];
+    [moveLoadingVC setTeacher:_content.teacher];
+    
+    [self performSelector:@selector(animation) withObject:nil afterDelay:1.f];
+}
+
+
+#pragma mark - Animations
+-(void)animation {
+    CGRect frame = [[UIScreen mainScreen] bounds];
+    UIView *view = moveLoadingVC.view;
+    [view removeFromSuperview];
+    
+    [view setFrame:CGRectMake(-frame.size.width/2, 300, view.frame.size.width, view.frame.size.height)];
+    [self.view addSubview:view];
+    [UIView animateWithDuration:0.4f animations:^{
+        [view setFrame:CGRectMake(30, 300, view.frame.size.width, view.frame.size.height)];
+    } completion:^(BOOL finished) {
+        [UIView animateWithDuration:0.2f animations:^{
+            [view setFrame:CGRectMake(0, 300, view.frame.size.width, view.frame.size.height)];
+        }];
+    }];
 }
 
 

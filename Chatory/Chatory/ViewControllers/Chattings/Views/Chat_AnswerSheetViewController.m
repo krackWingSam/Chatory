@@ -11,11 +11,10 @@
 
 @interface Chat_AnswerSheetViewController () <CTSpeechRecognizerDelegate> {
     IBOutlet UIView *view_Select;
-    IBOutlet UITextField *tf_Question_01_01;
+    
     IBOutlet UIView *view_Question_01_01;
     
     IBOutlet UIView *view_Speak;
-    IBOutlet UITextField *tf_Speak;
     
     CTSpeechRecognizer *speechRecognizer;
     
@@ -53,26 +52,24 @@
         [self.view addSubview:view_Select];
         [view_Question_01_01 setFrame:CGRectMake(view_Select.frame.size.width/2 - view_Question_01_01.frame.size.width/2, 15, view_Question_01_01.frame.size.width, view_Question_01_01.frame.size.height)];
         [view_Select addSubview:view_Question_01_01];
+        
+        _placeHolder = @"정답을 입력해주세요.";
     }
     if ([_question.key isEqualToString:QUESTION_KEY_02]) {
         [self.view setFrame:CGRectMake(0, frame.size.height - view_Speak.frame.size.height, frame.size.width, view_Speak.frame.size.height)];
         [self.view addSubview:view_Speak];
+        
+        _placeHolder = @"따라 읽어보세요.";
     }
 }
 
 
 #pragma mark - IBActions
--(IBAction)action_Send:(id)sender {
-    [self.delegate isRightAnswer:currentAnswer];
-    [tf_Question_01_01 setText:nil];
-    [tf_Speak setText:nil];
-}
-
 -(IBAction)action_Select:(UIButton *)sender {
     if ([_question.key isEqualToString:QUESTION_KEY_01]) {
-        [tf_Question_01_01 setText:[sender restorationIdentifier]];
         currentAnswer = [sender restorationIdentifier];
     }
+    [self.delegate selectAnswer:currentAnswer];
 }
 
 -(IBAction)action_StartSpeak:(id)sender {
@@ -87,9 +84,9 @@
 #pragma mark - CTSpeechRecognizer
 -(void)speechedText:(NSString *)string {
     dispatch_async(dispatch_get_main_queue(), ^{
-        
-        [tf_Speak setText:string];
         currentAnswer = string;
+        
+        [self.delegate selectAnswer:currentAnswer];
     });
 }
 

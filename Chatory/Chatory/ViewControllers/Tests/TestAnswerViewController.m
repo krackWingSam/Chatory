@@ -52,7 +52,11 @@
         [view_Answer setFrame:CGRectMake(0, frame.size.height, view_Answer.frame.size.width, view_Answer.frame.size.height)];
         [self.view insertSubview:view_Answer belowSubview:view_AnswerRect];
         [UIView animateWithDuration:0.5f animations:^{
-            [view_Answer setFrame:CGRectMake(0, frame.size.height - view_Answer.frame.size.height, view_Answer.frame.size.width, view_Answer.frame.size.height)];
+            [view_Answer setFrame:CGRectMake(0, frame.size.height - view_Answer.frame.size.height + 20, view_Answer.frame.size.width, view_Answer.frame.size.height)];
+        } completion:^(BOOL finished) {
+            [UIView animateWithDuration:0.2f animations:^{
+                [view_Answer setFrame:CGRectMake(0, frame.size.height - view_Answer.frame.size.height, view_Answer.frame.size.width, view_Answer.frame.size.height)];
+            }];
         }];
     });
 }

@@ -10,7 +10,7 @@
 
 @protocol Chat_AnswerSheetViewControllerDelegate
 
--(void)isRightAnswer:(NSString *)string_Answer;
+-(void)selectAnswer:(NSString *)string_Answer;
 
 @end
 
@@ -18,6 +18,7 @@
 @interface Chat_AnswerSheetViewController : UIViewController
 
 @property Question *question;
+@property (readonly) NSString *placeHolder;
 @property id <Chat_AnswerSheetViewControllerDelegate> delegate;
 
 @end

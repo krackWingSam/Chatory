@@ -10,6 +10,7 @@
 
 @interface UserAnswerViewController () {
     IBOutlet UIImageView *imageView;
+    IBOutlet UILabel *label_Answer;
 }
 
 @end
@@ -34,14 +35,9 @@
 
 -(void)initUI {
     UIImage *image;
-    if ([_string_Answer isEqualToString:@"hop"])
-        image = [UIImage imageNamed:@"Q01_correct_answer"];
-    if ([_string_Answer isEqualToString:@"crawl"])
-        image = [UIImage imageNamed:@"Q01_wrong01_answer"];
-    if ([_string_Answer isEqualToString:@"waddle"])
-        image = [UIImage imageNamed:@"Q01_wrong02_answer"];
-    if ([_string_Answer isEqualToString:@"flap"])
-        image = [UIImage imageNamed:@"Q01_wrong03_answer"];
+    
+    image = [UIImage imageNamed:@"null_bubble"];
+    [label_Answer setText:_string_Answer];
     
     [imageView setImage:image];
 }

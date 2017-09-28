@@ -27,8 +27,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    
-    [self initUI];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -39,14 +37,15 @@
 -(void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     
+    [self initUI];
     isStop = NO;
-    [self showDotAnimation];
 }
 
 -(void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
     
     isStop = YES;
+    dotIndex = 0;
 }
 
 -(void)initUI {
@@ -58,7 +57,7 @@
     for (UIImageView *imageView in array_Dot)
         [imageView setAlpha:0.f];
     
-    [imageView_Icon setImage:_question.teacher.icon];
+    [imageView_Icon setImage:_teacher.icon];
 }
 
 
@@ -95,12 +94,24 @@
             dotIndex += 1;
             if (dotIndex == [array_Dot count]) {
                 dotIndex = 0;
-                [self showDotAnimation];
+                
+                if (self.delegate)
+                    [self.delegate doneLoadingAnimation];
+                else
+                    [self showDotAnimation];
             }
             else
                 [self hideDotAnimation];
         }];
     });
+}
+
+
+#pragma mark - properties
+-(void)setShowIcon:(BOOL)showIcon {
+    _showIcon = showIcon;
+    
+    [imageView_Icon setHidden:!_showIcon];
 }
 
 

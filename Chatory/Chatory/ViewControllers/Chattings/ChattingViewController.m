@@ -12,10 +12,12 @@
 #import "UserAnswerViewController.h"
 #import "Chat_AnswerReactionViewController.h"
 
-@interface ChattingViewController () <Chat_QuestionViewControllerDelegate, Chat_AnswerSheetViewControllerDelegate, Chat_AnswerReactionViewControllerDelegate> {
+@interface ChattingViewController () <ChatCellDelegate, Chat_AnswerSheetViewControllerDelegate> {
     IBOutlet UIScrollView *scroll_Chat;
-    
-    IBOutlet NSLayoutConstraint *constraint_ScrollBottom;
+    IBOutlet UIView *view_TFBackground;
+    IBOutlet UITextField *tf_Answer;
+    IBOutlet UIButton *button_TextField;
+    IBOutlet UIButton *button_Send;
     
     UIViewController *currentAnswerSheetVC;
     NSMutableArray *array_Chat;
@@ -32,6 +34,7 @@
     array_Chat = [[NSMutableArray alloc] init];
     
     _content = [ContentManager getContentWithContentKey:CONTENT_KEY_01 withTeacherKey:TEACHER_KEY_TIGER];
+    [button_Send setHidden:YES];
 }
 
 -(void)viewWillAppear:(BOOL)animated {
@@ -102,7 +105,6 @@
             if (i == 0)
                 lastYPosition = 20;
             
-            
             CGRect frame = [vc.view frame];
             frame.origin.y = lastYPosition;
             [vc.view setFrame:frame];
@@ -111,10 +113,9 @@
             lastYPosition += vc.view.frame.size.height;
         }
         
-        
         if (lastYPosition > scroll_Chat.frame.size.height) {
             [UIView animateWithDuration:AnimationDuration animations:^{
-                [scroll_Chat setContentSize:CGSizeMake(frame.size.width, lastYPosition)];
+                [scroll_Chat setContentSize:CGSizeMake(frame.size.width, lastYPosition + currentAnswerSheetVC.view.frame.size.height - view_TFBackground.frame.size.height)];
                 [scroll_Chat setContentOffset:CGPointMake(0, lastYPosition - scroll_Chat.frame.size.height)];
             }];
         }
@@ -145,7 +146,43 @@
 }
 
 -(void)showAnswerSheet {
-    
+    dispatch_async(dispatch_get_main_queue(), ^{
+        if (currentAnswerSheetVC == nil)
+            return;
+        
+        CGRect frame = [[UIScreen mainScreen] bounds];
+        [currentAnswerSheetVC.view setFrame:CGRectMake(0, frame.size.height, currentAnswerSheetVC.view.frame.size.width, currentAnswerSheetVC.view.frame.size.height)];
+        [self.view insertSubview:currentAnswerSheetVC.view belowSubview:view_TFBackground];
+        
+        NSString *placeHolder = [(Chat_AnswerSheetViewController *)currentAnswerSheetVC placeHolder];
+        [tf_Answer setPlaceholder:placeHolder];
+        
+        [UIView animateWithDuration:0.3f animations:^{
+            [currentAnswerSheetVC.view setFrame:CGRectMake(0, frame.size.height - currentAnswerSheetVC.view.frame.size.height - 10, currentAnswerSheetVC.view.frame.size.width, currentAnswerSheetVC.view.frame.size.height)];
+        } completion:^(BOOL finished) {
+            [UIView animateWithDuration:0.2f animations:^{
+                [currentAnswerSheetVC.view setFrame:CGRectMake(0, frame.size.height - currentAnswerSheetVC.view.frame.size.height, currentAnswerSheetVC.view.frame.size.width, currentAnswerSheetVC.view.frame.size.height)];
+                
+                if (scroll_Chat.contentSize.height > scroll_Chat.frame.size.height)
+                    [scroll_Chat setContentOffset:CGPointMake(0, scroll_Chat.contentSize.height -(scroll_Chat.frame.size.height))];
+            }];
+        }];
+    });
+}
+
+-(void)hideAnswerSheet {
+    dispatch_async(dispatch_get_main_queue(), ^{
+        if (currentAnswerSheetVC == nil)
+            return;
+        
+        CGRect frame = [[UIScreen mainScreen] bounds];
+        [UIView animateWithDuration:0.4f animations:^{
+            [currentAnswerSheetVC.view setFrame:CGRectMake(0, frame.size.height, currentAnswerSheetVC.view.frame.size.width, currentAnswerSheetVC.view.frame.size.height)];
+        } completion:^(BOOL finished) {
+            [currentAnswerSheetVC.view removeFromSuperview];
+            [tf_Answer setPlaceholder:@""];
+        }];
+    });
 }
 
 
@@ -157,19 +194,39 @@
 
 -(IBAction)action_TextField:(id)sender {
     dispatch_async(dispatch_get_main_queue(), ^{
+        currentAnswerSheetVC = _content.currentQuestion.answerViewController;
         UIViewController *currentQuestionVC = _content.currentQuestion.questionViewController;
-        CGFloat yPosition = [currentQuestionVC.view frame].origin.y;
+        CGFloat yPosition = [currentQuestionVC.view frame].origin.y - 20;
         
-        [self.view addSubview:currentAnswerSheetVC.view];
-        [currentAnswerSheetVC.view setAlpha:0.f];
-        
-        [UIView animateWithDuration:AnimationDuration animations:^{
-            [scroll_Chat setContentOffset:CGPointMake(0, yPosition - 40)];
-        } completion:^(BOOL finished) {
-            [UIView animateWithDuration:AnimationDuration animations:^{
-                [currentAnswerSheetVC.view setAlpha:1.f];
-            }];
+        [UIView animateWithDuration:0.2f animations:^{
+            [scroll_Chat setContentOffset:CGPointMake(0, yPosition)];
         }];
+        [self showAnswerSheet];
+    });
+}
+
+-(IBAction)action_SendAnswer:(id)sender {
+    dispatch_async(dispatch_get_main_queue(), ^{
+        UserAnswerViewController *answerVC = [[UserAnswerViewController alloc] initWithNibName:@"UserAnswerViewController" bundle:nil];
+        [answerVC setString_Answer:tf_Answer.text];
+        
+        [array_Chat addObject:answerVC];
+        
+        Chat_AnswerReactionViewController *vc = [[Chat_AnswerReactionViewController alloc] initWithNibName:@"Chat_AnswerReactionViewController" bundle:nil];
+        [vc setDelegate:self];
+        [vc setQuestion:_content.currentQuestion];
+        
+        if ([_content.currentQuestion isAnswer:tf_Answer.text])
+            [vc setString_RightAnswer:tf_Answer.text];
+        else
+            [vc setString_WrongAnswer:tf_Answer.text];
+        
+        [array_Chat addObject:vc];
+        
+        [self reloadScrollView];
+        [self hideAnswerSheet];
+        
+        [tf_Answer setText:@""];
     });
 }
 
@@ -181,14 +238,7 @@
     
     if ([currentAnswerVC class] == [Chat_AnswerSheetViewController class]) {
         [(Chat_AnswerSheetViewController *)currentAnswerVC setDelegate:self];
-        
-        [currentAnswerVC.view setAlpha:0.f];
-        [self.view addSubview:currentAnswerVC.view];
-        
-        [constraint_ScrollBottom setConstant:currentAnswerVC.view.frame.size.height - 57];
-        [UIView animateWithDuration:AnimationDuration animations:^{
-            [currentAnswerVC.view setAlpha:1.f];
-        }];
+        [self showAnswerSheet];
     }
     
     [self reloadScrollView];
@@ -196,43 +246,9 @@
 
 
 #pragma mark - Chat_AnswerSheetViewControllerDelegate
--(void)isRightAnswer:(NSString *)string_Answer {
-    dispatch_async(dispatch_get_main_queue(), ^{
-        [constraint_ScrollBottom setConstant:0.f];
-        [UIView animateWithDuration:AnimationDuration animations:^{
-            [currentAnswerSheetVC.view setAlpha:0.f];
-        } completion:^(BOOL finished) {
-            [currentAnswerSheetVC.view removeFromSuperview];
-        }];
-        
-        UserAnswerViewController *answerVC = [[UserAnswerViewController alloc] initWithNibName:@"UserAnswerViewController" bundle:nil];
-        [answerVC setString_Answer:string_Answer];
-        
-        [array_Chat addObject:answerVC];
-        
-        [self reloadScrollView];
-        
-        Chat_AnswerReactionViewController *vc = [[Chat_AnswerReactionViewController alloc] initWithNibName:@"Chat_AnswerReactionViewController" bundle:nil];
-        [vc setDelegate:self];
-        [vc setTeacher:_content.teacher];
-        
-        if ([_content.currentQuestion isAnswer:string_Answer]) {
-            [vc setString_RightAnswer:string_Answer];
-        }
-        else {
-            [vc setString_WrongAnswer:string_Answer];
-        }
-        
-        [array_Chat addObject:vc];
-        
-        [self reloadScrollView];
-    });
-}
-
-
-#pragma mark - Chat_AnswerReactionViewControllerDelegate
--(void)changedViewHeight {
-    [self reloadScrollView];
+-(void)selectAnswer:(NSString *)string_Answer {
+    [tf_Answer setText:string_Answer];
+    [button_Send setHidden:NO];
 }
 
 

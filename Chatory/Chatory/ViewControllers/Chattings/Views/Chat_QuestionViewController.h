@@ -6,19 +6,9 @@
 //  Copyright © 2017년 askstory. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "ChatCellViewController.h"
 
 
-@protocol Chat_QuestionViewControllerDelegate
-
--(void)showViewsDone;
-
-@end
-
-
-@interface Chat_QuestionViewController : UIViewController
-
-@property Question *question;
-@property id <Chat_QuestionViewControllerDelegate> delegate;
+@interface Chat_QuestionViewController : ChatCellViewController
 
 @end

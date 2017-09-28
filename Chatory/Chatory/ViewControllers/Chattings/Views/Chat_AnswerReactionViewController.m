@@ -9,6 +9,7 @@
 #import "Chat_AnswerReactionViewController.h"
 
 @interface Chat_AnswerReactionViewController () {
+    IBOutlet UIView *view_Emotion;
     IBOutlet UIView *view_Reaction;
     IBOutlet UIImageView *imageView_Icon;
     IBOutlet UIImageView *imageView_Emotion;
@@ -19,66 +20,44 @@
 
 @implementation Chat_AnswerReactionViewController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
--(void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
-    
-    [self initUI];
-}
-
 -(void)initUI {
+    [super initUI];
     dispatch_async(dispatch_get_main_queue(), ^{
         CGRect frame = [[UIScreen mainScreen] bounds];
-        [imageView_Emotion setAnimationRepeatCount:4];
+        [imageView_Emotion setAnimationRepeatCount:1];
         
-        [self.view addSubview:view_Reaction];
+        [imageView_Icon setImage:self.question.teacher.icon];
         
-        [imageView_Icon setImage:_teacher.icon];
+        array_Views = @[view_Emotion, view_Reaction];
         
-        if (_string_RightAnswer) {
-            [imageView_Emotion setAnimatedGif:_teacher.currectImage];
+        if (self.string_RightAnswer) {
+            [imageView_Emotion setAnimatedGif:self.question.teacher.currectImage];
             [imageView_Emotion startGifAnimation];
             
-            if ([_string_RightAnswer isEqualToString:@"hop"]) {
+            if ([self.string_RightAnswer isEqualToString:@"hop"]) {
                 [imageView_Reaction setImage:[UIImage imageNamed:@"Q01_correct_text01"]];
             }
         }
         else {
-            [imageView_Emotion setAnimatedGif:[_teacher getWrongImage]];
+            [imageView_Emotion setAnimatedGif:[self.question.teacher getWrongImage]];
             [imageView_Emotion startGifAnimation];
             
-            if ([_string_WrongAnswer isEqualToString:@"crawl"]) {
+            if ([self.string_WrongAnswer isEqualToString:@"crawl"]) {
                 [imageView_Reaction setImage:[UIImage imageNamed:@"Q01_wrong01_text"]];
             }
-            if ([_string_WrongAnswer isEqualToString:@"waddle"]) {
+            if ([self.string_WrongAnswer isEqualToString:@"waddle"]) {
                 [imageView_Reaction setImage:[UIImage imageNamed:@"Q01_wrong02_text"]];
             }
-            if ([_string_WrongAnswer isEqualToString:@"flap"]) {
+            if ([self.string_WrongAnswer isEqualToString:@"flap"]) {
                 [imageView_Reaction setImage:[UIImage imageNamed:@"Q01_wrong03_text"]];
             }
         }
         
-        [view_Reaction setFrame:CGRectMake(0, 0, frame.size.width, imageView_Reaction.frame.origin.y +  imageView_Reaction.image.size.height)];
+        [view_Emotion setFrame:CGRectMake(0, 0, frame.size.width, view_Emotion.frame.size.height)];
+        [view_Reaction setFrame:CGRectMake(0, view_Emotion.frame.origin.y + view_Emotion.frame.size.height, frame.size.width, imageView_Reaction.image.size.height + 10)];
         
-        [self.view setFrame:CGRectMake(self.view.frame.origin.x, self.view.frame.origin.y, view_Reaction.frame.size.width, imageView_Reaction.frame.origin.y + imageView_Reaction.image.size.height + 5)];
-        
-        [self performSelector:@selector(requestReload) withObject:nil afterDelay:0.0f];
+        [self.view setFrame:CGRectMake(self.view.frame.origin.x, self.view.frame.origin.y, frame.size.width, view_Reaction.frame.origin.y + view_Reaction.frame.size.height)];
     });
-}
-
--(void)requestReload {
-    [self.delegate changedViewHeight];
-    if (_string_RightAnswer)
-        [self.delegate loadNextQuestion];
 }
 
 

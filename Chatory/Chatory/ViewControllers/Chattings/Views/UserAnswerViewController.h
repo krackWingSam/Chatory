@@ -10,7 +10,6 @@
 
 @interface UserAnswerViewController : UIViewController
 
-
 @property NSString *string_Answer;
 
 @end

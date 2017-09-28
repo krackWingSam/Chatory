@@ -8,8 +8,20 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol Chat_LoadingViewControllerDelegate <NSObject>
+
+-(void)doneLoadingAnimation;
+
+@end
+
+
 @interface Chat_LoadingViewController : UIViewController
 
-@property Question *question;
+-(void)showDotAnimation;
+
+@property (nonatomic, getter=isShowIcon) BOOL showIcon;
+@property Teacher *teacher;
+
+@property id<Chat_LoadingViewControllerDelegate> delegate;
 
 @end

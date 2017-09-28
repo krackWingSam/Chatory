@@ -13,6 +13,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="UserAnswerViewController">
             <connections>
                 <outlet property="imageView" destination="9Qa-gT-1il" id="7kV-jy-rOb"/>
+                <outlet property="label_Answer" destination="tkT-II-3A8" id="6Nu-Eq-ySk"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -21,11 +22,20 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="62"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Q01_wrong01_answer.png" translatesAutoresizingMaskIntoConstraints="NO" id="9Qa-gT-1il">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="null_bubble.png" translatesAutoresizingMaskIntoConstraints="NO" id="9Qa-gT-1il">
                     <rect key="frame" x="241" y="10" width="114" height="42"/>
                 </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="crawl" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tkT-II-3A8">
+                    <rect key="frame" x="243" y="18" width="112" height="24"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <constraints>
+                <constraint firstItem="tkT-II-3A8" firstAttribute="centerY" secondItem="9Qa-gT-1il" secondAttribute="centerY" constant="-1" id="5lU-V1-hsh"/>
+                <constraint firstItem="tkT-II-3A8" firstAttribute="leading" secondItem="9Qa-gT-1il" secondAttribute="leading" constant="2" id="Hka-Kg-zyx"/>
+                <constraint firstItem="tkT-II-3A8" firstAttribute="trailing" secondItem="9Qa-gT-1il" secondAttribute="trailing" id="MrC-Y5-jQM"/>
                 <constraint firstItem="9Qa-gT-1il" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="10" id="MuR-T9-KdK"/>
                 <constraint firstAttribute="trailing" secondItem="9Qa-gT-1il" secondAttribute="trailing" constant="20" id="q9c-jj-72l"/>
             </constraints>
@@ -35,6 +45,6 @@
         </view>
     </objects>
     <resources>
-        <image name="Q01_wrong01_answer.png" width="114" height="42"/>
+        <image name="null_bubble.png" width="114" height="42"/>
     </resources>
 </document>

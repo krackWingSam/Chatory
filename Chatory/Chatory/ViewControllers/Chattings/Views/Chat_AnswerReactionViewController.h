@@ -6,22 +6,9 @@
 //  Copyright © 2017년 askstory. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
-
-@protocol Chat_AnswerReactionViewControllerDelegate
-
--(void)changedViewHeight;
--(void)loadNextQuestion;
-
-@end
+#import "ChatCellViewController.h"
 
 
-@interface Chat_AnswerReactionViewController : UIViewController
-
-@property NSString *string_RightAnswer;
-@property NSString *string_WrongAnswer;
-@property Teacher *teacher;
-
-@property id <Chat_AnswerReactionViewControllerDelegate> delegate;
+@interface Chat_AnswerReactionViewController : ChatCellViewController
 
 @end
