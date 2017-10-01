@@ -58,6 +58,8 @@
         [imageView setAlpha:0.f];
     
     [imageView_Icon setImage:_teacher.icon];
+    
+    
 }
 
 

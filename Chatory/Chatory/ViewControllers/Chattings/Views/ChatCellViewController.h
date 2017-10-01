@@ -28,6 +28,7 @@
 }
 
 -(void)initUI;
+-(void)calcFrames;
 
 #pragma mark - Animations
 -(void)showLoading;

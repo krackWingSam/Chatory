@@ -13,8 +13,8 @@
     IBOutlet UIView *view_Select;
     
     IBOutlet UIView *view_Question_01_01;
-    
     IBOutlet UIView *view_Speak;
+    IBOutlet UIView *view_Keyboard;
     
     CTSpeechRecognizer *speechRecognizer;
     
@@ -61,6 +61,13 @@
         
         _placeHolder = @"따라 읽어보세요.";
     }
+    
+    if ([_question.key isEqualToString:QUESTION_KEY_03]) {
+        [self.view setFrame:CGRectMake(0, frame.size.height - view_Keyboard.frame.size.height, frame.size.width, view_Keyboard.frame.size.height)];
+        [self.view addSubview:view_Keyboard];
+        
+        _placeHolder = @"정답을 입력해주세요.";
+    }
 }
 
 
@@ -70,6 +77,8 @@
         currentAnswer = [sender restorationIdentifier];
     }
     [self.delegate selectAnswer:currentAnswer];
+    
+    [[SoundManager sharedManager] playSoundWithSoundID:SoundID_Choose];
 }
 
 -(IBAction)action_StartSpeak:(id)sender {

@@ -23,6 +23,7 @@
         if ([contentKey isEqualToString:CONTENT_KEY_01]) {
             [tempArray addObject:[Question getQuestionWithKey:QUESTION_KEY_01 withTeacherKey:_teacher]];
             [tempArray addObject:[Question getQuestionWithKey:QUESTION_KEY_02 withTeacherKey:_teacher]];
+            [tempArray addObject:[Question getQuestionWithKey:QUESTION_KEY_03 withTeacherKey:_teacher]];
         }
         
         _array_Question = [[NSArray alloc] initWithArray:tempArray];

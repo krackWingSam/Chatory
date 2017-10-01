@@ -24,10 +24,16 @@
     // Dispose of any resources that can be recreated.
 }
 
+-(void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    [self initUI];
+    [self calcFrames];
+}
+
 -(void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     
-    [self initUI];
     [self showLoading];
 }
 
@@ -40,6 +46,16 @@
     [loadingVC setTeacher:_question.teacher];
     [loadingVC setDelegate:self];
     view_Loading = loadingVC.view;
+}
+
+-(void)calcFrames {
+    CGRect frame = [[UIScreen mainScreen] bounds];
+    CGFloat height = 0;
+    for (UIView *view in array_Views) {
+        height += view.frame.size.height;
+    }
+    
+    [self.view setFrame:CGRectMake(self.view.frame.origin.x, self.view.frame.origin.y, frame.size.width, height)];
 }
 
 
@@ -77,6 +93,15 @@
             UIView *beforeView = nil;
             beforeView = [array_Views objectAtIndex:currentIndex - 1];
             yPosition = beforeView.frame.origin.y + beforeView.frame.size.height;
+            [[SoundManager sharedManager] playSoundWithSoundID:SoundID_Chat];
+        }
+        else {
+            if (_string_RightAnswer == nil && _string_WrongAnswer == nil)
+                [[SoundManager sharedManager] playSoundWithSoundID:SoundID_Chat];
+            else if (_string_RightAnswer)
+                [[SoundManager sharedManager] playSoundWithSoundID:SoundID_Correct];
+            else
+                [[SoundManager sharedManager] playSoundWithSoundID:SoundID_Wrong];
         }
         
         [currentView setFrame:CGRectMake(0, yPosition, currentView.frame.size.width, currentView.frame.size.height)];
@@ -86,7 +111,6 @@
         [UIView animateWithDuration:0.4f animations:^{
             [view_Loading setAlpha:0.f];
             [currentView setAlpha:1.f];
-            [self.view setFrame:CGRectMake(self.view.frame.origin.x, self.view.frame.origin.y, self.view.frame.size.width, currentView.frame.origin.y + currentView.frame.size.height)];
         } completion:^(BOOL finished) {
             currentIndex += 1;
             position_Loading.y = currentView.frame.origin.y + currentView.frame.size.height;

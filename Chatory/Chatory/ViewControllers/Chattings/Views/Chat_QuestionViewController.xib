@@ -18,6 +18,8 @@
                 <outlet property="view_Question_01_01c" destination="NEI-lL-vIR" id="zrD-dT-7hb"/>
                 <outlet property="view_Question_02a" destination="zZt-hf-zSh" id="FhJ-rM-hXa"/>
                 <outlet property="view_Question_02b" destination="sXC-U6-7aq" id="RdE-Ip-p25"/>
+                <outlet property="view_Question_03a" destination="chl-Gw-9Gl" id="Uhi-dZ-dwx"/>
+                <outlet property="view_Question_03b" destination="pDm-xw-c1B" id="6oe-Sr-mQd"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -125,7 +127,7 @@
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="ffw-Nu-NiE"/>
-            <point key="canvasLocation" x="594.5" y="93.5"/>
+            <point key="canvasLocation" x="591" y="-63"/>
         </view>
         <view contentMode="scaleToFill" id="NEI-lL-vIR">
             <rect key="frame" x="0.0" y="0.0" width="375" height="160"/>
@@ -180,7 +182,54 @@
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="gdo-vH-aPT"/>
-            <point key="canvasLocation" x="595" y="266"/>
+            <point key="canvasLocation" x="591" y="110"/>
+        </view>
+        <view contentMode="scaleToFill" id="chl-Gw-9Gl">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="82"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JcS-nj-Awb">
+                    <rect key="frame" x="20" y="5" width="48" height="48"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="48" id="DPw-ZG-GiV"/>
+                        <constraint firstAttribute="width" constant="48" id="OV6-zO-wOx"/>
+                    </constraints>
+                </view>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Q03_text01.png" translatesAutoresizingMaskIntoConstraints="NO" id="DSC-HX-6x6">
+                    <rect key="frame" x="78" y="5" width="212" height="72"/>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" red="0.93333333330000001" green="0.93333333330000001" blue="0.93333333330000001" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="JcS-nj-Awb" firstAttribute="leading" secondItem="1i8-ht-5WD" secondAttribute="leading" constant="20" id="QYi-oL-H4h"/>
+                <constraint firstItem="DSC-HX-6x6" firstAttribute="leading" secondItem="JcS-nj-Awb" secondAttribute="trailing" constant="10" id="bbk-Wy-nSa"/>
+                <constraint firstItem="DSC-HX-6x6" firstAttribute="top" secondItem="JcS-nj-Awb" secondAttribute="top" id="qM6-74-JCs"/>
+                <constraint firstItem="JcS-nj-Awb" firstAttribute="top" secondItem="1i8-ht-5WD" secondAttribute="top" constant="5" id="w8x-LK-aGX"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="1i8-ht-5WD"/>
+            <point key="canvasLocation" x="1018" y="-63"/>
+        </view>
+        <view contentMode="scaleToFill" id="pDm-xw-c1B">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="254"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Q03_Gif.png" translatesAutoresizingMaskIntoConstraints="NO" id="rls-iM-JZZ">
+                    <rect key="frame" x="78" y="5" width="244" height="244"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="244" id="AaM-FA-NzR"/>
+                        <constraint firstAttribute="width" constant="244" id="nWQ-Zi-58K"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <constraints>
+                <constraint firstItem="rls-iM-JZZ" firstAttribute="leading" secondItem="2b5-4K-Q1d" secondAttribute="leading" constant="78" id="2vg-t5-hgZ"/>
+                <constraint firstItem="rls-iM-JZZ" firstAttribute="top" secondItem="2b5-4K-Q1d" secondAttribute="top" constant="5" id="Ajq-pY-rDq"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="2b5-4K-Q1d"/>
+            <point key="canvasLocation" x="1017.5" y="154.5"/>
         </view>
     </objects>
     <resources>
@@ -190,6 +239,8 @@
         <image name="Q02_Gif.png" width="150" height="150"/>
         <image name="Q02_sound_icon.png" width="29" height="29"/>
         <image name="Q02_text01.png" width="246" height="72"/>
+        <image name="Q03_Gif.png" width="244" height="244"/>
+        <image name="Q03_text01.png" width="212" height="72"/>
         <image name="Teacher_icon.png" width="48" height="48"/>
     </resources>
 </document>

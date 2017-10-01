@@ -35,6 +35,12 @@
         
         if ([key isEqualToString:QUESTION_KEY_02]) {
             _string_Answer = @"Forest";
+            _string_Answer2 = @"forest";
+        }
+        
+        if ([key isEqualToString:QUESTION_KEY_03]) {
+            _string_Answer = @"Race";
+            _string_Answer = @"race";
         }
     }
     return self;
@@ -42,7 +48,7 @@
 
 -(BOOL)isAnswer:(NSString *)string_Answer {
     BOOL isAnswer = NO;
-    if ([_string_Answer isEqualToString:string_Answer])
+    if ([_string_Answer isEqualToString:string_Answer] || [_string_Answer2 isEqualToString:string_Answer])
         isAnswer = YES;
     
     return isAnswer;

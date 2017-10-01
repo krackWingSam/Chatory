@@ -16,6 +16,7 @@
 #define AnimationDuration 0.5f
 
 #import "ContentManager.h"
+#import "SoundManager.h"
 #import "UIImageView+AnimatedGif.h"
 
 #endif /* PrefixHeader_pch */

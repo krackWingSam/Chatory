@@ -13,6 +13,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Chat_AnswerSheetViewController">
             <connections>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="view_Keyboard" destination="6ut-kj-nS7" id="roE-OV-vMO"/>
                 <outlet property="view_Question_01_01" destination="got-ZO-GZc" id="47p-t2-1qq"/>
                 <outlet property="view_Select" destination="Ylp-2e-AJO" id="WnL-PB-fQj"/>
                 <outlet property="view_Speak" destination="IMp-ry-ELZ" id="KSj-NE-ylw"/>
@@ -125,6 +126,13 @@
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="rLc-32-wGd"/>
             <point key="canvasLocation" x="482" y="45"/>
+        </view>
+        <view contentMode="scaleToFill" id="6ut-kj-nS7">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="258"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="o7v-j7-eSK"/>
+            <point key="canvasLocation" x="919" y="82"/>
         </view>
     </objects>
     <resources>

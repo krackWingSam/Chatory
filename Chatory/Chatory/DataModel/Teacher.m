@@ -20,12 +20,18 @@
         if ([key isEqualToString:TEACHER_KEY_TIGER]) {
             _icon = [UIImage imageNamed:@"Teacher_icon"];
             
-            NSString *gifImagePath = [[NSBundle mainBundle] pathForResource:@"Q01_correct" ofType:@"gif"];
-            NSData *gifData = [[NSData alloc] initWithContentsOfFile:gifImagePath];
-            _currectImage = [AnimatedGif getAnimationForGifWithData:gifData];
-            
-            NSArray *nameArray = @[@"Q01_wrong01", @"Q01_wrong02", @"Q01_wrong03"];
             NSMutableArray *tempArray = [[NSMutableArray alloc] init];
+            NSArray *nameArray = @[@"Q01_correct01", @"Q02_correct02"];
+            for (NSString *name in nameArray) {
+                NSString *path = [[NSBundle mainBundle] pathForResource:name ofType:@"gif"];
+                NSData *tempData = [[NSData alloc] initWithContentsOfFile:path];
+                AnimatedGif *tempGif = [AnimatedGif getAnimationForGifWithData:tempData];
+                
+                [tempArray addObject:tempGif];
+            }
+            _array_RightImage = [[NSArray alloc] initWithArray:tempArray];
+            
+            nameArray = @[@"Q01_wrong01", @"Q01_wrong02", @"Q01_wrong03"];
             for (NSString *name in nameArray) {
                 NSString *path = [[NSBundle mainBundle] pathForResource:name ofType:@"gif"];
                 NSData *tempData = [[NSData alloc] initWithContentsOfFile:path];
@@ -38,6 +44,13 @@
         }
     }
     return self;
+}
+
+
+#pragma mark - public
+-(AnimatedGif *)getRightImage {
+    int randNumber = rand() % [_array_RightImage count];
+    return [_array_RightImage objectAtIndex:randNumber];
 }
 
 -(AnimatedGif *)getWrongImage {

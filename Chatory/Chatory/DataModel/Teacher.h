@@ -15,12 +15,12 @@
 
 +(id)getTeacherWithKey:(NSString *)key;
 
-
+-(AnimatedGif *)getRightImage;
 -(AnimatedGif *)getWrongImage;
 
 @property (readonly) NSString *key;
 @property (readonly) UIImage *icon;
-@property (readonly) AnimatedGif *currectImage;
+@property (readonly) NSArray *array_RightImage;
 @property (readonly) NSArray *array_WrongImage;
 
 @end
