@@ -21,6 +21,7 @@
 		CA0A26C21F71EA6000209E05 /* ChattingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA0A26C11F71EA6000209E05 /* ChattingViewController.m */; };
 		CA0A26C81F71FAA100209E05 /* Question.m in Sources */ = {isa = PBXBuildFile; fileRef = CA0A26C71F71FAA100209E05 /* Question.m */; };
 		CA0A26CB1F71FB9600209E05 /* Teacher.m in Sources */ = {isa = PBXBuildFile; fileRef = CA0A26CA1F71FB9600209E05 /* Teacher.m */; };
+		CA2908B31F888ACF0045C35B /* DevMode.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA2908B21F888ACF0045C35B /* DevMode.storyboard */; };
 		CA3900341F79D48200343521 /* CTSpeechRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = CA3900331F79D48200343521 /* CTSpeechRecognizer.m */; };
 		CA3900381F79E29400343521 /* TSSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA3900371F79E29400343521 /* TSSViewController.m */; };
 		CA39003E1F7A082E00343521 /* SoundViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA39003D1F7A082E00343521 /* SoundViewController.m */; };
@@ -186,6 +187,7 @@
 		CA0A26C71F71FAA100209E05 /* Question.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Question.m; sourceTree = "<group>"; };
 		CA0A26C91F71FB9600209E05 /* Teacher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Teacher.h; sourceTree = "<group>"; };
 		CA0A26CA1F71FB9600209E05 /* Teacher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Teacher.m; sourceTree = "<group>"; };
+		CA2908B21F888ACF0045C35B /* DevMode.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DevMode.storyboard; sourceTree = "<group>"; };
 		CA3900321F79D48200343521 /* CTSpeechRecognizer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTSpeechRecognizer.h; sourceTree = "<group>"; };
 		CA3900331F79D48200343521 /* CTSpeechRecognizer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTSpeechRecognizer.m; sourceTree = "<group>"; };
 		CA3900361F79E29400343521 /* TSSViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TSSViewController.h; sourceTree = "<group>"; };
@@ -502,6 +504,7 @@
 			children = (
 				CA0A26931F70AC4E00209E05 /* Main.storyboard */,
 				CA5C89481F748F50009431D6 /* ChatBot.storyboard */,
+				CA2908B21F888ACF0045C35B /* DevMode.storyboard */,
 			);
 			path = StoryBoards;
 			sourceTree = "<group>";
@@ -973,6 +976,7 @@
 				CA643D201F7DE663003B99C6 /* Q01_text01@2x.png in Resources */,
 				CA643D211F7DE663003B99C6 /* Q01_text02@2x.png in Resources */,
 				CA643D221F7DE663003B99C6 /* Teacher_icon@2x.png in Resources */,
+				CA2908B31F888ACF0045C35B /* DevMode.storyboard in Resources */,
 				CA643D231F7DE663003B99C6 /* text_loading_box@2x.png in Resources */,
 				CA643D241F7DE663003B99C6 /* Textbox@2x.png in Resources */,
 				CA643D251F7DE663003B99C6 /* Textbox_frame@2x.png in Resources */,

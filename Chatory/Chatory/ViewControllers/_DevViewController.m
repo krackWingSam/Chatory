@@ -22,7 +22,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    array_TableCellTitles = @[@"ChattingViewController", @"TSS Test", @"Sound Test", @"Chatting Answer UI", @"Chatting Loading Animation", @"MoviePlayer"];
+    array_TableCellTitles = @[@"ChattingViewController", @"TSS Test", @"Sound Test", @"Chatting Answer UI", @"Chatting Loading Animation", @"MoviePlayer", @"selectTeacher"];
     [table_DevList reloadData];
 }
 
