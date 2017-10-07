@@ -22,7 +22,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    array_TableCellTitles = @[@"vc1", @"vc2", @"vc3"];
+    array_TableCellTitles = @[@"ChattingViewController", @"TSS Test", @"Sound Test", @"Chatting Answer UI", @"Chatting Loading Animation", @"MoviePlayer"];
     [table_DevList reloadData];
 }
 
@@ -47,6 +47,35 @@
 #pragma mark - UITableViewDelegate
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     NSLog(@"table view cell selected : %ld", (long)indexPath.row);
+    
+    switch (indexPath.row) {
+        case 0:     //Chatting View Controller
+            [self performSegueWithIdentifier:@"ShowChattingSegue" sender:nil];
+            break;
+            
+        case 1:
+            [self performSegueWithIdentifier:@"ShowSTTSegue" sender:nil];
+            break;
+            
+        case 2:
+            [self performSegueWithIdentifier:@"ShowSoundSegue" sender:nil];
+            break;
+            
+        case 3:
+            [self performSegueWithIdentifier:@"ShowAnswerSheetSegue" sender:nil];
+            break;
+            
+        case 4:
+            [self performSegueWithIdentifier:@"ShowLoadingSegue" sender:nil];
+            break;
+            
+        case 5:
+            [self performSegueWithIdentifier:@"ShowMovieSegue" sender:nil];
+            break;
+            
+        default:
+            break;
+    }
 }
 
 

@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Chat_QuestionViewController">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="view_Question_01_01a" destination="xS9-Xn-aTP" id="CZt-ek-jtn"/>
+                <outlet property="view_Question_01_01b" destination="RE0-mG-c3r" id="LfH-wW-vVP"/>
+                <outlet property="view_Question_01_01c" destination="NEI-lL-vIR" id="zrD-dT-7hb"/>
+                <outlet property="view_Question_02a" destination="zZt-hf-zSh" id="FhJ-rM-hXa"/>
+                <outlet property="view_Question_02b" destination="sXC-U6-7aq" id="RdE-Ip-p25"/>
+                <outlet property="view_Question_03a" destination="chl-Gw-9Gl" id="Uhi-dZ-dwx"/>
+                <outlet property="view_Question_03b" destination="pDm-xw-c1B" id="6oe-Sr-mQd"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="103"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
+            <point key="canvasLocation" x="-298" y="-206"/>
+        </view>
+        <view contentMode="scaleToFill" id="xS9-Xn-aTP">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="73"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kkf-cL-A9V">
+                    <rect key="frame" x="20" y="5" width="48" height="48"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Teacher_icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="UFy-uJ-2DE">
+                            <rect key="frame" x="0.0" y="0.0" width="48" height="48"/>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="UFy-uJ-2DE" firstAttribute="top" secondItem="Kkf-cL-A9V" secondAttribute="top" id="1uI-Ss-lGa"/>
+                        <constraint firstAttribute="bottom" secondItem="UFy-uJ-2DE" secondAttribute="bottom" id="4MY-kU-uwJ"/>
+                        <constraint firstAttribute="height" constant="48" id="6ek-iu-2rn"/>
+                        <constraint firstAttribute="width" constant="48" id="Bic-FL-gJv"/>
+                        <constraint firstItem="UFy-uJ-2DE" firstAttribute="leading" secondItem="Kkf-cL-A9V" secondAttribute="leading" id="FnE-pu-nxR"/>
+                        <constraint firstAttribute="trailing" secondItem="UFy-uJ-2DE" secondAttribute="trailing" id="vwh-cP-7JX"/>
+                    </constraints>
+                </view>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Q01_text01.png" translatesAutoresizingMaskIntoConstraints="NO" id="hrF-2j-VuC">
+                    <rect key="frame" x="78" y="5" width="228" height="63"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="228" id="20W-aA-NaO"/>
+                        <constraint firstAttribute="height" constant="63" id="VbS-QZ-6r8"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" red="0.93333333330000001" green="0.93333333330000001" blue="0.93333333330000001" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="Kkf-cL-A9V" firstAttribute="top" secondItem="Kel-Wh-EsH" secondAttribute="top" constant="5" id="1Qr-IS-Xnw"/>
+                <constraint firstItem="hrF-2j-VuC" firstAttribute="leading" secondItem="Kkf-cL-A9V" secondAttribute="trailing" constant="10" id="B1c-Jo-TAf"/>
+                <constraint firstItem="hrF-2j-VuC" firstAttribute="top" secondItem="Kkf-cL-A9V" secondAttribute="top" id="HxG-Xu-Ybl"/>
+                <constraint firstItem="Kkf-cL-A9V" firstAttribute="leading" secondItem="Kel-Wh-EsH" secondAttribute="leading" constant="20" id="SnP-CL-qAJ"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="Kel-Wh-EsH"/>
+            <point key="canvasLocation" x="158.5" y="-67"/>
+        </view>
+        <view contentMode="scaleToFill" id="RE0-mG-c3r">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="51"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pfH-0c-tHX">
+                    <rect key="frame" x="20" y="5" width="48" height="48"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="48" id="Vrx-i0-Sk3"/>
+                        <constraint firstAttribute="width" constant="48" id="wJw-bd-zDc"/>
+                    </constraints>
+                </view>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Q01_text02.png" translatesAutoresizingMaskIntoConstraints="NO" id="VK2-ar-5y5">
+                    <rect key="frame" x="78" y="5" width="219" height="41"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="41" id="e03-Zg-Ggg"/>
+                        <constraint firstAttribute="width" constant="219" id="iwi-zh-bqe"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" red="0.93333333330000001" green="0.93333333330000001" blue="0.93333333330000001" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="VK2-ar-5y5" firstAttribute="leading" secondItem="pfH-0c-tHX" secondAttribute="trailing" constant="10" id="KhT-K1-RHR"/>
+                <constraint firstItem="VK2-ar-5y5" firstAttribute="top" secondItem="pfH-0c-tHX" secondAttribute="top" id="XEP-bY-WEI"/>
+                <constraint firstItem="pfH-0c-tHX" firstAttribute="leading" secondItem="pRU-pX-pH3" secondAttribute="leading" constant="20" id="vNV-h4-TT7"/>
+                <constraint firstItem="pfH-0c-tHX" firstAttribute="top" secondItem="pRU-pX-pH3" secondAttribute="top" constant="5" id="znM-zV-Hxp"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="pRU-pX-pH3"/>
+            <point key="canvasLocation" x="158.5" y="82"/>
+        </view>
+        <view contentMode="scaleToFill" id="zZt-hf-zSh">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="82"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BuU-Hh-x4U">
+                    <rect key="frame" x="20" y="5" width="48" height="48"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="48" id="5nJ-Ya-LLq"/>
+                        <constraint firstAttribute="width" constant="48" id="7sz-B9-Vlh"/>
+                    </constraints>
+                </view>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Q02_text01.png" translatesAutoresizingMaskIntoConstraints="NO" id="ObS-Cu-m41">
+                    <rect key="frame" x="78" y="5" width="246" height="72"/>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" red="0.93333333330000001" green="0.93333333330000001" blue="0.93333333330000001" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="ObS-Cu-m41" firstAttribute="top" secondItem="BuU-Hh-x4U" secondAttribute="top" id="387-y9-NJ1"/>
+                <constraint firstItem="BuU-Hh-x4U" firstAttribute="leading" secondItem="ffw-Nu-NiE" secondAttribute="leading" constant="20" id="7bP-cG-ufa"/>
+                <constraint firstItem="ObS-Cu-m41" firstAttribute="leading" secondItem="BuU-Hh-x4U" secondAttribute="trailing" constant="10" id="NZi-Xj-eJO"/>
+                <constraint firstItem="BuU-Hh-x4U" firstAttribute="top" secondItem="ffw-Nu-NiE" secondAttribute="top" constant="5" id="Pc8-0t-3uu"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="ffw-Nu-NiE"/>
+            <point key="canvasLocation" x="591" y="-63"/>
+        </view>
+        <view contentMode="scaleToFill" id="NEI-lL-vIR">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="160"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Q01_Gif.png" translatesAutoresizingMaskIntoConstraints="NO" id="wmR-3c-ADu">
+                    <rect key="frame" x="78" y="5" width="150" height="150"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="150" id="SVD-Gj-Tpm"/>
+                        <constraint firstAttribute="width" constant="150" id="Sz0-8S-YQH"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <constraints>
+                <constraint firstItem="wmR-3c-ADu" firstAttribute="top" secondItem="Juv-ug-rUY" secondAttribute="top" constant="5" id="4pN-5B-vhJ"/>
+                <constraint firstItem="wmR-3c-ADu" firstAttribute="leading" secondItem="Juv-ug-rUY" secondAttribute="leading" constant="78" id="tIa-nY-ocx"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="Juv-ug-rUY"/>
+            <point key="canvasLocation" x="159" y="344"/>
+        </view>
+        <view contentMode="scaleToFill" id="sXC-U6-7aq">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="160"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Q02_Gif.png" translatesAutoresizingMaskIntoConstraints="NO" id="FDB-Ff-zmh">
+                    <rect key="frame" x="78" y="5" width="150" height="150"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="150" id="mTo-ML-oDI"/>
+                        <constraint firstAttribute="height" constant="150" id="ybK-yD-Tep"/>
+                    </constraints>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Q02_sound_icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="Xiq-9j-vgN">
+                    <rect key="frame" x="189" y="15" width="29" height="29"/>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LvC-ml-6Ks">
+                    <rect key="frame" x="78" y="5" width="150" height="150"/>
+                    <connections>
+                        <action selector="action_PlayQuestion02:" destination="-1" eventType="touchUpInside" id="L5b-AP-xRA"/>
+                    </connections>
+                </button>
+            </subviews>
+            <constraints>
+                <constraint firstItem="LvC-ml-6Ks" firstAttribute="trailing" secondItem="FDB-Ff-zmh" secondAttribute="trailing" id="3xN-cZ-eDN"/>
+                <constraint firstItem="LvC-ml-6Ks" firstAttribute="top" secondItem="FDB-Ff-zmh" secondAttribute="top" id="Dzm-xs-rZn"/>
+                <constraint firstItem="FDB-Ff-zmh" firstAttribute="leading" secondItem="gdo-vH-aPT" secondAttribute="leading" constant="78" id="Fwo-da-n9a"/>
+                <constraint firstItem="LvC-ml-6Ks" firstAttribute="leading" secondItem="FDB-Ff-zmh" secondAttribute="leading" id="lFR-dH-kxl"/>
+                <constraint firstItem="LvC-ml-6Ks" firstAttribute="bottom" secondItem="FDB-Ff-zmh" secondAttribute="bottom" id="m6V-MD-UvI"/>
+                <constraint firstItem="FDB-Ff-zmh" firstAttribute="trailing" secondItem="Xiq-9j-vgN" secondAttribute="trailing" constant="10" id="rT9-td-6VX"/>
+                <constraint firstItem="FDB-Ff-zmh" firstAttribute="top" secondItem="Xiq-9j-vgN" secondAttribute="top" constant="-10" id="sBf-Mr-XQa"/>
+                <constraint firstItem="FDB-Ff-zmh" firstAttribute="top" secondItem="gdo-vH-aPT" secondAttribute="top" constant="5" id="trG-Wj-mDD"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="gdo-vH-aPT"/>
+            <point key="canvasLocation" x="591" y="110"/>
+        </view>
+        <view contentMode="scaleToFill" id="chl-Gw-9Gl">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="82"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JcS-nj-Awb">
+                    <rect key="frame" x="20" y="5" width="48" height="48"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="48" id="DPw-ZG-GiV"/>
+                        <constraint firstAttribute="width" constant="48" id="OV6-zO-wOx"/>
+                    </constraints>
+                </view>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Q03_text01.png" translatesAutoresizingMaskIntoConstraints="NO" id="DSC-HX-6x6">
+                    <rect key="frame" x="78" y="5" width="212" height="72"/>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" red="0.93333333330000001" green="0.93333333330000001" blue="0.93333333330000001" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="JcS-nj-Awb" firstAttribute="leading" secondItem="1i8-ht-5WD" secondAttribute="leading" constant="20" id="QYi-oL-H4h"/>
+                <constraint firstItem="DSC-HX-6x6" firstAttribute="leading" secondItem="JcS-nj-Awb" secondAttribute="trailing" constant="10" id="bbk-Wy-nSa"/>
+                <constraint firstItem="DSC-HX-6x6" firstAttribute="top" secondItem="JcS-nj-Awb" secondAttribute="top" id="qM6-74-JCs"/>
+                <constraint firstItem="JcS-nj-Awb" firstAttribute="top" secondItem="1i8-ht-5WD" secondAttribute="top" constant="5" id="w8x-LK-aGX"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="1i8-ht-5WD"/>
+            <point key="canvasLocation" x="1018" y="-63"/>
+        </view>
+        <view contentMode="scaleToFill" id="pDm-xw-c1B">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="254"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Q03_Gif.png" translatesAutoresizingMaskIntoConstraints="NO" id="rls-iM-JZZ">
+                    <rect key="frame" x="78" y="5" width="244" height="244"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="244" id="AaM-FA-NzR"/>
+                        <constraint firstAttribute="width" constant="244" id="nWQ-Zi-58K"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <constraints>
+                <constraint firstItem="rls-iM-JZZ" firstAttribute="leading" secondItem="2b5-4K-Q1d" secondAttribute="leading" constant="78" id="2vg-t5-hgZ"/>
+                <constraint firstItem="rls-iM-JZZ" firstAttribute="top" secondItem="2b5-4K-Q1d" secondAttribute="top" constant="5" id="Ajq-pY-rDq"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="2b5-4K-Q1d"/>
+            <point key="canvasLocation" x="1017.5" y="154.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Q01_Gif.png" width="150" height="150"/>
+        <image name="Q01_text01.png" width="228" height="63"/>
+        <image name="Q01_text02.png" width="219" height="41"/>
+        <image name="Q02_Gif.png" width="150" height="150"/>
+        <image name="Q02_sound_icon.png" width="29" height="29"/>
+        <image name="Q02_text01.png" width="246" height="72"/>
+        <image name="Q03_Gif.png" width="244" height="244"/>
+        <image name="Q03_text01.png" width="212" height="72"/>
+        <image name="Teacher_icon.png" width="48" height="48"/>
+    </resources>
+</document>
