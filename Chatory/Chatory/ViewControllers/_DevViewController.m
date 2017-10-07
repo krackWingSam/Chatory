@@ -73,6 +73,10 @@
             [self performSegueWithIdentifier:@"ShowMovieSegue" sender:nil];
             break;
             
+        case 6:
+            [self performSegueWithIdentifier:@"ShowTeacherSegue" sender:nil];
+            break;
+            
         default:
             break;
     }

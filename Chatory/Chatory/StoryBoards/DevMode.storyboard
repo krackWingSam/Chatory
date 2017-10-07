@@ -422,11 +422,20 @@ will show Answer Sheet  Touch Background Action or Send Button Actions will 
                             <nil key="action"/>
                         </segue>
                         <segue destination="BFg-tj-1rd" kind="show" identifier="ShowChattingSegue" id="cEz-ja-d0D"/>
+                        <segue destination="yk1-vx-gOu" kind="show" identifier="ShowTeacherSegue" id="WKv-nA-hBQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q1a-2B-AqM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2662" y="-546"/>
+        </scene>
+        <!--SelectTeacher-->
+        <scene sceneID="nqe-rn-y6h">
+            <objects>
+                <viewControllerPlaceholder storyboardName="SelectTeacher" id="yk1-vx-gOu" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wag-Tq-zQh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3343" y="-1062"/>
         </scene>
         <!--ChatBot-->
         <scene sceneID="Hv1-Es-HaY">
