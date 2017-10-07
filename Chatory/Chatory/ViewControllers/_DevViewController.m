@@ -22,7 +22,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    array_TableCellTitles = @[@"ChattingViewController", @"TSS Test", @"Sound Test", @"Chatting Answer UI", @"Chatting Loading Animation"];
+    array_TableCellTitles = @[@"ChattingViewController", @"TSS Test", @"Sound Test", @"Chatting Answer UI", @"Chatting Loading Animation", @"MoviePlayer"];
     [table_DevList reloadData];
 }
 
@@ -67,6 +67,11 @@
             
         case 4:
             [self performSegueWithIdentifier:@"ShowLoadingSegue" sender:nil];
+            break;
+            
+        case 5:
+            [self performSegueWithIdentifier:@"ShowMovieSegue" sender:nil];
+            break;
             
         default:
             break;

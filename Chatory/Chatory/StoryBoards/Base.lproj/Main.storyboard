@@ -43,6 +43,24 @@
             </objects>
             <point key="canvasLocation" x="142" y="225"/>
         </scene>
+        <!--Movie View Controller-->
+        <scene sceneID="3au-hV-km7">
+            <objects>
+                <viewController id="f3C-gJ-PqP" customClass="MovieViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="BB9-AF-cNg"/>
+                        <viewControllerLayoutGuide type="bottom" id="JL6-dr-dkc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="w6H-tN-6L7">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gWa-KE-Bvg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1271" y="-546"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="Cxq-4p-PpQ">
             <objects>
@@ -419,6 +437,7 @@ will show Answer Sheet  Touch Background Action or Send Button Actions will 
                         <segue destination="OmG-6j-XGj" kind="show" identifier="ShowSoundSegue" id="nji-qV-6dG"/>
                         <segue destination="3X2-YW-esq" kind="show" identifier="ShowAnswerSheetSegue" id="m4B-bH-WWn"/>
                         <segue destination="yzb-Mp-ZCk" kind="show" identifier="ShowLoadingSegue" id="g3I-tT-561"/>
+                        <segue destination="f3C-gJ-PqP" kind="show" identifier="ShowMovieSegue" id="Nxw-82-1Iz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TDN-9Y-Su6" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -24,6 +24,7 @@
 		CA3900341F79D48200343521 /* CTSpeechRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = CA3900331F79D48200343521 /* CTSpeechRecognizer.m */; };
 		CA3900381F79E29400343521 /* TSSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA3900371F79E29400343521 /* TSSViewController.m */; };
 		CA39003E1F7A082E00343521 /* SoundViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA39003D1F7A082E00343521 /* SoundViewController.m */; };
+		CA42141D1F8884230044CD77 /* MovieViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA42141C1F8884230044CD77 /* MovieViewController.m */; };
 		CA4FCBF51F7B306F005B97AF /* TestAnswerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA4FCBF41F7B306F005B97AF /* TestAnswerViewController.m */; };
 		CA4FCBF91F7B3D87005B97AF /* Chat_LoadingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA4FCBF71F7B3D86005B97AF /* Chat_LoadingViewController.m */; };
 		CA4FCBFA1F7B3D87005B97AF /* Chat_LoadingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA4FCBF81F7B3D86005B97AF /* Chat_LoadingViewController.xib */; };
@@ -191,6 +192,8 @@
 		CA3900371F79E29400343521 /* TSSViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TSSViewController.m; sourceTree = "<group>"; };
 		CA39003C1F7A082E00343521 /* SoundViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SoundViewController.h; sourceTree = "<group>"; };
 		CA39003D1F7A082E00343521 /* SoundViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SoundViewController.m; sourceTree = "<group>"; };
+		CA42141B1F8884230044CD77 /* MovieViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MovieViewController.h; sourceTree = "<group>"; };
+		CA42141C1F8884230044CD77 /* MovieViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MovieViewController.m; sourceTree = "<group>"; };
 		CA4FCBF31F7B306F005B97AF /* TestAnswerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestAnswerViewController.h; sourceTree = "<group>"; };
 		CA4FCBF41F7B306F005B97AF /* TestAnswerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestAnswerViewController.m; sourceTree = "<group>"; };
 		CA4FCBF61F7B3D86005B97AF /* Chat_LoadingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Chat_LoadingViewController.h; sourceTree = "<group>"; };
@@ -417,8 +420,9 @@
 		CA0A26AF1F70F12A00209E05 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				CA3900351F79E28300343521 /* Tests */,
+				CA42141A1F8884050044CD77 /* Movie */,
 				CA0A26BF1F71EA5400209E05 /* Chattings */,
+				CA3900351F79E28300343521 /* Tests */,
 				CA0A26B51F70F16400209E05 /* _DevViewController.h */,
 				CA0A26B61F70F16400209E05 /* _DevViewController.m */,
 				CA0A26B01F70F12A00209E05 /* ViewController.h */,
@@ -482,6 +486,15 @@
 				CA4FCBFC1F7B40BD005B97AF /* TestChatLoadingViewController.m */,
 			);
 			path = Tests;
+			sourceTree = "<group>";
+		};
+		CA42141A1F8884050044CD77 /* Movie */ = {
+			isa = PBXGroup;
+			children = (
+				CA42141B1F8884230044CD77 /* MovieViewController.h */,
+				CA42141C1F8884230044CD77 /* MovieViewController.m */,
+			);
+			path = Movie;
 			sourceTree = "<group>";
 		};
 		CA5C89471F748F0C009431D6 /* StoryBoards */ = {
@@ -1145,6 +1158,7 @@
 				CA752A111F7C838F00AE32B8 /* ChatCellViewController.m in Sources */,
 				CA0A268F1F70AC4D00209E05 /* AppDelegate.m in Sources */,
 				CA39003E1F7A082E00343521 /* SoundViewController.m in Sources */,
+				CA42141D1F8884230044CD77 /* MovieViewController.m in Sources */,
 				CA8C373A1F78CC7B00FDCB58 /* Content.m in Sources */,
 				CA643D6B1F80A232003B99C6 /* Chat_LastViewController.m in Sources */,
 				CA4FCBF51F7B306F005B97AF /* TestAnswerViewController.m in Sources */,
