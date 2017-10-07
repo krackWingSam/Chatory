@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Chat_LoadingViewController">
+            <connections>
+                <outlet property="iamgeView_Dot1" destination="a3q-Le-JDV" id="mNV-VW-f0D"/>
+                <outlet property="iamgeView_Dot2" destination="89n-cu-UXo" id="eL5-2Y-Fj8"/>
+                <outlet property="iamgeView_Dot3" destination="Mwc-Eh-ik6" id="2WO-lT-BLX"/>
+                <outlet property="imageView_Icon" destination="fqW-5w-77h" id="9MX-En-Hc3"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="376" height="58"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fqW-5w-77h">
+                    <rect key="frame" x="20" y="5" width="48" height="48"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="48" id="7SN-eR-jSK"/>
+                        <constraint firstAttribute="height" constant="48" id="9ba-ne-0Gh"/>
+                    </constraints>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="text_loading_box.png" translatesAutoresizingMaskIntoConstraints="NO" id="2we-R7-Dsm">
+                    <rect key="frame" x="78" y="8" width="114" height="42"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dot01.png" translatesAutoresizingMaskIntoConstraints="NO" id="a3q-Le-JDV">
+                    <rect key="frame" x="102" y="23" width="12" height="12"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="12" id="O8r-6q-o0z"/>
+                        <constraint firstAttribute="height" constant="12" id="RF2-tg-ZUP"/>
+                    </constraints>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dot01.png" translatesAutoresizingMaskIntoConstraints="NO" id="89n-cu-UXo">
+                    <rect key="frame" x="129" y="23" width="12" height="12"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="12" id="vnj-Z4-rA9"/>
+                        <constraint firstAttribute="height" constant="12" id="yI7-m4-dcN"/>
+                    </constraints>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dot01.png" translatesAutoresizingMaskIntoConstraints="NO" id="Mwc-Eh-ik6">
+                    <rect key="frame" x="156" y="23" width="12" height="12"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="12" id="CCk-lf-w8N"/>
+                        <constraint firstAttribute="height" constant="12" id="bi7-Oq-XWv"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <constraints>
+                <constraint firstItem="89n-cu-UXo" firstAttribute="centerX" secondItem="2we-R7-Dsm" secondAttribute="centerX" id="3cF-rS-M63"/>
+                <constraint firstItem="2we-R7-Dsm" firstAttribute="centerY" secondItem="fqW-5w-77h" secondAttribute="centerY" id="48w-87-IWr"/>
+                <constraint firstItem="2we-R7-Dsm" firstAttribute="leading" secondItem="fqW-5w-77h" secondAttribute="trailing" constant="10" id="HWA-iw-07d"/>
+                <constraint firstItem="Mwc-Eh-ik6" firstAttribute="leading" secondItem="89n-cu-UXo" secondAttribute="trailing" constant="15" id="MUi-qg-bgg"/>
+                <constraint firstItem="89n-cu-UXo" firstAttribute="leading" secondItem="a3q-Le-JDV" secondAttribute="trailing" constant="15" id="R01-PD-qPG"/>
+                <constraint firstItem="fqW-5w-77h" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="5" id="b1z-Ky-XTP"/>
+                <constraint firstItem="89n-cu-UXo" firstAttribute="centerY" secondItem="a3q-Le-JDV" secondAttribute="centerY" id="eLH-bN-BOc"/>
+                <constraint firstItem="89n-cu-UXo" firstAttribute="centerY" secondItem="2we-R7-Dsm" secondAttribute="centerY" id="lEH-Qu-shP"/>
+                <constraint firstItem="fqW-5w-77h" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="nAN-sr-z0k"/>
+                <constraint firstItem="Mwc-Eh-ik6" firstAttribute="centerY" secondItem="89n-cu-UXo" secondAttribute="centerY" id="v5Q-fS-us4"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
+            <point key="canvasLocation" x="86.5" y="147"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="dot01.png" width="24" height="24"/>
+        <image name="text_loading_box.png" width="114" height="42"/>
+    </resources>
+</document>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="UserAnswerViewController">
+            <connections>
+                <outlet property="imageView" destination="9Qa-gT-1il" id="7kV-jy-rOb"/>
+                <outlet property="label_Answer" destination="tkT-II-3A8" id="6Nu-Eq-ySk"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="62"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="null_bubble.png" translatesAutoresizingMaskIntoConstraints="NO" id="9Qa-gT-1il">
+                    <rect key="frame" x="241" y="10" width="114" height="42"/>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="crawl" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tkT-II-3A8">
+                    <rect key="frame" x="243" y="18" width="112" height="24"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <constraints>
+                <constraint firstItem="tkT-II-3A8" firstAttribute="centerY" secondItem="9Qa-gT-1il" secondAttribute="centerY" constant="-1" id="5lU-V1-hsh"/>
+                <constraint firstItem="tkT-II-3A8" firstAttribute="leading" secondItem="9Qa-gT-1il" secondAttribute="leading" constant="2" id="Hka-Kg-zyx"/>
+                <constraint firstItem="tkT-II-3A8" firstAttribute="trailing" secondItem="9Qa-gT-1il" secondAttribute="trailing" id="MrC-Y5-jQM"/>
+                <constraint firstItem="9Qa-gT-1il" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="10" id="MuR-T9-KdK"/>
+                <constraint firstAttribute="trailing" secondItem="9Qa-gT-1il" secondAttribute="trailing" constant="20" id="q9c-jj-72l"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
+            <point key="canvasLocation" x="33.5" y="-246.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="null_bubble.png" width="114" height="42"/>
+    </resources>
+</document>

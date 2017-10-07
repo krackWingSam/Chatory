@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Chat_AnswerSheetViewController">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="view_Keyboard" destination="6ut-kj-nS7" id="roE-OV-vMO"/>
+                <outlet property="view_Question_01_01" destination="got-ZO-GZc" id="47p-t2-1qq"/>
+                <outlet property="view_Select" destination="Ylp-2e-AJO" id="WnL-PB-fQj"/>
+                <outlet property="view_Speak" destination="IMp-ry-ELZ" id="KSj-NE-ylw"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="143"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
+            <point key="canvasLocation" x="34" y="-199"/>
+        </view>
+        <view contentMode="scaleToFill" id="Ylp-2e-AJO">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="110"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Q01_textbox.png" translatesAutoresizingMaskIntoConstraints="NO" id="okn-eV-xjL">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="110"/>
+                </imageView>
+            </subviews>
+            <constraints>
+                <constraint firstItem="okn-eV-xjL" firstAttribute="leading" secondItem="T2G-Gz-JwM" secondAttribute="leading" id="3hG-C4-pCG"/>
+                <constraint firstItem="T2G-Gz-JwM" firstAttribute="trailing" secondItem="okn-eV-xjL" secondAttribute="trailing" id="4Ia-sn-8hR"/>
+                <constraint firstAttribute="bottom" secondItem="okn-eV-xjL" secondAttribute="bottom" id="6hY-Qu-jMa"/>
+                <constraint firstItem="okn-eV-xjL" firstAttribute="top" secondItem="T2G-Gz-JwM" secondAttribute="top" id="8F4-Fg-ypn"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="T2G-Gz-JwM"/>
+            <point key="canvasLocation" x="34" y="8"/>
+        </view>
+        <view contentMode="scaleToFill" id="got-ZO-GZc">
+            <rect key="frame" x="0.0" y="0.0" width="319.5" height="33"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <button opaque="NO" tag="101" contentMode="scaleToFill" restorationIdentifier="hop" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wzl-Iq-fAT">
+                    <rect key="frame" x="0.0" y="0.0" width="59" height="33"/>
+                    <state key="normal" image="Q01_selection01.png"/>
+                    <connections>
+                        <action selector="action_Select:" destination="-1" eventType="touchUpInside" id="4aD-cB-uOW"/>
+                    </connections>
+                </button>
+                <button opaque="NO" tag="102" contentMode="scaleToFill" restorationIdentifier="waddle" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JOs-lz-Wnp">
+                    <rect key="frame" x="72.5" y="0.0" width="88" height="33"/>
+                    <state key="normal" image="Q01_selection02.png"/>
+                    <connections>
+                        <action selector="action_Select:" destination="-1" eventType="touchUpInside" id="SVh-1e-Hsu"/>
+                    </connections>
+                </button>
+                <button opaque="NO" tag="103" contentMode="scaleToFill" restorationIdentifier="crawl" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tYJ-XX-Svj">
+                    <rect key="frame" x="174" y="0.0" width="72" height="33"/>
+                    <state key="normal" image="Q01_selection03.png"/>
+                    <connections>
+                        <action selector="action_Select:" destination="-1" eventType="touchUpInside" id="wyj-al-oQc"/>
+                    </connections>
+                </button>
+                <button opaque="NO" tag="104" contentMode="scaleToFill" restorationIdentifier="flap" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hq6-8J-1yo">
+                    <rect key="frame" x="259.5" y="0.0" width="60" height="33"/>
+                    <state key="normal" image="Q01_selection04.png"/>
+                    <connections>
+                        <action selector="action_Select:" destination="-1" eventType="touchUpInside" id="cNc-RC-1an"/>
+                    </connections>
+                </button>
+            </subviews>
+            <constraints>
+                <constraint firstItem="wzl-Iq-fAT" firstAttribute="centerY" secondItem="got-ZO-GZc" secondAttribute="centerY" id="065-r2-P8P"/>
+                <constraint firstItem="hq6-8J-1yo" firstAttribute="leading" secondItem="tYJ-XX-Svj" secondAttribute="trailing" constant="13.4" id="6TY-4a-f3p"/>
+                <constraint firstItem="hq6-8J-1yo" firstAttribute="trailing" secondItem="GTT-fi-EEH" secondAttribute="trailing" id="Kci-zR-l6l"/>
+                <constraint firstItem="hq6-8J-1yo" firstAttribute="centerY" secondItem="got-ZO-GZc" secondAttribute="centerY" id="SNd-CM-BvS"/>
+                <constraint firstItem="wzl-Iq-fAT" firstAttribute="leading" secondItem="GTT-fi-EEH" secondAttribute="leading" id="hwd-J7-uTl"/>
+                <constraint firstItem="tYJ-XX-Svj" firstAttribute="centerY" secondItem="got-ZO-GZc" secondAttribute="centerY" id="lyZ-YA-KrL"/>
+                <constraint firstItem="tYJ-XX-Svj" firstAttribute="leading" secondItem="JOs-lz-Wnp" secondAttribute="trailing" constant="13.4" id="paC-Db-mFG"/>
+                <constraint firstItem="JOs-lz-Wnp" firstAttribute="centerY" secondItem="got-ZO-GZc" secondAttribute="centerY" id="vaA-TZ-NMA"/>
+                <constraint firstItem="JOs-lz-Wnp" firstAttribute="leading" secondItem="wzl-Iq-fAT" secondAttribute="trailing" constant="13.4" id="zJY-RY-WfR"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="GTT-fi-EEH"/>
+            <point key="canvasLocation" x="27" y="120.5"/>
+        </view>
+        <view contentMode="scaleToFill" id="IMp-ry-ELZ">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="183"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Q02_textbox.png" translatesAutoresizingMaskIntoConstraints="NO" id="109-ep-XKH">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="183"/>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Z0-Y2-HpI">
+                    <rect key="frame" x="144.5" y="25" width="86" height="86"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="86" id="4ZM-Hc-AJW"/>
+                        <constraint firstAttribute="width" constant="86" id="nIX-D9-pzQ"/>
+                    </constraints>
+                    <state key="normal" image="Voise_icon.png" backgroundImage="Voise_bg.png"/>
+                    <state key="selected" backgroundImage="Voise_bg.png"/>
+                    <connections>
+                        <action selector="action_StartSpeak:" destination="-1" eventType="touchDown" id="We0-64-zjJ"/>
+                        <action selector="action_StopSpeak:" destination="-1" eventType="touchUpOutside" id="Bad-r0-gdx"/>
+                        <action selector="action_StopSpeak:" destination="-1" eventType="touchUpInside" id="dBR-cO-dVo"/>
+                    </connections>
+                </button>
+            </subviews>
+            <constraints>
+                <constraint firstItem="rLc-32-wGd" firstAttribute="bottom" secondItem="109-ep-XKH" secondAttribute="bottom" id="06N-Ch-2Gn"/>
+                <constraint firstItem="2Z0-Y2-HpI" firstAttribute="top" secondItem="rLc-32-wGd" secondAttribute="top" constant="25" id="Dq0-qU-0wy"/>
+                <constraint firstItem="rLc-32-wGd" firstAttribute="trailing" secondItem="109-ep-XKH" secondAttribute="trailing" id="K9z-zf-iPl"/>
+                <constraint firstItem="109-ep-XKH" firstAttribute="top" secondItem="rLc-32-wGd" secondAttribute="top" id="QIk-5K-g7V"/>
+                <constraint firstItem="2Z0-Y2-HpI" firstAttribute="centerX" secondItem="IMp-ry-ELZ" secondAttribute="centerX" id="TDg-Z6-yZN"/>
+                <constraint firstItem="109-ep-XKH" firstAttribute="leading" secondItem="rLc-32-wGd" secondAttribute="leading" id="euP-Pm-SG6"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="rLc-32-wGd"/>
+            <point key="canvasLocation" x="482" y="45"/>
+        </view>
+        <view contentMode="scaleToFill" id="6ut-kj-nS7">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="258"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="o7v-j7-eSK"/>
+            <point key="canvasLocation" x="919" y="82"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Q01_selection01.png" width="59" height="33"/>
+        <image name="Q01_selection02.png" width="88" height="33"/>
+        <image name="Q01_selection03.png" width="72" height="33"/>
+        <image name="Q01_selection04.png" width="60" height="33"/>
+        <image name="Q01_textbox.png" width="375" height="111"/>
+        <image name="Q02_textbox.png" width="375" height="184"/>
+        <image name="Voise_bg.png" width="86" height="86"/>
+        <image name="Voise_icon.png" width="31" height="51"/>
+    </resources>
+</document>
