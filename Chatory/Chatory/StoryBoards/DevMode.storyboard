@@ -423,11 +423,20 @@ will show Answer Sheet  Touch Background Action or Send Button Actions will 
                         </segue>
                         <segue destination="BFg-tj-1rd" kind="show" identifier="ShowChattingSegue" id="cEz-ja-d0D"/>
                         <segue destination="yk1-vx-gOu" kind="show" identifier="ShowTeacherSegue" id="WKv-nA-hBQ"/>
+                        <segue destination="gEJ-YV-6Fc" kind="show" identifier="ShowTaleSegue" id="v1F-7I-Wb3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q1a-2B-AqM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2662" y="-546"/>
+        </scene>
+        <!--SelectFairyTale-->
+        <scene sceneID="4I7-Gl-gCZ">
+            <objects>
+                <viewControllerPlaceholder storyboardName="SelectFairyTale" id="gEJ-YV-6Fc" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="co4-Lr-3Vb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3343" y="-1115"/>
         </scene>
         <!--SelectTeacher-->
         <scene sceneID="nqe-rn-y6h">

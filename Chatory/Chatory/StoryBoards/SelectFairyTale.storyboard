@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="P8c-dV-dqw">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Select Fairy Tale View Controller-->
+        <scene sceneID="9s6-7t-WM8">
+            <objects>
+                <viewController id="P8c-dV-dqw" customClass="SelectFairyTaleViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gOC-vl-GSh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="step2.png" translatesAutoresizingMaskIntoConstraints="NO" id="Rn8-uo-N7H">
+                                <rect key="frame" x="43" y="100" width="71" height="28"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="step2_text.png" translatesAutoresizingMaskIntoConstraints="NO" id="0TX-Xc-ZLc">
+                                <rect key="frame" x="43" y="144" width="160" height="64"/>
+                            </imageView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="owy-7J-y4F">
+                                <rect key="frame" x="0.0" y="244" width="375" height="402"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="402" id="PKs-jg-QhA"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Rn8-uo-N7H" firstAttribute="top" secondItem="nh5-7H-nCz" secondAttribute="top" constant="80" id="5gl-Vc-UHR"/>
+                            <constraint firstItem="0TX-Xc-ZLc" firstAttribute="leading" secondItem="Rn8-uo-N7H" secondAttribute="leading" id="EbQ-GT-Dff"/>
+                            <constraint firstItem="owy-7J-y4F" firstAttribute="leading" secondItem="nh5-7H-nCz" secondAttribute="leading" id="M7l-K0-3Ma"/>
+                            <constraint firstItem="0TX-Xc-ZLc" firstAttribute="top" secondItem="Rn8-uo-N7H" secondAttribute="bottom" constant="16" id="PpN-vT-jue"/>
+                            <constraint firstItem="owy-7J-y4F" firstAttribute="top" secondItem="0TX-Xc-ZLc" secondAttribute="bottom" constant="36" id="T81-nI-1Lz"/>
+                            <constraint firstItem="Rn8-uo-N7H" firstAttribute="leading" secondItem="nh5-7H-nCz" secondAttribute="leading" constant="43" id="Xm0-m5-mZC"/>
+                            <constraint firstItem="nh5-7H-nCz" firstAttribute="trailing" secondItem="owy-7J-y4F" secondAttribute="trailing" id="k7m-W4-LJO"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="nh5-7H-nCz"/>
+                    </view>
+                    <connections>
+                        <outlet property="contentView" destination="gwP-Jq-WAq" id="5GC-ZB-2un"/>
+                        <outlet property="scrollView" destination="owy-7J-y4F" id="kHj-ai-C8F"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KKf-Z9-iGg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <view contentMode="scaleToFill" id="gwP-Jq-WAq">
+                    <rect key="frame" x="0.0" y="0.0" width="1424" height="402"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="select_story01.png" translatesAutoresizingMaskIntoConstraints="NO" id="QMx-Qg-tpZ">
+                            <rect key="frame" x="43" y="0.0" width="335" height="402"/>
+                        </imageView>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="select_story02.png" translatesAutoresizingMaskIntoConstraints="NO" id="ieo-6Y-b6r">
+                            <rect key="frame" x="378" y="0.0" width="335" height="402"/>
+                        </imageView>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="select_story03.png" translatesAutoresizingMaskIntoConstraints="NO" id="VcG-z9-rhq">
+                            <rect key="frame" x="713" y="0.0" width="335" height="402"/>
+                        </imageView>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="select_story03.png" translatesAutoresizingMaskIntoConstraints="NO" id="qo2-sz-2Hl">
+                            <rect key="frame" x="1048" y="0.0" width="335" height="402"/>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="QMx-Qg-tpZ" firstAttribute="top" secondItem="fJC-LS-q6H" secondAttribute="top" id="0Sz-Uo-hPx"/>
+                        <constraint firstItem="VcG-z9-rhq" firstAttribute="bottom" secondItem="fJC-LS-q6H" secondAttribute="bottom" id="BTY-6u-8QP"/>
+                        <constraint firstItem="qo2-sz-2Hl" firstAttribute="leading" secondItem="VcG-z9-rhq" secondAttribute="trailing" id="DNg-vk-hP2"/>
+                        <constraint firstItem="ieo-6Y-b6r" firstAttribute="top" secondItem="fJC-LS-q6H" secondAttribute="top" id="JvR-pe-QAE"/>
+                        <constraint firstItem="ieo-6Y-b6r" firstAttribute="leading" secondItem="QMx-Qg-tpZ" secondAttribute="trailing" id="bVU-ns-RQz"/>
+                        <constraint firstItem="VcG-z9-rhq" firstAttribute="leading" secondItem="ieo-6Y-b6r" secondAttribute="trailing" id="buj-Gf-AoD"/>
+                        <constraint firstItem="ieo-6Y-b6r" firstAttribute="bottom" secondItem="fJC-LS-q6H" secondAttribute="bottom" id="fVH-wK-nWh"/>
+                        <constraint firstItem="qo2-sz-2Hl" firstAttribute="top" secondItem="fJC-LS-q6H" secondAttribute="top" id="hDC-IO-740"/>
+                        <constraint firstItem="QMx-Qg-tpZ" firstAttribute="leading" secondItem="fJC-LS-q6H" secondAttribute="leading" constant="43" id="i0L-I4-QOC"/>
+                        <constraint firstItem="qo2-sz-2Hl" firstAttribute="bottom" secondItem="fJC-LS-q6H" secondAttribute="bottom" id="kJp-QM-ixB"/>
+                        <constraint firstItem="fJC-LS-q6H" firstAttribute="bottom" secondItem="QMx-Qg-tpZ" secondAttribute="bottom" id="kaT-dF-6Ck"/>
+                        <constraint firstItem="VcG-z9-rhq" firstAttribute="top" secondItem="fJC-LS-q6H" secondAttribute="top" id="n1Y-m2-aAX"/>
+                    </constraints>
+                    <viewLayoutGuide key="safeArea" id="fJC-LS-q6H"/>
+                </view>
+            </objects>
+            <point key="canvasLocation" x="159" y="255"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="select_story01.png" width="335" height="402"/>
+        <image name="select_story02.png" width="335" height="402"/>
+        <image name="select_story03.png" width="335" height="402"/>
+        <image name="step2.png" width="71" height="28"/>
+        <image name="step2_text.png" width="160" height="64"/>
+    </resources>
+</document>

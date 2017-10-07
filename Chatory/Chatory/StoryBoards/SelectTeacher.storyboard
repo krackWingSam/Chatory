@@ -95,23 +95,53 @@
                                 <constraint firstAttribute="width" constant="150" id="ghj-ZY-NZh"/>
                             </constraints>
                         </imageView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0i0-88-Afs">
+                            <rect key="frame" x="43" y="0.0" width="251" height="402"/>
+                            <connections>
+                                <action selector="action_SelectTeacher:" destination="SYJ-Dj-k0f" eventType="touchUpInside" id="jq8-Ev-BeU"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IEX-ce-8Yb">
+                            <rect key="frame" x="294" y="0.0" width="251" height="402"/>
+                            <connections>
+                                <action selector="action_SelectTeacher:" destination="SYJ-Dj-k0f" eventType="touchUpInside" id="w1d-Ba-j5o"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SN3-ak-o5A">
+                            <rect key="frame" x="545" y="0.0" width="251" height="402"/>
+                            <connections>
+                                <action selector="action_SelectTeacher:" destination="SYJ-Dj-k0f" eventType="touchUpInside" id="HhP-GA-sUh"/>
+                            </connections>
+                        </button>
                     </subviews>
                     <constraints>
                         <constraint firstItem="BZh-Iw-fBr" firstAttribute="top" secondItem="wGo-wj-Iy9" secondAttribute="top" constant="50" id="6dr-4Y-pGN"/>
                         <constraint firstItem="AF3-RQ-apF" firstAttribute="leading" secondItem="ad5-vR-bYY" secondAttribute="trailing" id="8JZ-ba-4qm"/>
+                        <constraint firstItem="SN3-ak-o5A" firstAttribute="trailing" secondItem="wGo-wj-Iy9" secondAttribute="trailing" id="DWP-ef-UpQ"/>
+                        <constraint firstItem="0i0-88-Afs" firstAttribute="leading" secondItem="ad5-vR-bYY" secondAttribute="leading" id="ENW-kY-0aR"/>
                         <constraint firstItem="dRw-Dd-SxH" firstAttribute="centerX" secondItem="ad5-vR-bYY" secondAttribute="centerX" id="FaB-z8-KfV"/>
                         <constraint firstAttribute="bottom" secondItem="wGo-wj-Iy9" secondAttribute="bottom" id="HFp-8D-bUi"/>
+                        <constraint firstItem="SN3-ak-o5A" firstAttribute="top" secondItem="wGo-wj-Iy9" secondAttribute="top" id="Jw7-hE-cgf"/>
                         <constraint firstItem="7xj-k8-KcZ" firstAttribute="centerX" secondItem="AF3-RQ-apF" secondAttribute="centerX" id="JwL-R8-cJ2"/>
                         <constraint firstItem="BZh-Iw-fBr" firstAttribute="centerX" secondItem="wGo-wj-Iy9" secondAttribute="centerX" id="KLm-Pc-jOy"/>
                         <constraint firstItem="dRw-Dd-SxH" firstAttribute="top" secondItem="ad5-vR-bYY" secondAttribute="top" constant="50" id="LPz-kp-pYq"/>
+                        <constraint firstItem="SN3-ak-o5A" firstAttribute="leading" secondItem="wGo-wj-Iy9" secondAttribute="leading" id="OSb-wk-Xf7"/>
+                        <constraint firstItem="IEX-ce-8Yb" firstAttribute="trailing" secondItem="AF3-RQ-apF" secondAttribute="trailing" id="QjB-KI-tcy"/>
+                        <constraint firstItem="0i0-88-Afs" firstAttribute="bottom" secondItem="ad5-vR-bYY" secondAttribute="bottom" id="RO2-zF-6dB"/>
                         <constraint firstItem="ad5-vR-bYY" firstAttribute="leading" secondItem="BWk-bl-RJ2" secondAttribute="leading" constant="43" id="Rm7-nm-Dp3"/>
+                        <constraint firstItem="IEX-ce-8Yb" firstAttribute="top" secondItem="AF3-RQ-apF" secondAttribute="top" id="W8H-8B-vCU"/>
+                        <constraint firstItem="0i0-88-Afs" firstAttribute="trailing" secondItem="ad5-vR-bYY" secondAttribute="trailing" id="Ycg-QT-7MW"/>
+                        <constraint firstItem="IEX-ce-8Yb" firstAttribute="bottom" secondItem="AF3-RQ-apF" secondAttribute="bottom" id="ZB3-PX-rPl"/>
                         <constraint firstItem="wGo-wj-Iy9" firstAttribute="leading" secondItem="AF3-RQ-apF" secondAttribute="trailing" id="ZVH-Dy-EZA"/>
+                        <constraint firstItem="0i0-88-Afs" firstAttribute="top" secondItem="ad5-vR-bYY" secondAttribute="top" id="e8g-uL-KAt"/>
                         <constraint firstItem="7xj-k8-KcZ" firstAttribute="top" secondItem="AF3-RQ-apF" secondAttribute="top" constant="50" id="f6r-cF-f4i"/>
                         <constraint firstItem="AF3-RQ-apF" firstAttribute="top" secondItem="BWk-bl-RJ2" secondAttribute="top" id="fUP-Yg-EjS"/>
                         <constraint firstItem="AF3-RQ-apF" firstAttribute="bottom" secondItem="BWk-bl-RJ2" secondAttribute="bottom" id="h6a-ly-uKc"/>
                         <constraint firstItem="wGo-wj-Iy9" firstAttribute="top" secondItem="BWk-bl-RJ2" secondAttribute="top" id="hsR-tM-4Im"/>
                         <constraint firstItem="BWk-bl-RJ2" firstAttribute="bottom" secondItem="ad5-vR-bYY" secondAttribute="bottom" id="pQM-hW-5fD"/>
                         <constraint firstItem="ad5-vR-bYY" firstAttribute="top" secondItem="BWk-bl-RJ2" secondAttribute="top" id="tpS-nh-m0f"/>
+                        <constraint firstItem="SN3-ak-o5A" firstAttribute="bottom" secondItem="wGo-wj-Iy9" secondAttribute="bottom" id="ykv-8G-zUc"/>
+                        <constraint firstItem="IEX-ce-8Yb" firstAttribute="leading" secondItem="AF3-RQ-apF" secondAttribute="leading" id="yxV-93-6Sr"/>
                     </constraints>
                     <viewLayoutGuide key="safeArea" id="BWk-bl-RJ2"/>
                 </view>

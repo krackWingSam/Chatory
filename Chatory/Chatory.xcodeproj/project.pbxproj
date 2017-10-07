@@ -128,6 +128,17 @@
 		CA2909B61F889D540045C35B /* Q03_text01@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CA29094E1F889D440045C35B /* Q03_text01@2x.png */; };
 		CA2909B71F889D540045C35B /* Q03_wrong01_gif@2x.gif in Resources */ = {isa = PBXBuildFile; fileRef = CA2909501F889D440045C35B /* Q03_wrong01_gif@2x.gif */; };
 		CA2909B81F889D540045C35B /* Q03_wrong01_text@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CA2909511F889D440045C35B /* Q03_wrong01_text@2x.png */; };
+		CA2909BA1F88A03B0045C35B /* SelectFairyTale.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA2909B91F88A03B0045C35B /* SelectFairyTale.storyboard */; };
+		CA2909BD1F88A6570045C35B /* UserDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CA2909BC1F88A6570045C35B /* UserDataManager.m */; };
+		CA2909C81F88C94D0045C35B /* select_story01@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CA2909BF1F88B0450045C35B /* select_story01@2x.png */; };
+		CA2909C91F88C94D0045C35B /* select_story02@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CA2909C01F88B0450045C35B /* select_story02@2x.png */; };
+		CA2909CA1F88C94D0045C35B /* select_story03@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CA2909C11F88B0450045C35B /* select_story03@2x.png */; };
+		CA2909CB1F88C94D0045C35B /* select_story04@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CA2909C21F88B0450045C35B /* select_story04@2x.png */; };
+		CA2909CC1F88C94D0045C35B /* step2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CA2909C31F88B0450045C35B /* step2@2x.png */; };
+		CA2909CD1F88C94D0045C35B /* step2_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CA2909C41F88B0450045C35B /* step2_bg@2x.png */; };
+		CA2909CE1F88C94D0045C35B /* step2_dot@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CA2909C51F88B0450045C35B /* step2_dot@2x.png */; };
+		CA2909CF1F88C94D0045C35B /* step2_dot_color@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CA2909C61F88B0450045C35B /* step2_dot_color@2x.png */; };
+		CA2909D01F88C94D0045C35B /* step2_text@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CA2909C71F88B0450045C35B /* step2_text@2x.png */; };
 		CA3900341F79D48200343521 /* CTSpeechRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = CA3900331F79D48200343521 /* CTSpeechRecognizer.m */; };
 		CA3900381F79E29400343521 /* TSSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA3900371F79E29400343521 /* TSSViewController.m */; };
 		CA39003E1F7A082E00343521 /* SoundViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA39003D1F7A082E00343521 /* SoundViewController.m */; };
@@ -308,6 +319,18 @@
 		CA29094E1F889D440045C35B /* Q03_text01@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Q03_text01@2x.png"; sourceTree = "<group>"; };
 		CA2909501F889D440045C35B /* Q03_wrong01_gif@2x.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "Q03_wrong01_gif@2x.gif"; sourceTree = "<group>"; };
 		CA2909511F889D440045C35B /* Q03_wrong01_text@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Q03_wrong01_text@2x.png"; sourceTree = "<group>"; };
+		CA2909B91F88A03B0045C35B /* SelectFairyTale.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SelectFairyTale.storyboard; sourceTree = "<group>"; };
+		CA2909BB1F88A6570045C35B /* UserDataManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserDataManager.h; sourceTree = "<group>"; };
+		CA2909BC1F88A6570045C35B /* UserDataManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserDataManager.m; sourceTree = "<group>"; };
+		CA2909BF1F88B0450045C35B /* select_story01@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "select_story01@2x.png"; sourceTree = "<group>"; };
+		CA2909C01F88B0450045C35B /* select_story02@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "select_story02@2x.png"; sourceTree = "<group>"; };
+		CA2909C11F88B0450045C35B /* select_story03@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "select_story03@2x.png"; sourceTree = "<group>"; };
+		CA2909C21F88B0450045C35B /* select_story04@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "select_story04@2x.png"; sourceTree = "<group>"; };
+		CA2909C31F88B0450045C35B /* step2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "step2@2x.png"; sourceTree = "<group>"; };
+		CA2909C41F88B0450045C35B /* step2_bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "step2_bg@2x.png"; sourceTree = "<group>"; };
+		CA2909C51F88B0450045C35B /* step2_dot@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "step2_dot@2x.png"; sourceTree = "<group>"; };
+		CA2909C61F88B0450045C35B /* step2_dot_color@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "step2_dot_color@2x.png"; sourceTree = "<group>"; };
+		CA2909C71F88B0450045C35B /* step2_text@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "step2_text@2x.png"; sourceTree = "<group>"; };
 		CA3900321F79D48200343521 /* CTSpeechRecognizer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTSpeechRecognizer.h; sourceTree = "<group>"; };
 		CA3900331F79D48200343521 /* CTSpeechRecognizer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTSpeechRecognizer.m; sourceTree = "<group>"; };
 		CA3900361F79E29400343521 /* TSSViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TSSViewController.h; sourceTree = "<group>"; };
@@ -585,6 +608,7 @@
 			isa = PBXGroup;
 			children = (
 				CA2908FA1F889D440045C35B /* 1 */,
+				CA2909BE1F88B0450045C35B /* 2 */,
 			);
 			path = Scene;
 			sourceTree = "<group>";
@@ -806,6 +830,22 @@
 			path = wrong;
 			sourceTree = "<group>";
 		};
+		CA2909BE1F88B0450045C35B /* 2 */ = {
+			isa = PBXGroup;
+			children = (
+				CA2909BF1F88B0450045C35B /* select_story01@2x.png */,
+				CA2909C01F88B0450045C35B /* select_story02@2x.png */,
+				CA2909C11F88B0450045C35B /* select_story03@2x.png */,
+				CA2909C21F88B0450045C35B /* select_story04@2x.png */,
+				CA2909C31F88B0450045C35B /* step2@2x.png */,
+				CA2909C41F88B0450045C35B /* step2_bg@2x.png */,
+				CA2909C51F88B0450045C35B /* step2_dot@2x.png */,
+				CA2909C61F88B0450045C35B /* step2_dot_color@2x.png */,
+				CA2909C71F88B0450045C35B /* step2_text@2x.png */,
+			);
+			path = 2;
+			sourceTree = "<group>";
+		};
 		CA3900311F79D44600343521 /* Object */ = {
 			isa = PBXGroup;
 			children = (
@@ -846,6 +886,7 @@
 				CA5C89481F748F50009431D6 /* ChatBot.storyboard */,
 				CA2908B21F888ACF0045C35B /* DevMode.storyboard */,
 				CA2908B41F888C620045C35B /* SelectTeacher.storyboard */,
+				CA2909B91F88A03B0045C35B /* SelectFairyTale.storyboard */,
 			);
 			path = StoryBoards;
 			sourceTree = "<group>";
@@ -905,6 +946,8 @@
 				CA8C37361F78CC6300FDCB58 /* ContentManager.m */,
 				CA643D571F808A8A003B99C6 /* SoundManager.h */,
 				CA643D581F808A8A003B99C6 /* SoundManager.m */,
+				CA2909BB1F88A6570045C35B /* UserDataManager.h */,
+				CA2909BC1F88A6570045C35B /* UserDataManager.m */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -1008,8 +1051,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CA2909C81F88C94D0045C35B /* select_story01@2x.png in Resources */,
+				CA2909C91F88C94D0045C35B /* select_story02@2x.png in Resources */,
+				CA2909CA1F88C94D0045C35B /* select_story03@2x.png in Resources */,
+				CA2909CB1F88C94D0045C35B /* select_story04@2x.png in Resources */,
+				CA2909CC1F88C94D0045C35B /* step2@2x.png in Resources */,
+				CA2909CD1F88C94D0045C35B /* step2_bg@2x.png in Resources */,
+				CA2909CE1F88C94D0045C35B /* step2_dot@2x.png in Resources */,
+				CA2909CF1F88C94D0045C35B /* step2_dot_color@2x.png in Resources */,
+				CA2909D01F88C94D0045C35B /* step2_text@2x.png in Resources */,
 				CA2909521F889D530045C35B /* Q01_correct01.gif in Resources */,
 				CA2909531F889D530045C35B /* Q01_wrong01.gif in Resources */,
+				CA2909BA1F88A03B0045C35B /* SelectFairyTale.storyboard in Resources */,
 				CA2909541F889D530045C35B /* Q01_wrong02.gif in Resources */,
 				CA2909551F889D530045C35B /* Q01_wrong03.gif in Resources */,
 				CA2909561F889D530045C35B /* Q02_correct02.gif in Resources */,
@@ -1260,6 +1313,7 @@
 				CADB75731F78EBBA00B84433 /* Chat_AnswerReactionViewController.m in Sources */,
 				CADB75691F78E5CE00B84433 /* UserAnswerViewController.m in Sources */,
 				CA3900381F79E29400343521 /* TSSViewController.m in Sources */,
+				CA2909BD1F88A6570045C35B /* UserDataManager.m in Sources */,
 				CA0A268C1F70AC4D00209E05 /* main.m in Sources */,
 				CA5C89C91F74A8E1009431D6 /* Chat_QuestionViewController.m in Sources */,
 				CA0A26C81F71FAA100209E05 /* Question.m in Sources */,

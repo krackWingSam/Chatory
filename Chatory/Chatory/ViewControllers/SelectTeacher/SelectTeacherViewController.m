@@ -7,6 +7,7 @@
 //
 
 #import "SelectTeacherViewController.h"
+#import "UserDataManager.h"
 
 @interface SelectTeacherViewController () <UIScrollViewDelegate> {
     IBOutlet UIScrollView *scrollView;
@@ -74,30 +75,42 @@
     CGFloat targetX = scrollView.contentOffset.x + velocity.x * 60.0;
     CGFloat indexWidth = contentView.frame.size.width / 3;
     CGFloat indexMargin = indexWidth / 2;
+    CGFloat moveToX = 0;
+    
+    targetContentOffset->x = _scrollView.contentOffset.x;
+    
+    if (targetX < indexWidth - indexMargin)
+        moveToX = 0;
+    else if (targetX > indexWidth * 2 - indexMargin)
+        moveToX = scrollView.contentSize.width - scrollView.frame.size.width;
+    else
+        moveToX = 294-43;
     
     dispatch_async(dispatch_get_main_queue(), ^{
-//        [image_Teacher01 stopAnimating];
-//        [image_Teacher02 stopAnimating];
-//        [image_Teacher03 stopAnimating];
+        [UIView animateWithDuration:0.2f animations:^{
+            [_scrollView setContentOffset:CGPointMake(moveToX, 0)];
+        }];
     });
-    
-    if (targetX < indexWidth - indexMargin) {
-        targetContentOffset->x = 0;
-        dispatch_async(dispatch_get_main_queue(), ^{
-//            [image_Teacher01 startAnimating];
-        });
-    }
-    else if (targetX > indexWidth * 2 - indexMargin) {
-        targetContentOffset->x = indexWidth * 2;
-        dispatch_async(dispatch_get_main_queue(), ^{
-//            [image_Teacher03 startAnimating];
-        });
-    }
-    else {
-        targetContentOffset->x = 294-43;
-        dispatch_async(dispatch_get_main_queue(), ^{
-//            [image_Teacher02 startAnimating];
-        });
+}
+
+
+#pragma mark - IBActions
+-(IBAction)action_SelectTeacher:(UIButton *)sender {
+    NSLog(@"selected teacher : %d", (int)sender.tag);
+    UserDataManager *manager = [UserDataManager sharedManager];
+    switch (sender.tag) {
+        case 0:
+            [manager setTeacherKey:TEACHER_KEY_TIGER];
+            break;
+            
+        case 1:
+            break;
+            
+        case 2:
+            break;
+            
+        default:
+            break;
     }
 }
 
