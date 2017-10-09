@@ -9,6 +9,8 @@
 #import "MovieViewController.h"
 #import <AVKit/AVKit.h>
 
+#import "MovieTimeScriptManager.h"
+
 @interface MovieViewController () {
     IBOutlet UIView *view_MovieFrame;
     IBOutlet UIScrollView *scroll_Script;
@@ -43,7 +45,11 @@
     NSArray *array_Player;
     NSArray *array_ScriptView;
     
-    BOOL isPlay;
+    BOOL isAutoPlay;
+    MovieTimeScriptManager *scriptTime;
+    NSRange currentScriptRange;
+    id timeObserver;
+    dispatch_queue_t queue_TimeObserver;
 }
 
 @end
@@ -75,6 +81,8 @@
     
     playerVC = [[AVPlayerViewController alloc] init];
     [playerVC setShowsPlaybackControls:NO];
+    
+    queue_TimeObserver = dispatch_queue_create("com.fermata.chatory.movie_time_seeker", DISPATCH_QUEUE_SERIAL);
     
     [self switchMovie:0];
 }
@@ -108,7 +116,7 @@
 
 -(void)initMovie {
     NSArray *names = @[@"v1"];
-    
+    isAutoPlay = NO;
     NSMutableArray *tempArray = [[NSMutableArray alloc] init];
     for (NSString *name in names) {
         NSString *path = [[NSBundle mainBundle] pathForResource:name ofType:@"mp4"];
@@ -121,6 +129,19 @@
     }
     
     array_Player = [[NSArray alloc] initWithArray:tempArray];
+    
+    scriptTime = [[MovieTimeScriptManager alloc] init];
+}
+
+#pragma mark - MovieAutoPlayControl
+-(void)startAutoPlay {
+    isAutoPlay = YES;
+    [playerVC.player play];
+}
+
+-(void)stopAutoPlay {
+    isAutoPlay = NO;
+    [playerVC.player pause];
 }
 
 
@@ -146,11 +167,15 @@
     if (movieIndex >= [array_Player count])
         return;
     
+    [self removeTimeObserver];
+    
     AVPlayer *currentPlayer = [array_Player objectAtIndex:movieIndex];
     if (currentPlayer.status != AVPlayerStatusReadyToPlay)
         return;
     
     [playerVC setPlayer:currentPlayer];
+    
+    [self addTimeObserver];
     
     [playerVC.view setFrame:CGRectMake(0, 0, view_MovieFrame.frame.size.width, view_MovieFrame.frame.size.height)];
     [view_MovieFrame addSubview:playerVC.view];
@@ -159,6 +184,8 @@
         [view removeFromSuperview];
     [scroll_Script addSubview:[array_ScriptView objectAtIndex:movieIndex]];
     [scroll_Script setContentSize:[[array_ScriptView objectAtIndex:movieIndex] frame].size];
+    
+    [self startAutoPlay];
 }
 
 
@@ -172,9 +199,6 @@
 }
 
 -(IBAction)action_Translate:(UIButton *)sender {
-    if (isPlay)
-        return;
-    
     NSInteger currentIndex = [sender tag];
     UIImageView *currentImageView = [array_ScriptImageView objectAtIndex:currentIndex];
     UIImage *currentTranslatedImage = [array_ScriptTranslateImage objectAtIndex:currentIndex];
@@ -196,11 +220,74 @@
             else
                 [currentButton setSelected:NO];
         }
+        
+        isAutoPlay = NO;
+        currentScriptRange = [[scriptTime.array_ScriptRange objectAtIndex:currentIndex] rangeValue];
+        [playerVC.player seekToTime:CMTimeMake(currentScriptRange.location, 100) toleranceBefore:CMTimeMake(10, 100) toleranceAfter:CMTimeMake(10, 100)];
+        [playerVC.player play];
+        
+        
+        UIImageView *imageView = [array_ScriptImageView objectAtIndex:currentIndex];
+        [imageView setImage:[array_ScriptOnImage objectAtIndex:currentIndex]];
     });
 }
 
 
 #pragma mark - Observing
+-(void)addTimeObserver {
+    AVPlayer *currentPlayer = [playerVC player];
+    
+    timeObserver = [currentPlayer addPeriodicTimeObserverForInterval:CMTimeMake(1, 10) queue:queue_TimeObserver usingBlock:^(CMTime time) {
+        NSLog(@"time : %f", CMTimeGetSeconds(time));
+        CGFloat currentSecond = CMTimeGetSeconds(time) * 100;
+        
+        if (isAutoPlay) {
+            for (NSValue *valueObject in scriptTime.array_ScriptRange) {
+                NSRange range = [valueObject rangeValue];
+                CGFloat compareRangeStart = (CGFloat)range.location;
+                CGFloat compareRangeEnd = (CGFloat)range.length;
+                
+                NSInteger currentIndex = [scriptTime.array_ScriptRange indexOfObject:valueObject];
+                UIImageView *imageView = [array_ScriptImageView objectAtIndex:currentIndex];
+                
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    if (currentSecond >= compareRangeStart && currentSecond <= compareRangeEnd) {
+                        [imageView setImage:[array_ScriptOnImage objectAtIndex:currentIndex]];
+                        //check scroll offset
+                        
+                    }
+                    else
+                        [imageView setImage:[array_ScriptOffImage objectAtIndex:currentIndex]];
+                });
+            }
+        }
+        else {
+            CGFloat compareRangeStart = (CGFloat)currentScriptRange.location - 50;
+            CGFloat compareRangeEnd = (CGFloat)currentScriptRange.length;
+            if (currentSecond < compareRangeStart || currentSecond > compareRangeEnd) {
+                [playerVC.player pause];
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    for (UIButton *button in array_ScriptButton)
+                        [button setSelected:NO];
+                    
+                    for (int i=0 ; i<[array_ScriptImageView count] ; i++) {
+                        UIImageView *imageView = [array_ScriptImageView objectAtIndex:i];
+                        UIImage *image = [array_ScriptOffImage objectAtIndex:i];
+                        [imageView setImage:image];
+                    }
+                });
+            }
+        }
+    }];
+}
+
+-(void)removeTimeObserver {
+    AVPlayer *currentPlayer = [playerVC player];
+    
+    if (timeObserver)
+        [currentPlayer removeTimeObserver:timeObserver];
+}
+
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object
                         change:(NSDictionary *)change context:(void *)context {
     NSLog(@"observing check");

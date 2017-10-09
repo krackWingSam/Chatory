@@ -276,6 +276,7 @@
 		CAF60F991F8A0B0E0093A72F /* Q03_wrong01_gif@2x.gif in Resources */ = {isa = PBXBuildFile; fileRef = CAF60EA91F89FAF10093A72F /* Q03_wrong01_gif@2x.gif */; };
 		CAF60F9A1F8A0B0E0093A72F /* Q03_wrong01_text@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CAF60EAA1F89FAF10093A72F /* Q03_wrong01_text@2x.png */; };
 		CAF60F9D1F8A0E6E0093A72F /* TestVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAF60F9C1F8A0E6E0093A72F /* TestVideoViewController.m */; };
+		CAF60FA01F8B11230093A72F /* MovieTimeScriptManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CAF60F9F1F8B11230093A72F /* MovieTimeScriptManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -593,6 +594,8 @@
 		CAF60EC11F89FDB60093A72F /* #01_07_translation@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "#01_07_translation@2x.png"; sourceTree = "<group>"; };
 		CAF60F9B1F8A0E6E0093A72F /* TestVideoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestVideoViewController.h; sourceTree = "<group>"; };
 		CAF60F9C1F8A0E6E0093A72F /* TestVideoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestVideoViewController.m; sourceTree = "<group>"; };
+		CAF60F9E1F8B11230093A72F /* MovieTimeScriptManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MovieTimeScriptManager.h; sourceTree = "<group>"; };
+		CAF60F9F1F8B11230093A72F /* MovieTimeScriptManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MovieTimeScriptManager.m; sourceTree = "<group>"; };
 		DB5CBA1496E1B953F9510377 /* Pods-ChatoryTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChatoryTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ChatoryTests/Pods-ChatoryTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -713,6 +716,8 @@
 				CA0A26CA1F71FB9600209E05 /* Teacher.m */,
 				CA8C37381F78CC7B00FDCB58 /* Content.h */,
 				CA8C37391F78CC7B00FDCB58 /* Content.m */,
+				CAF60F9E1F8B11230093A72F /* MovieTimeScriptManager.h */,
+				CAF60F9F1F8B11230093A72F /* MovieTimeScriptManager.m */,
 			);
 			path = DataModel;
 			sourceTree = "<group>";
@@ -1878,6 +1883,7 @@
 				CA0A26C21F71EA6000209E05 /* ChattingViewController.m in Sources */,
 				CA0A26BC1F7113E600209E05 /* TeacherViewController.m in Sources */,
 				CA643D591F808A8A003B99C6 /* SoundManager.m in Sources */,
+				CAF60FA01F8B11230093A72F /* MovieTimeScriptManager.m in Sources */,
 				CA2908BA1F888CA80045C35B /* SelectFairyTaleViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
