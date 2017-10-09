@@ -7,10 +7,13 @@
 //
 
 #import "SelectFairyTaleViewController.h"
+#import "UserDataManager.h"
 
 @interface SelectFairyTaleViewController () <UIScrollViewDelegate> {
     IBOutlet UIScrollView *scrollView;
     IBOutlet UIView *contentView;
+    
+    UserDataManager *manager;
 }
 
 @end
@@ -30,6 +33,8 @@
 }
 
 -(void)initUI {
+    manager = [UserDataManager sharedManager];
+    
     [scrollView addSubview:contentView];
     [scrollView setContentSize:contentView.frame.size];
     [scrollView setDelegate:self];
@@ -67,6 +72,8 @@
     NSLog(@"select tale : %d", (int)sender.tag);
     switch (sender.tag) {
         case 0:
+            [manager setContentKey:CONTENT_KEY_01];
+            [self performSegueWithIdentifier:@"ShowMovieSegue" sender:nil];
             break;
             
         case 1:

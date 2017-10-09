@@ -101,6 +101,7 @@
     switch (sender.tag) {
         case 0:
             [manager setTeacherKey:TEACHER_KEY_TIGER];
+            [self performSegueWithIdentifier:@"ShowTaleSegue" sender:nil];
             break;
             
         case 1:

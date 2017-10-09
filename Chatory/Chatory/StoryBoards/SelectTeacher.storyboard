@@ -49,6 +49,7 @@
                         <outlet property="image_Teacher02" destination="7xj-k8-KcZ" id="3Jz-VL-vHA"/>
                         <outlet property="image_Teacher03" destination="BZh-Iw-fBr" id="b8K-CI-4CB"/>
                         <outlet property="scrollView" destination="OdL-ga-jDg" id="2Ny-ue-o4w"/>
+                        <segue destination="bVl-Ir-2r4" kind="show" identifier="ShowTaleSegue" id="zrO-f3-62u"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="v6b-wO-Ask" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -147,6 +148,14 @@
                 </view>
             </objects>
             <point key="canvasLocation" x="218" y="202"/>
+        </scene>
+        <!--SelectFairyTale-->
+        <scene sceneID="3cS-ho-gxd">
+            <objects>
+                <viewControllerPlaceholder storyboardName="SelectFairyTale" id="bVl-Ir-2r4" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IRn-dB-gMD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="938" y="201"/>
         </scene>
     </scenes>
     <resources>

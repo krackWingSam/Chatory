@@ -46,6 +46,7 @@
                     <connections>
                         <outlet property="contentView" destination="gwP-Jq-WAq" id="5GC-ZB-2un"/>
                         <outlet property="scrollView" destination="owy-7J-y4F" id="kHj-ai-C8F"/>
+                        <segue destination="oXN-4Q-m8D" kind="show" identifier="ShowMovieSegue" id="pLe-es-3EZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KKf-Z9-iGg" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -65,26 +66,54 @@
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="select_story03.png" translatesAutoresizingMaskIntoConstraints="NO" id="qo2-sz-2Hl">
                             <rect key="frame" x="1048" y="0.0" width="335" height="402"/>
                         </imageView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mhc-v8-e6V">
+                            <rect key="frame" x="43" y="0.0" width="335" height="402"/>
+                            <connections>
+                                <action selector="action_Select:" destination="P8c-dV-dqw" eventType="touchUpInside" id="CzR-ox-icr"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JdA-3O-0Sr">
+                            <rect key="frame" x="378" y="0.0" width="335" height="402"/>
+                            <connections>
+                                <action selector="action_Select:" destination="P8c-dV-dqw" eventType="touchUpInside" id="ECC-1F-QZC"/>
+                            </connections>
+                        </button>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstItem="QMx-Qg-tpZ" firstAttribute="top" secondItem="fJC-LS-q6H" secondAttribute="top" id="0Sz-Uo-hPx"/>
+                        <constraint firstItem="JdA-3O-0Sr" firstAttribute="top" secondItem="ieo-6Y-b6r" secondAttribute="top" id="5FL-dW-LbO"/>
+                        <constraint firstItem="mhc-v8-e6V" firstAttribute="bottom" secondItem="QMx-Qg-tpZ" secondAttribute="bottom" id="Axy-Cy-Crd"/>
                         <constraint firstItem="VcG-z9-rhq" firstAttribute="bottom" secondItem="fJC-LS-q6H" secondAttribute="bottom" id="BTY-6u-8QP"/>
+                        <constraint firstItem="JdA-3O-0Sr" firstAttribute="bottom" secondItem="ieo-6Y-b6r" secondAttribute="bottom" id="C7G-Xl-d5x"/>
                         <constraint firstItem="qo2-sz-2Hl" firstAttribute="leading" secondItem="VcG-z9-rhq" secondAttribute="trailing" id="DNg-vk-hP2"/>
                         <constraint firstItem="ieo-6Y-b6r" firstAttribute="top" secondItem="fJC-LS-q6H" secondAttribute="top" id="JvR-pe-QAE"/>
+                        <constraint firstItem="JdA-3O-0Sr" firstAttribute="leading" secondItem="ieo-6Y-b6r" secondAttribute="leading" id="Q9e-fJ-Gye"/>
                         <constraint firstItem="ieo-6Y-b6r" firstAttribute="leading" secondItem="QMx-Qg-tpZ" secondAttribute="trailing" id="bVU-ns-RQz"/>
                         <constraint firstItem="VcG-z9-rhq" firstAttribute="leading" secondItem="ieo-6Y-b6r" secondAttribute="trailing" id="buj-Gf-AoD"/>
+                        <constraint firstItem="mhc-v8-e6V" firstAttribute="trailing" secondItem="QMx-Qg-tpZ" secondAttribute="trailing" id="eeO-fM-dUQ"/>
+                        <constraint firstItem="JdA-3O-0Sr" firstAttribute="trailing" secondItem="ieo-6Y-b6r" secondAttribute="trailing" id="fPD-KG-iYc"/>
                         <constraint firstItem="ieo-6Y-b6r" firstAttribute="bottom" secondItem="fJC-LS-q6H" secondAttribute="bottom" id="fVH-wK-nWh"/>
                         <constraint firstItem="qo2-sz-2Hl" firstAttribute="top" secondItem="fJC-LS-q6H" secondAttribute="top" id="hDC-IO-740"/>
                         <constraint firstItem="QMx-Qg-tpZ" firstAttribute="leading" secondItem="fJC-LS-q6H" secondAttribute="leading" constant="43" id="i0L-I4-QOC"/>
                         <constraint firstItem="qo2-sz-2Hl" firstAttribute="bottom" secondItem="fJC-LS-q6H" secondAttribute="bottom" id="kJp-QM-ixB"/>
                         <constraint firstItem="fJC-LS-q6H" firstAttribute="bottom" secondItem="QMx-Qg-tpZ" secondAttribute="bottom" id="kaT-dF-6Ck"/>
                         <constraint firstItem="VcG-z9-rhq" firstAttribute="top" secondItem="fJC-LS-q6H" secondAttribute="top" id="n1Y-m2-aAX"/>
+                        <constraint firstItem="mhc-v8-e6V" firstAttribute="leading" secondItem="QMx-Qg-tpZ" secondAttribute="leading" id="ueo-7P-Xoe"/>
+                        <constraint firstItem="mhc-v8-e6V" firstAttribute="top" secondItem="QMx-Qg-tpZ" secondAttribute="top" id="wFh-8u-Dik"/>
                     </constraints>
                     <viewLayoutGuide key="safeArea" id="fJC-LS-q6H"/>
                 </view>
             </objects>
             <point key="canvasLocation" x="159" y="255"/>
+        </scene>
+        <!--Movie-->
+        <scene sceneID="niD-c0-WaC">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Movie" id="oXN-4Q-m8D" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WUl-Qt-2ef" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="852" y="254"/>
         </scene>
     </scenes>
     <resources>

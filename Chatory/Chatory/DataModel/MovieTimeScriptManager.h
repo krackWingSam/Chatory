@@ -10,6 +10,7 @@
 
 @interface MovieTimeScriptManager : NSObject
 
-@property NSArray *array_ScriptRange;
+@property (readonly) NSArray *array_ScriptRange;
+@property (readonly) NSArray *array_VideoLength;
 
 @end
