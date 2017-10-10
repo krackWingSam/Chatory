@@ -24,4 +24,17 @@
     // Dispose of any resources that can be recreated.
 }
 
+
+#pragma mark - IBActions
+-(IBAction)action_Back:(id)sender {
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
+
+#pragma mark - Override
+-(BOOL)prefersStatusBarHidden {
+    return YES;
+}
+
+
 @end

@@ -1195,6 +1195,19 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cQs-tb-ucr">
                                 <rect key="frame" x="60" y="379.5" width="254" height="47"/>
                                 <state key="normal" image="word_Practice_B.png"/>
+                                <connections>
+                                    <segue destination="oBq-3F-v10" kind="show" id="o7R-ps-ha2"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nxO-ib-yl4">
+                                <rect key="frame" x="38" y="86" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="OnB-Jw-TfB"/>
+                                    <constraint firstAttribute="height" constant="60" id="dJn-Cc-U8v"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="action_Back:" destination="35h-8U-BaD" eventType="touchUpInside" id="tFb-OC-mom"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1204,8 +1217,10 @@
                             <constraint firstItem="lz7-C1-lTQ" firstAttribute="top" secondItem="NIE-Gb-RYf" secondAttribute="bottom" constant="20" id="BhQ-ST-aeq"/>
                             <constraint firstItem="NIE-Gb-RYf" firstAttribute="centerX" secondItem="Vye-4Z-dy1" secondAttribute="centerX" id="DWf-1G-xzY"/>
                             <constraint firstItem="NIE-Gb-RYf" firstAttribute="top" secondItem="cQs-tb-ucr" secondAttribute="bottom" constant="20" id="GFS-d2-H1S"/>
+                            <constraint firstItem="7nj-2m-2PR" firstAttribute="top" secondItem="nxO-ib-yl4" secondAttribute="top" id="QK3-VU-qh8"/>
                             <constraint firstItem="7nj-2m-2PR" firstAttribute="centerX" secondItem="Vye-4Z-dy1" secondAttribute="centerX" id="Rn3-5L-Srb"/>
                             <constraint firstItem="rO4-zj-WPH" firstAttribute="leading" secondItem="9d7-wx-geA" secondAttribute="leading" id="ZJD-fn-Q6b"/>
+                            <constraint firstItem="7nj-2m-2PR" firstAttribute="leading" secondItem="nxO-ib-yl4" secondAttribute="leading" id="aaK-pT-RTg"/>
                             <constraint firstAttribute="trailing" secondItem="rO4-zj-WPH" secondAttribute="trailing" id="b1B-f8-Tr8"/>
                             <constraint firstItem="9d7-wx-geA" firstAttribute="bottom" secondItem="rO4-zj-WPH" secondAttribute="bottom" id="ceW-nv-wJd"/>
                             <constraint firstItem="lz7-C1-lTQ" firstAttribute="bottom" secondItem="7nj-2m-2PR" secondAttribute="bottom" constant="-20" id="fcj-Ph-eya"/>
@@ -1218,6 +1233,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xgn-0c-WFp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="109.59999999999999" y="927.88605697151434"/>
+        </scene>
+        <!--ChatBot-->
+        <scene sceneID="i0Q-MN-wrY">
+            <objects>
+                <viewControllerPlaceholder storyboardName="ChatBot" id="oBq-3F-v10" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zvg-o1-VPP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="710" y="927"/>
         </scene>
     </scenes>
     <resources>

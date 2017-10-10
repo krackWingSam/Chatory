@@ -338,4 +338,10 @@
 }
 
 
+#pragma mark - Override
+-(BOOL)prefersStatusBarHidden {
+    return YES;
+}
+
+
 @end
