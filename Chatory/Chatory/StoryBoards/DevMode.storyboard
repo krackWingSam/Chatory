@@ -412,6 +412,7 @@ will show Answer Sheet  Touch Background Action or Send Button Actions will 
                         <segue destination="gEJ-YV-6Fc" kind="show" identifier="ShowTaleSegue" id="v1F-7I-Wb3"/>
                         <segue destination="xSh-z7-oqY" kind="show" identifier="ShowMovieSegue" id="Klm-35-kGm"/>
                         <segue destination="WOc-GO-XFD" kind="show" identifier="ShowTestVideoSegue" id="fBY-Kb-DXh"/>
+                        <segue destination="8Nq-aE-CIJ" kind="show" identifier="ShowSliderSegue" id="oCE-8I-2su"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q1a-2B-AqM" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -432,6 +433,35 @@ will show Answer Sheet  Touch Background Action or Send Button Actions will 
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zFg-fb-zYv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2663" y="170"/>
+        </scene>
+        <!--Test Slider View Controller-->
+        <scene sceneID="VeM-OI-cDS">
+            <objects>
+                <viewController id="8Nq-aE-CIJ" customClass="TestSliderViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="U0O-DN-mac">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="5" translatesAutoresizingMaskIntoConstraints="NO" id="bQA-zM-S4x">
+                                <rect key="frame" x="18" y="318.5" width="339" height="31"/>
+                                <connections>
+                                    <action selector="action_SliderValueChange:" destination="8Nq-aE-CIJ" eventType="valueChanged" id="6te-ZO-cGY"/>
+                                </connections>
+                            </slider>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="bQA-zM-S4x" firstAttribute="centerY" secondItem="U0O-DN-mac" secondAttribute="centerY" id="GRP-zm-LrZ"/>
+                            <constraint firstItem="bQA-zM-S4x" firstAttribute="leading" secondItem="vSY-Ho-jKD" secondAttribute="leading" constant="20" id="XzB-bp-bt1"/>
+                            <constraint firstItem="bQA-zM-S4x" firstAttribute="centerX" secondItem="U0O-DN-mac" secondAttribute="centerX" id="eTn-WQ-kFg"/>
+                            <constraint firstItem="vSY-Ho-jKD" firstAttribute="trailing" secondItem="bQA-zM-S4x" secondAttribute="trailing" constant="20" id="pzM-FY-MAy"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="vSY-Ho-jKD"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Seo-Kc-yUr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1986" y="170"/>
         </scene>
         <!--SelectFairyTale-->
         <scene sceneID="4I7-Gl-gCZ">

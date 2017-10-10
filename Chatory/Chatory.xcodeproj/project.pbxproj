@@ -269,6 +269,7 @@
 		CAC6EAC21F8B504B00072D01 /* Q03_wrong01_text@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CAC6E9EB1F8B503500072D01 /* Q03_wrong01_text@2x.png */; };
 		CAC6EAC51F8B5CFA00072D01 /* MovieCompleteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAC6EAC41F8B5CFA00072D01 /* MovieCompleteViewController.m */; };
 		CAC6EAC71F8B61D900072D01 /* complete_back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CAC6EAC61F8B61C400072D01 /* complete_back@2x.png */; };
+		CAC6EACA1F8C546700072D01 /* TestSliderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAC6EAC91F8C546700072D01 /* TestSliderViewController.m */; };
 		CADB75691F78E5CE00B84433 /* UserAnswerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CADB75671F78E5CE00B84433 /* UserAnswerViewController.m */; };
 		CADB756A1F78E5CE00B84433 /* UserAnswerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CADB75681F78E5CE00B84433 /* UserAnswerViewController.xib */; };
 		CADB75731F78EBBA00B84433 /* Chat_AnswerReactionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CADB75711F78EBBA00B84433 /* Chat_AnswerReactionViewController.m */; };
@@ -589,6 +590,8 @@
 		CAC6EAC31F8B5CFA00072D01 /* MovieCompleteViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MovieCompleteViewController.h; sourceTree = "<group>"; };
 		CAC6EAC41F8B5CFA00072D01 /* MovieCompleteViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MovieCompleteViewController.m; sourceTree = "<group>"; };
 		CAC6EAC61F8B61C400072D01 /* complete_back@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "complete_back@2x.png"; sourceTree = "<group>"; };
+		CAC6EAC81F8C546700072D01 /* TestSliderViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestSliderViewController.h; sourceTree = "<group>"; };
+		CAC6EAC91F8C546700072D01 /* TestSliderViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestSliderViewController.m; sourceTree = "<group>"; };
 		CADB75661F78E5CE00B84433 /* UserAnswerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserAnswerViewController.h; sourceTree = "<group>"; };
 		CADB75671F78E5CE00B84433 /* UserAnswerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserAnswerViewController.m; sourceTree = "<group>"; };
 		CADB75681F78E5CE00B84433 /* UserAnswerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserAnswerViewController.xib; sourceTree = "<group>"; };
@@ -789,6 +792,8 @@
 				CA4FCBFC1F7B40BD005B97AF /* TestChatLoadingViewController.m */,
 				CAF60F9B1F8A0E6E0093A72F /* TestVideoViewController.h */,
 				CAF60F9C1F8A0E6E0093A72F /* TestVideoViewController.m */,
+				CAC6EAC81F8C546700072D01 /* TestSliderViewController.h */,
+				CAC6EAC91F8C546700072D01 /* TestSliderViewController.m */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -1896,6 +1901,7 @@
 				CA0A26C81F71FAA100209E05 /* Question.m in Sources */,
 				CA3900341F79D48200343521 /* CTSpeechRecognizer.m in Sources */,
 				CA0A26CB1F71FB9600209E05 /* Teacher.m in Sources */,
+				CAC6EACA1F8C546700072D01 /* TestSliderViewController.m in Sources */,
 				CA8C37371F78CC6300FDCB58 /* ContentManager.m in Sources */,
 				CA4FCBF91F7B3D87005B97AF /* Chat_LoadingViewController.m in Sources */,
 				CA0A26C21F71EA6000209E05 /* ChattingViewController.m in Sources */,

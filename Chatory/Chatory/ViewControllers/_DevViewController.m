@@ -85,6 +85,10 @@
             [self performSegueWithIdentifier:@"ShowTestVideoSegue" sender:nil];
             break;
             
+        case 9:
+            [self performSegueWithIdentifier:@"ShowSliderSegue" sender:nil];
+            break;
+            
         default:
             break;
     }
