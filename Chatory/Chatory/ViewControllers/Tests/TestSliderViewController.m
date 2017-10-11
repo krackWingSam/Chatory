@@ -8,7 +8,11 @@
 
 #import "TestSliderViewController.h"
 
-@interface TestSliderViewController ()
+@interface TestSliderViewController () {
+    IBOutlet UISlider *slider;
+    
+    NSArray *array_Image;
+}
 
 @end
 
@@ -17,6 +21,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    [self initUI];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -24,13 +30,8 @@
     // Dispose of any resources that can be recreated.
 }
 
-
-#pragma mark - IBActions
--(IBAction)action_SliderValueChange:(UISlider *)sender {
-    CGFloat floatValue = [sender value];
-    if (floatValue > 0 && floatValue < 1.5) {
-        
-    }
+-(void)initUI {
+    
 }
 
 

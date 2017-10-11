@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="JYw-OB-fL1">
-                                <rect key="frame" x="0.0" y="20" width="375" height="500"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="500"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="movie_nav_1.png" translatesAutoresizingMaskIntoConstraints="NO" id="RgT-er-l3c">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="232"/>
@@ -27,7 +27,7 @@
                                             <constraint firstAttribute="height" constant="232" id="aK8-V3-hSl"/>
                                         </constraints>
                                     </imageView>
-                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="5" translatesAutoresizingMaskIntoConstraints="NO" id="ZQE-TE-PGo">
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="5" translatesAutoresizingMaskIntoConstraints="NO" id="ZQE-TE-PGo" customClass="CTSlider">
                                         <rect key="frame" x="-2" y="0.0" width="379" height="31"/>
                                         <connections>
                                             <action selector="action_SliderMovie:" destination="aal-i8-lb5" eventType="touchUpOutside" id="Ejt-tA-2PD"/>
@@ -58,14 +58,14 @@
                                 </constraints>
                             </view>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4fq-bU-kGD">
-                                <rect key="frame" x="0.0" y="520" width="375" height="147"/>
+                                <rect key="frame" x="0.0" y="500" width="375" height="167"/>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" red="0.93333333330000001" green="0.93333333330000001" blue="0.93333333330000001" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="4fq-bU-kGD" firstAttribute="leading" secondItem="Otf-1r-qtW" secondAttribute="leading" id="3Sb-kk-ACg"/>
-                            <constraint firstItem="JYw-OB-fL1" firstAttribute="top" secondItem="Otf-1r-qtW" secondAttribute="top" id="GxI-0n-WmJ"/>
                             <constraint firstItem="Otf-1r-qtW" firstAttribute="trailing" secondItem="4fq-bU-kGD" secondAttribute="trailing" id="Kth-Ke-OPt"/>
+                            <constraint firstItem="JYw-OB-fL1" firstAttribute="top" secondItem="8XX-Kq-blI" secondAttribute="top" id="RhY-ln-WXI"/>
                             <constraint firstItem="4fq-bU-kGD" firstAttribute="top" secondItem="JYw-OB-fL1" secondAttribute="bottom" id="Wh2-c4-lTe"/>
                             <constraint firstItem="Otf-1r-qtW" firstAttribute="trailing" secondItem="JYw-OB-fL1" secondAttribute="trailing" id="cQi-4R-Z26"/>
                             <constraint firstItem="JYw-OB-fL1" firstAttribute="leading" secondItem="Otf-1r-qtW" secondAttribute="leading" id="fbe-gM-jDW"/>

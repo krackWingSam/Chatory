@@ -39,7 +39,7 @@
 
 -(id)init {
     if (self = [super init]) {
-        
+        [self initSTT];
     }
     return self;
 }
@@ -61,7 +61,6 @@
 
 #pragma mark - public
 -(void)start {
-    [self initSTT];
     
     if (task || speechRecognizer.isAvailable == NO)
         return;

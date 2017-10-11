@@ -442,11 +442,9 @@ will show Answer Sheet  Touch Background Action or Send Button Actions will 
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="5" translatesAutoresizingMaskIntoConstraints="NO" id="bQA-zM-S4x">
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="5" translatesAutoresizingMaskIntoConstraints="NO" id="bQA-zM-S4x" customClass="CTSlider">
                                 <rect key="frame" x="18" y="318.5" width="339" height="31"/>
-                                <connections>
-                                    <action selector="action_SliderValueChange:" destination="8Nq-aE-CIJ" eventType="valueChanged" id="6te-ZO-cGY"/>
-                                </connections>
+                                <color key="backgroundColor" red="0.43529411759999997" green="0.75294117650000003" blue="0.37254901959999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </slider>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -458,6 +456,9 @@ will show Answer Sheet  Touch Background Action or Send Button Actions will 
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="vSY-Ho-jKD"/>
                     </view>
+                    <connections>
+                        <outlet property="slider" destination="bQA-zM-S4x" id="glu-Qv-aRs"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Seo-Kc-yUr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
