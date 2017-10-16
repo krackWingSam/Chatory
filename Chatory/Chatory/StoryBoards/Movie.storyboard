@@ -52,6 +52,9 @@
                                         <state key="normal" title="Skip">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="action_Skip:" destination="aal-i8-lb5" eventType="touchUpInside" id="wlf-xp-0PV"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -147,6 +150,7 @@
                         <outlet property="view_Script03" destination="xgc-od-MQU" id="nCQ-mO-Tj9"/>
                         <outlet property="view_Script04" destination="e17-0E-GKO" id="EBU-Gq-aXN"/>
                         <outlet property="view_Script05" destination="v5S-v5-alF" id="muN-eI-JwW"/>
+                        <outlet property="view_Skip" destination="e2B-Fs-h06" id="T2w-jd-1Tw"/>
                         <outlet property="view_VideoControl" destination="X9w-RV-cnB" id="iLm-3q-e58"/>
                         <segue destination="35h-8U-BaD" kind="show" identifier="ShowCompleteSegue" id="Sre-lu-SJp"/>
                     </connections>
@@ -1179,21 +1183,42 @@
                     <viewLayoutGuide key="safeArea" id="wOU-y7-I8G"/>
                 </view>
                 <view contentMode="scaleToFill" id="e2B-Fs-h06">
-                    <rect key="frame" x="0.0" y="0.0" width="240" height="241"/>
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="380"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Skip_movie_popup.png" translatesAutoresizingMaskIntoConstraints="NO" id="c0c-HA-TQM">
-                            <rect key="frame" x="42" y="27.5" width="158" height="185"/>
+                            <rect key="frame" x="41" y="5" width="293" height="370"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="185" id="HWL-bY-JNn"/>
+                                <constraint firstAttribute="width" constant="293" id="DWm-Kd-EnA"/>
+                                <constraint firstAttribute="height" constant="370" id="HWL-bY-JNn"/>
                             </constraints>
                         </imageView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nuj-lm-FPa">
+                            <rect key="frame" x="65" y="25" width="150" height="21"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="21" id="VWx-BY-Wkn"/>
+                            </constraints>
+                            <state key="normal" image="Back_movie.png"/>
+                            <connections>
+                                <action selector="action_CancelSkip:" destination="aal-i8-lb5" eventType="touchUpInside" id="y7a-Qc-EQo"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QmC-26-vPL">
+                            <rect key="frame" x="60" y="308" width="254" height="47"/>
+                            <state key="normal" image="Skip_yes_B.png"/>
+                            <connections>
+                                <action selector="action_ConfirmSkip:" destination="aal-i8-lb5" eventType="touchUpInside" id="VfW-dB-zsQ"/>
+                            </connections>
+                        </button>
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <constraints>
-                        <constraint firstAttribute="trailing" secondItem="c0c-HA-TQM" secondAttribute="trailing" constant="40" id="1Yi-8S-fmZ"/>
                         <constraint firstItem="c0c-HA-TQM" firstAttribute="centerY" secondItem="e2B-Fs-h06" secondAttribute="centerY" id="OyF-Ob-9zo"/>
-                        <constraint firstItem="c0c-HA-TQM" firstAttribute="leading" secondItem="NFw-fe-4FJ" secondAttribute="leading" constant="42" id="sc5-sF-UPi"/>
+                        <constraint firstItem="c0c-HA-TQM" firstAttribute="centerX" secondItem="e2B-Fs-h06" secondAttribute="centerX" id="c42-aO-NMs"/>
+                        <constraint firstItem="QmC-26-vPL" firstAttribute="bottom" secondItem="c0c-HA-TQM" secondAttribute="bottom" constant="-20" id="j5F-ml-w89"/>
+                        <constraint firstItem="QmC-26-vPL" firstAttribute="centerX" secondItem="e2B-Fs-h06" secondAttribute="centerX" id="o2M-2O-bCO"/>
+                        <constraint firstItem="nuj-lm-FPa" firstAttribute="top" secondItem="c0c-HA-TQM" secondAttribute="top" constant="20" id="quc-Lu-6Mg"/>
+                        <constraint firstItem="nuj-lm-FPa" firstAttribute="leading" secondItem="c0c-HA-TQM" secondAttribute="leading" constant="24" id="tSM-Zv-Ghj"/>
                     </constraints>
                     <viewLayoutGuide key="safeArea" id="NFw-fe-4FJ"/>
                 </view>
@@ -1300,7 +1325,9 @@
         <image name="#05_02_off.png" width="176" height="14"/>
         <image name="#05_03_off.png" width="182" height="15"/>
         <image name="#05_04_off.png" width="290" height="19"/>
+        <image name="Back_movie.png" width="150" height="17"/>
         <image name="Skip_movie_popup.png" width="299" height="375"/>
+        <image name="Skip_yes_B.png" width="254" height="47"/>
         <image name="complete_back.png" width="375" height="667"/>
         <image name="movie_nav_1.png" width="375" height="232"/>
         <image name="movie_next.png" width="88" height="40"/>

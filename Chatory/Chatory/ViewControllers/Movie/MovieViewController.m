@@ -198,6 +198,47 @@
     }];
 }
 
+-(void)showSkipView {
+    if ([view_Skip superview] == self.view)
+        return;
+    
+    [playerVC.player pause];
+    
+    CGRect frame = [[UIScreen mainScreen] bounds];
+    CGRect startRect = CGRectMake(frame.size.width/2 - view_Skip.frame.size.width/2, -view_Skip.frame.size.height, view_Skip.frame.size.width, view_Skip.frame.size.height);
+    CGRect centerRect = CGRectMake(startRect.origin.x, frame.size.height/2 - view_Skip.frame.size.height/2, startRect.size.width, startRect.size.height);
+    CGRect bounceRect = CGRectMake(startRect.origin.x, centerRect.origin.y + 30, startRect.size.width, startRect.size.height);
+    [view_Skip setFrame:startRect];
+    [self.view addSubview:view_Skip];
+    
+    [UIView animateWithDuration:0.3f animations:^{
+        [view_Skip setFrame:bounceRect];
+    } completion:^(BOOL finished) {
+        [UIView animateWithDuration:0.2f animations:^{
+            [view_Skip setFrame:centerRect];
+        }];
+    }];
+}
+
+-(void)hideSkipView {
+    CGRect frame = [[UIScreen mainScreen] bounds];
+    
+    CGRect hideRect = CGRectMake(frame.size.width/2 - view_Skip.frame.size.width/2, -view_Skip.frame.size.height, view_Skip.frame.size.width, view_Skip.frame.size.height);
+    CGRect centerRect = CGRectMake(hideRect.origin.x, frame.size.height/2 - view_Skip.frame.size.height/2, hideRect.size.width, hideRect.size.height);
+    CGRect bounceRect = CGRectMake(hideRect.origin.x, centerRect.origin.y + 30, hideRect.size.width, hideRect.size.height);
+    
+    [UIView animateWithDuration:0.2f animations:^{
+        [view_Skip setFrame:bounceRect];
+    } completion:^(BOOL finished) {
+        [UIView animateWithDuration:0.2f animations:^{
+            [view_Skip setFrame:hideRect];
+        } completion:^(BOOL finished) {
+            [view_Skip removeFromSuperview];
+            [playerVC.player play];
+        }];
+    }];
+}
+
 
 #pragma mark - for Movie
 -(void)switchMovie:(NSInteger)movieIndex {
@@ -306,6 +347,18 @@
     [self.navigationController popViewControllerAnimated:YES];
 }
 
+-(IBAction)action_Skip:(id)sender {
+    [self showSkipView];
+}
+
+-(IBAction)action_CancelSkip:(id)sender {
+    [self hideSkipView];
+}
+
+-(IBAction)action_ConfirmSkip:(id)sender {
+    [self performSegueWithIdentifier:@"ShowCompleteSegue" sender:nil];
+}
+
 
 #pragma mark - Observing
 -(void)addTimeObserver {
@@ -330,10 +383,12 @@
                 currentIndex += addedIndex;
                 if (currentIndex >= 26)
                     currentIndex = 25;
+                UIButton *currentButton = [array_ScriptButton objectAtIndex:currentIndex];
                 UIImageView *imageView = [array_ScriptImageView objectAtIndex:currentIndex];
                 
                 dispatch_async(dispatch_get_main_queue(), ^{
                     if (currentSecond >= compareRangeStart && currentSecond <= compareRangeEnd) {
+                        [currentButton setSelected:YES];
                         [imageView setImage:[array_ScriptOnImage objectAtIndex:currentIndex]];
                         //check scroll offset
                         CGPoint currentOffset = [scroll_Script contentOffset];
@@ -346,8 +401,10 @@
                             [scroll_Script setContentOffset:currentOffset];
                         }];
                     }
-                    else
+                    else {
+                        [currentButton setSelected:NO];
                         [imageView setImage:[array_ScriptOffImage objectAtIndex:currentIndex]];
+                    }
                 });
             }
             

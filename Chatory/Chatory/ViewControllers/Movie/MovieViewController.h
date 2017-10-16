@@ -15,6 +15,8 @@
     IBOutlet UISlider *slider;
     IBOutlet UIImageView *imageView_VideoTitle;
     
+    IBOutlet UIView *view_Skip;
+    
     IBOutlet UIView *view_VideoControl;
     IBOutlet UIView *view_Script01;
     IBOutlet UIView *view_Script02;
