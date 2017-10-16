@@ -44,6 +44,15 @@
                                             <action selector="action_Back:" destination="aal-i8-lb5" eventType="touchUpInside" id="hAa-gX-RZV"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fQd-Do-MNc">
+                                        <rect key="frame" x="325" y="8" width="30" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="5cR-Vg-e02"/>
+                                        </constraints>
+                                        <state key="normal" title="Skip">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="RgT-er-l3c" firstAttribute="leading" secondItem="JYw-OB-fL1" secondAttribute="leading" id="4dP-6Q-4kN"/>
@@ -52,7 +61,9 @@
                                     <constraint firstAttribute="trailing" secondItem="ZQE-TE-PGo" secondAttribute="trailing" id="FJc-cR-0rm"/>
                                     <constraint firstAttribute="height" constant="500" id="RN2-oZ-TJR"/>
                                     <constraint firstItem="RgT-er-l3c" firstAttribute="top" secondItem="JYw-OB-fL1" secondAttribute="top" id="bOM-zG-III"/>
+                                    <constraint firstItem="fQd-Do-MNc" firstAttribute="centerY" secondItem="gGe-zH-KNz" secondAttribute="centerY" id="iwg-pI-AVm"/>
                                     <constraint firstItem="gGe-zH-KNz" firstAttribute="top" secondItem="JYw-OB-fL1" secondAttribute="top" constant="8" id="nf1-cW-xKk"/>
+                                    <constraint firstAttribute="trailing" secondItem="fQd-Do-MNc" secondAttribute="trailing" constant="20" id="v4C-pd-hUE"/>
                                     <constraint firstItem="gGe-zH-KNz" firstAttribute="leading" secondItem="JYw-OB-fL1" secondAttribute="leading" id="wfY-oE-R5q"/>
                                     <constraint firstAttribute="trailing" secondItem="RgT-er-l3c" secondAttribute="trailing" id="y3J-gN-m62"/>
                                 </constraints>
@@ -1167,6 +1178,25 @@
                     </constraints>
                     <viewLayoutGuide key="safeArea" id="wOU-y7-I8G"/>
                 </view>
+                <view contentMode="scaleToFill" id="e2B-Fs-h06">
+                    <rect key="frame" x="0.0" y="0.0" width="240" height="241"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Skip_movie_popup.png" translatesAutoresizingMaskIntoConstraints="NO" id="c0c-HA-TQM">
+                            <rect key="frame" x="42" y="27.5" width="158" height="185"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="185" id="HWL-bY-JNn"/>
+                            </constraints>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="c0c-HA-TQM" secondAttribute="trailing" constant="40" id="1Yi-8S-fmZ"/>
+                        <constraint firstItem="c0c-HA-TQM" firstAttribute="centerY" secondItem="e2B-Fs-h06" secondAttribute="centerY" id="OyF-Ob-9zo"/>
+                        <constraint firstItem="c0c-HA-TQM" firstAttribute="leading" secondItem="NFw-fe-4FJ" secondAttribute="leading" constant="42" id="sc5-sF-UPi"/>
+                    </constraints>
+                    <viewLayoutGuide key="safeArea" id="NFw-fe-4FJ"/>
+                </view>
             </objects>
             <point key="canvasLocation" x="109.59999999999999" y="158.77061469265368"/>
         </scene>
@@ -1270,6 +1300,7 @@
         <image name="#05_02_off.png" width="176" height="14"/>
         <image name="#05_03_off.png" width="182" height="15"/>
         <image name="#05_04_off.png" width="290" height="19"/>
+        <image name="Skip_movie_popup.png" width="299" height="375"/>
         <image name="complete_back.png" width="375" height="667"/>
         <image name="movie_nav_1.png" width="375" height="232"/>
         <image name="movie_next.png" width="88" height="40"/>
