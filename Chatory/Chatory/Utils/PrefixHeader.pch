@@ -9,7 +9,7 @@
 #ifndef PrefixHeader_pch
 #define PrefixHeader_pch
 
-//#define DEV_MODE 1      //Dev mode enabled
+#define DEV_MODE 1      //Dev mode enabled
 #define RGBA(r, g, b, a) \
 [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:a] //RGBA
 

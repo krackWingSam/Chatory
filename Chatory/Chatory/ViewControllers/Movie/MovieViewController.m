@@ -206,7 +206,7 @@
     
     CGRect frame = [[UIScreen mainScreen] bounds];
     CGRect startRect = CGRectMake(frame.size.width/2 - view_Skip.frame.size.width/2, -view_Skip.frame.size.height, view_Skip.frame.size.width, view_Skip.frame.size.height);
-    CGRect centerRect = CGRectMake(startRect.origin.x, frame.size.height/2 - view_Skip.frame.size.height/2, startRect.size.width, startRect.size.height);
+    CGRect centerRect = CGRectMake(startRect.origin.x, 92, startRect.size.width, startRect.size.height);
     CGRect bounceRect = CGRectMake(startRect.origin.x, centerRect.origin.y + 30, startRect.size.width, startRect.size.height);
     [view_Skip setFrame:startRect];
     [self.view addSubview:view_Skip];
@@ -224,7 +224,7 @@
     CGRect frame = [[UIScreen mainScreen] bounds];
     
     CGRect hideRect = CGRectMake(frame.size.width/2 - view_Skip.frame.size.width/2, -view_Skip.frame.size.height, view_Skip.frame.size.width, view_Skip.frame.size.height);
-    CGRect centerRect = CGRectMake(hideRect.origin.x, frame.size.height/2 - view_Skip.frame.size.height/2, hideRect.size.width, hideRect.size.height);
+    CGRect centerRect = CGRectMake(hideRect.origin.x, 92, hideRect.size.width, hideRect.size.height);
     CGRect bounceRect = CGRectMake(hideRect.origin.x, centerRect.origin.y + 30, hideRect.size.width, hideRect.size.height);
     
     [UIView animateWithDuration:0.2f animations:^{

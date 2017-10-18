@@ -41,6 +41,18 @@
 }
 
 
+#pragma mark - Animation
+-(void)startSwitchAnimation {
+    [UIView animateWithDuration:0.2f animations:^{
+        
+    } completion:^(BOOL finished) {
+        
+    }];
+    [manager setContentKey:CONTENT_KEY_01];
+    [self performSegueWithIdentifier:@"ShowMovieSegue" sender:nil];
+}
+
+
 #pragma mark - UIScrollViewDelegate
 - (void)scrollViewWillEndDragging:(UIScrollView *)_scrollView withVelocity:(CGPoint)velocity targetContentOffset:(inout CGPoint *)targetContentOffset {
     CGFloat targetX = scrollView.contentOffset.x + velocity.x * 60.0;
@@ -72,8 +84,7 @@
     NSLog(@"select tale : %d", (int)sender.tag);
     switch (sender.tag) {
         case 0:
-            [manager setContentKey:CONTENT_KEY_01];
-            [self performSegueWithIdentifier:@"ShowMovieSegue" sender:nil];
+            [self startSwitchAnimation];
             break;
             
         case 1:
