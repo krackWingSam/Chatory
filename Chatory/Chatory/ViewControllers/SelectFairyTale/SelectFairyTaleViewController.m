@@ -13,6 +13,14 @@
     IBOutlet UIScrollView *scrollView;
     IBOutlet UIView *contentView;
     
+    IBOutlet UIView *view_Animated;
+    IBOutlet UIImageView *imageView_Background;
+    
+    IBOutlet UIImageView *imageView_TopBackground;
+    IBOutlet UIImageView *imageView_Title;
+    IBOutlet UIImageView *imageView_Line;
+    IBOutlet UIImageView *imageView_Description;
+    
     UserDataManager *manager;
 }
 
@@ -38,18 +46,40 @@
     [scrollView addSubview:contentView];
     [scrollView setContentSize:contentView.frame.size];
     [scrollView setDelegate:self];
+    
+    imageView_Background.layer.masksToBounds = NO;
+    imageView_Background.layer.shadowOffset = CGSizeMake(4, 5);
+    imageView_Background.layer.shadowRadius = 11.5;
+    imageView_Background.layer.shadowOpacity = 0.15;
 }
 
 
 #pragma mark - Animation
 -(void)startSwitchAnimation {
+    [manager setContentKey:CONTENT_KEY_01];
+    [scrollView removeFromSuperview];
+    
+    [self.view addSubview:view_Animated];
+    
     [UIView animateWithDuration:0.2f animations:^{
+        CGRect frame = [imageView_Background frame];
+        frame.size.width -= frame.size.width / 10;
+        frame.size.height -= frame.size.height / 10;
+        frame.origin.x += frame.size.width / 20;
+        frame.origin.y += frame.size.height / 20;
+        [imageView_Background setFrame:frame];
         
+        frame = [imageView_TopBackground frame];
+        frame.size.width -= frame.size.width / 10;
+        frame.size.height -= frame.size.height / 10;
+        frame.origin.x += frame.size.width / 20;
+        frame.origin.y += frame.size.height / 20;
+        [imageView_TopBackground setFrame:frame];
     } completion:^(BOOL finished) {
         
     }];
-    [manager setContentKey:CONTENT_KEY_01];
-    [self performSegueWithIdentifier:@"ShowMovieSegue" sender:nil];
+    
+//    [self performSegueWithIdentifier:@"ShowMovieSegue" sender:nil];
 }
 
 
@@ -96,6 +126,10 @@
         default:
             break;
     }
+}
+
+-(IBAction)action_Back:(id)sender {
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 
