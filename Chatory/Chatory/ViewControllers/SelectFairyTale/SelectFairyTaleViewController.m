@@ -14,12 +14,8 @@
     IBOutlet UIView *contentView;
     
     IBOutlet UIView *view_Animated;
-    IBOutlet UIImageView *imageView_Background;
-    
-    IBOutlet UIImageView *imageView_TopBackground;
-    IBOutlet UIImageView *imageView_Title;
-    IBOutlet UIImageView *imageView_Line;
-    IBOutlet UIImageView *imageView_Description;
+    IBOutlet UIView *view_Background;
+    IBOutlet UIImageView *imageView_OriginImage;
     
     UserDataManager *manager;
 }
@@ -46,11 +42,6 @@
     [scrollView addSubview:contentView];
     [scrollView setContentSize:contentView.frame.size];
     [scrollView setDelegate:self];
-    
-    imageView_Background.layer.masksToBounds = NO;
-    imageView_Background.layer.shadowOffset = CGSizeMake(4, 5);
-    imageView_Background.layer.shadowRadius = 11.5;
-    imageView_Background.layer.shadowOpacity = 0.15;
 }
 
 
@@ -62,21 +53,17 @@
     [self.view addSubview:view_Animated];
     
     [UIView animateWithDuration:0.2f animations:^{
-        CGRect frame = [imageView_Background frame];
+        CGRect frame = [imageView_OriginImage frame];
         frame.size.width -= frame.size.width / 10;
         frame.size.height -= frame.size.height / 10;
         frame.origin.x += frame.size.width / 20;
         frame.origin.y += frame.size.height / 20;
-        [imageView_Background setFrame:frame];
-        
-        frame = [imageView_TopBackground frame];
-        frame.size.width -= frame.size.width / 10;
-        frame.size.height -= frame.size.height / 10;
-        frame.origin.x += frame.size.width / 20;
-        frame.origin.y += frame.size.height / 20;
-        [imageView_TopBackground setFrame:frame];
+        [imageView_OriginImage setFrame:frame];
+        NSLog(@"frame : %f, %f : %f, %f", frame.origin.x, frame.origin.y, frame.size.width, frame.size.height);
     } completion:^(BOOL finished) {
-        
+        [UIView animateWithDuration:1.f animations:^{
+            [imageView_OriginImage setAlpha:1.f];
+        }];
     }];
     
 //    [self performSegueWithIdentifier:@"ShowMovieSegue" sender:nil];

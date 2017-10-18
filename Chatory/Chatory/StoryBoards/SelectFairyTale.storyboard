@@ -45,13 +45,10 @@
                     </view>
                     <connections>
                         <outlet property="contentView" destination="gwP-Jq-WAq" id="5GC-ZB-2un"/>
-                        <outlet property="imageView_Background" destination="8Qe-gC-5Yl" id="nYE-rC-xoc"/>
-                        <outlet property="imageView_Description" destination="QCY-r7-Hbg" id="urb-RD-6g3"/>
-                        <outlet property="imageView_Line" destination="hKn-DZ-NRe" id="yFt-mj-wS8"/>
-                        <outlet property="imageView_Title" destination="Kfh-2f-clX" id="wF6-ID-IaW"/>
-                        <outlet property="imageView_TopBackground" destination="FMf-Zd-Qz5" id="J4N-da-yNo"/>
+                        <outlet property="imageView_OriginImage" destination="jii-3b-BHY" id="r8H-GK-FM7"/>
                         <outlet property="scrollView" destination="owy-7J-y4F" id="kHj-ai-C8F"/>
                         <outlet property="view_Animated" destination="Ank-7v-fXI" id="OoY-Wd-3eM"/>
+                        <outlet property="view_Background" destination="XLG-rq-wdJ" id="gm5-kt-A9I"/>
                         <segue destination="oXN-4Q-m8D" kind="show" identifier="ShowMovieSegue" id="pLe-es-3EZ"/>
                     </connections>
                 </viewController>
@@ -104,26 +101,6 @@
                     <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="T_R_frame_bg.png" translatesAutoresizingMaskIntoConstraints="NO" id="8Qe-gC-5Yl">
-                            <rect key="frame" x="45" y="238" width="289" height="356"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        </imageView>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="T_R_photo.png" translatesAutoresizingMaskIntoConstraints="NO" id="FMf-Zd-Qz5">
-                            <rect key="frame" x="45" y="238" width="289" height="206"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        </imageView>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="select_story01_text01.png" translatesAutoresizingMaskIntoConstraints="NO" id="Kfh-2f-clX">
-                            <rect key="frame" x="58" y="448" width="158" height="63"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        </imageView>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="select_story01_text02.png" translatesAutoresizingMaskIntoConstraints="NO" id="QCY-r7-Hbg">
-                            <rect key="frame" x="70" y="512" width="236" height="55"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        </imageView>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="select_story01_line.png" translatesAutoresizingMaskIntoConstraints="NO" id="hKn-DZ-NRe">
-                            <rect key="frame" x="70" y="497" width="240" height="2"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        </imageView>
                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mig-ks-4fP">
                             <rect key="frame" x="16" y="20" width="46" height="30"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -132,6 +109,21 @@
                                 <action selector="action_Back:" destination="P8c-dV-dqw" eventType="touchUpInside" id="TYd-bX-wHV"/>
                             </connections>
                         </button>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="select_story01.png" translatesAutoresizingMaskIntoConstraints="NO" id="jii-3b-BHY">
+                            <rect key="frame" x="30" y="224" width="335" height="402"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </imageView>
+                        <view clipsSubviews="YES" alpha="0.0" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XLG-rq-wdJ">
+                            <rect key="frame" x="58" y="253" width="262" height="186"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="step2_bg.png" translatesAutoresizingMaskIntoConstraints="NO" id="0NE-eF-7EA">
+                                    <rect key="frame" x="18" y="-114" width="270" height="318"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                </imageView>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </view>
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <viewLayoutGuide key="safeArea" id="YoE-Ve-QQg"/>
@@ -149,16 +141,12 @@
         </scene>
     </scenes>
     <resources>
-        <image name="T_R_frame_bg.png" width="289" height="356"/>
-        <image name="T_R_photo.png" width="289" height="206"/>
         <image name="select_story01.png" width="335" height="402"/>
-        <image name="select_story01_line.png" width="242" height="2"/>
-        <image name="select_story01_text01.png" width="158" height="63"/>
-        <image name="select_story01_text02.png" width="236" height="54"/>
         <image name="select_story02.png" width="335" height="402"/>
         <image name="select_story03.png" width="335" height="402"/>
         <image name="select_story04.png" width="335" height="402"/>
         <image name="step2.png" width="71" height="28"/>
+        <image name="step2_bg.png" width="698" height="667"/>
         <image name="step2_text.png" width="160" height="64"/>
     </resources>
 </document>
