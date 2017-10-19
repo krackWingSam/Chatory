@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "CTSpeechRecognizer.h"
+#import "VideoManager.h"
 
 @interface AppDelegate ()
 
@@ -18,7 +19,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    
+    [VideoManager sharedManager];
     [CTSpeechRecognizer sharedRecognizer];
     
     return YES;

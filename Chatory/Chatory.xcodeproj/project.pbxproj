@@ -47,6 +47,7 @@
 		CA643D661F809D42003B99C6 /* send.wav in Resources */ = {isa = PBXBuildFile; fileRef = CA643D601F809CFE003B99C6 /* send.wav */; };
 		CA643D6B1F80A232003B99C6 /* Chat_LastViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA643D691F80A232003B99C6 /* Chat_LastViewController.m */; };
 		CA643D6C1F80A232003B99C6 /* Chat_LastViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA643D6A1F80A232003B99C6 /* Chat_LastViewController.xib */; };
+		CA699A501F98CA1A00553BEB /* VideoManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CA699A4F1F98CA1A00553BEB /* VideoManager.m */; };
 		CA6B6F7E1F9764D9004F50DC /* select_story01_line@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CA6B6F781F9764D9004F50DC /* select_story01_line@2x.png */; };
 		CA6B6F7F1F9764D9004F50DC /* select_story01_text01@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CA6B6F791F9764D9004F50DC /* select_story01_text01@2x.png */; };
 		CA6B6F801F9764D9004F50DC /* select_story01_text02@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CA6B6F7A1F9764D9004F50DC /* select_story01_text02@2x.png */; };
@@ -377,6 +378,8 @@
 		CA643D681F80A232003B99C6 /* Chat_LastViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Chat_LastViewController.h; sourceTree = "<group>"; };
 		CA643D691F80A232003B99C6 /* Chat_LastViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Chat_LastViewController.m; sourceTree = "<group>"; };
 		CA643D6A1F80A232003B99C6 /* Chat_LastViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Chat_LastViewController.xib; sourceTree = "<group>"; };
+		CA699A4E1F98CA1A00553BEB /* VideoManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VideoManager.h; sourceTree = "<group>"; };
+		CA699A4F1F98CA1A00553BEB /* VideoManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VideoManager.m; sourceTree = "<group>"; };
 		CA6B6F781F9764D9004F50DC /* select_story01_line@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "select_story01_line@2x.png"; sourceTree = "<group>"; };
 		CA6B6F791F9764D9004F50DC /* select_story01_text01@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "select_story01_text01@2x.png"; sourceTree = "<group>"; };
 		CA6B6F7A1F9764D9004F50DC /* select_story01_text02@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "select_story01_text02@2x.png"; sourceTree = "<group>"; };
@@ -923,6 +926,8 @@
 				CA643D581F808A8A003B99C6 /* SoundManager.m */,
 				CA2909BB1F88A6570045C35B /* UserDataManager.h */,
 				CA2909BC1F88A6570045C35B /* UserDataManager.m */,
+				CA699A4E1F98CA1A00553BEB /* VideoManager.h */,
+				CA699A4F1F98CA1A00553BEB /* VideoManager.m */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -1982,6 +1987,7 @@
 				CA0A26C81F71FAA100209E05 /* Question.m in Sources */,
 				CA3900341F79D48200343521 /* CTSpeechRecognizer.m in Sources */,
 				CA0A26CB1F71FB9600209E05 /* Teacher.m in Sources */,
+				CA699A501F98CA1A00553BEB /* VideoManager.m in Sources */,
 				CAC6EACA1F8C546700072D01 /* TestSliderViewController.m in Sources */,
 				CA8C37371F78CC6300FDCB58 /* ContentManager.m in Sources */,
 				CA4FCBF91F7B3D87005B97AF /* Chat_LoadingViewController.m in Sources */,

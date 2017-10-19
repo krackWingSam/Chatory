@@ -10,6 +10,7 @@
 #import <AVKit/AVKit.h>
 
 #import "MovieTimeScriptManager.h"
+#import "VideoManager.h"
 
 @interface MovieViewController () {
     AVPlayerViewController *playerVC;
@@ -46,7 +47,7 @@
     [self initImage];
     [self initUI];
     
-    [self showIndicator];
+//    [self showIndicator];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -129,20 +130,11 @@
 }
 
 -(void)initMovie {
-    NSArray *names = @[@"v1", @"v2", @"v3", @"v4", @"v5"];
     isAutoPlay = NO;
-    NSMutableArray *tempArray = [[NSMutableArray alloc] init];
-    for (NSString *name in names) {
-        NSString *path = [[NSBundle mainBundle] pathForResource:name ofType:@"mp4"];
-        NSURL *url = [NSURL fileURLWithPath:path];
-        AVAsset *asset = [AVAsset assetWithURL:url];
-        AVPlayerItem *item = [[AVPlayerItem alloc] initWithAsset:asset];
-        AVPlayer *player = [[AVPlayer alloc] initWithPlayerItem:item];
+
+    array_Player = [[VideoManager sharedManager] array_Player];
+    for (AVPlayer *player in array_Player)
         [player addObserver:self forKeyPath:@"status" options:0 context:nil];
-        [tempArray addObject:player];
-    }
-    
-    array_Player = [[NSArray alloc] initWithArray:tempArray];
     
     scriptTime = [[MovieTimeScriptManager alloc] init];
 }

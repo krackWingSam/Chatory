@@ -14,8 +14,16 @@
     IBOutlet UIView *contentView;
     
     IBOutlet UIView *view_Animated;
-    IBOutlet UIView *view_Background;
     IBOutlet UIImageView *imageView_OriginImage;
+    
+    IBOutlet UIView *view_Background;
+    IBOutlet UIImageView *imageView_NewBackground;
+    
+    IBOutlet UIView *view_Popup;
+    
+    IBOutlet UIView *view_Menu;
+    IBOutlet UIView *view_Script;
+    
     
     UserDataManager *manager;
 }
@@ -50,6 +58,8 @@
     [manager setContentKey:CONTENT_KEY_01];
     [scrollView removeFromSuperview];
     
+    view_Background.layer.cornerRadius = 30.f;
+    
     [self.view addSubview:view_Animated];
     
     [UIView animateWithDuration:0.2f animations:^{
@@ -61,12 +71,55 @@
         [imageView_OriginImage setFrame:frame];
         NSLog(@"frame : %f, %f : %f, %f", frame.origin.x, frame.origin.y, frame.size.width, frame.size.height);
     } completion:^(BOOL finished) {
-        [UIView animateWithDuration:1.f animations:^{
-            [imageView_OriginImage setAlpha:1.f];
+        [view_Background setAlpha:1.f];
+        [UIView animateWithDuration:0.1f animations:^{
+            [imageView_OriginImage setAlpha:0.f];
+            [view_Background.layer setCornerRadius:0.f];
+        } completion:^(BOOL finished) {
+            [UIView animateWithDuration:0.3f animations:^{
+                [view_Background setFrame:view_Animated.frame];
+                [imageView_NewBackground setFrame:view_Animated.frame];
+            } completion:^(BOOL finished) {
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    [self startPopup];
+                });
+            }];
         }];
     }];
-    
-//    [self performSegueWithIdentifier:@"ShowMovieSegue" sender:nil];
+}
+
+-(void)startPopup {
+    [view_Popup setFrame:CGRectMake(0, self.view.frame.size.height, self.view.frame.size.width, self.view.frame.size.height)];
+    [self.view addSubview:view_Popup];
+    [UIView animateWithDuration:0.3f animations:^{
+        [view_Popup setFrame:CGRectMake(0, -30, view_Popup.frame.size.width, view_Popup.frame.size.height)];
+    } completion:^(BOOL finished) {
+        [UIView animateWithDuration:0.2f animations:^{
+            [view_Popup setFrame:CGRectMake(0, 0, view_Popup.frame.size.width, view_Popup.frame.size.height)];
+        }];
+    }];
+}
+
+-(void)startSwitchMovie {
+    [UIView animateWithDuration:0.2f animations:^{
+        [view_Popup setAlpha:0.f];
+    } completion:^(BOOL finished) {
+        [view_Script setFrame:CGRectMake(0, self.view.frame.size.height, self.view.frame.size.width, view_Script.frame.size.height)];
+        [self.view addSubview:view_Script];
+        [UIView animateWithDuration:0.2f animations:^{
+            [view_Background setFrame:CGRectMake(0, -167, view_Background.frame.size.width, view_Background.frame.size.height)];
+            [view_Script setFrame:CGRectMake(0, self.view.frame.size.height - 167, view_Script.frame.size.width, view_Script.frame.size.height)];
+        } completion:^(BOOL finished) {
+            [view_Menu setAlpha:0.f];
+            [view_Menu setFrame:CGRectMake(0, 0, view_Menu.frame.size.width, view_Menu.frame.size.height)];
+            [self.view addSubview:view_Menu];
+            [UIView animateWithDuration:0.2f animations:^{
+                [view_Menu setAlpha:1.f];
+            } completion:^(BOOL finished) {
+                [self performSegueWithIdentifier:@"ShowMovieSegue" sender:nil];
+            }];
+        }];
+    }];
 }
 
 
@@ -117,6 +170,14 @@
 
 -(IBAction)action_Back:(id)sender {
     [self.navigationController popViewControllerAnimated:YES];
+}
+
+-(IBAction)action_Movie:(id)sender {
+    [self startSwitchMovie];
+}
+
+-(IBAction)action_Question:(id)sender {
+    
 }
 
 
