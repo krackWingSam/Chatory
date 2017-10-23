@@ -8,6 +8,7 @@
 
 #import "SelectFairyTaleViewController.h"
 #import "UserDataManager.h"
+#import <AVKit/AVKit.h>
 
 @interface SelectFairyTaleViewController () <UIScrollViewDelegate> {
     IBOutlet UIScrollView *scrollView;
@@ -42,6 +43,15 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    NSError *error = nil;
+    BOOL isSetOk = [[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryPlayback mode:AVAudioSessionModeMoviePlayback options:AVAudioSessionCategoryOptionMixWithOthers error:&error];
+    if (!isSetOk)
+        NSLog(@"AvAudio Session set Error : %@", error);
 }
 
 -(void)initUI {
@@ -151,6 +161,7 @@
 
 #pragma mark - IBActions
 -(IBAction)action_Select:(UIButton *)sender {
+    [[SoundManager sharedManager] playSoundWithSoundID:SoundID_Select];
     NSLog(@"select tale : %d", (int)sender.tag);
     switch (sender.tag) {
         case 0:
@@ -173,11 +184,13 @@
 }
 
 -(IBAction)action_Movie:(id)sender {
+    [[SoundManager sharedManager] playSoundWithSoundID:SoundID_Select];
     [self startSwitchMovie];
 }
 
 -(IBAction)action_Question:(id)sender {
-    
+    [[SoundManager sharedManager] playSoundWithSoundID:SoundID_Select];
+    [self performSegueWithIdentifier:@"ShowChatSegue" sender:nil];
 }
 
 

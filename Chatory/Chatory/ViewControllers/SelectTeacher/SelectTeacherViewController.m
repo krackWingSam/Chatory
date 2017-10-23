@@ -8,6 +8,7 @@
 
 #import "SelectTeacherViewController.h"
 #import "UserDataManager.h"
+#import <AVKit/AVKit.h>
 
 @interface SelectTeacherViewController () <UIScrollViewDelegate> {
     IBOutlet UIScrollView *scrollView;
@@ -40,6 +41,11 @@
     [super viewWillAppear:animated];
     
     [self initUI];
+    
+    NSError *error = nil;
+    BOOL isSetOk = [[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryPlayback mode:AVAudioSessionModeMoviePlayback options:AVAudioSessionCategoryOptionMixWithOthers error:&error];
+    if (!isSetOk)
+        NSLog(@"AvAudio Session set Error : %@", error);
 }
 
 -(void)initUI {
@@ -96,7 +102,8 @@
 
 #pragma mark - IBActions
 -(IBAction)action_SelectTeacher:(UIButton *)sender {
-    NSLog(@"selected teacher : %d", (int)sender.tag);
+//    NSLog(@"selected teacher : %d", (int)sender.tag);
+    [[SoundManager sharedManager] playSoundWithSoundID:SoundID_Select];
     UserDataManager *manager = [UserDataManager sharedManager];
     switch (sender.tag) {
         case 0:

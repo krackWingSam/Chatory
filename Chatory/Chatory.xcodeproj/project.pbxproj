@@ -55,6 +55,8 @@
 		CA6B6F821F9764D9004F50DC /* T_R_frame_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CA6B6F7C1F9764D9004F50DC /* T_R_frame_bg@2x.png */; };
 		CA6B6F831F9764D9004F50DC /* T_R_photo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CA6B6F7D1F9764D9004F50DC /* T_R_photo@2x.png */; };
 		CA752A111F7C838F00AE32B8 /* ChatCellViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA752A101F7C838F00AE32B8 /* ChatCellViewController.m */; };
+		CA7BB8981F9DE075001CBF1B /* arrow_fairy@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CA7BB8961F9DE074001CBF1B /* arrow_fairy@2x.png */; };
+		CA7BB8991F9DE075001CBF1B /* arrow_front@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CA7BB8971F9DE074001CBF1B /* arrow_front@2x.png */; };
 		CA8C37371F78CC6300FDCB58 /* ContentManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CA8C37361F78CC6300FDCB58 /* ContentManager.m */; };
 		CA8C373A1F78CC7B00FDCB58 /* Content.m in Sources */ = {isa = PBXBuildFile; fileRef = CA8C37391F78CC7B00FDCB58 /* Content.m */; };
 		CA8C373E1F78D3EA00FDCB58 /* Chat_AnswerSheetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA8C373C1F78D3EA00FDCB58 /* Chat_AnswerSheetViewController.m */; };
@@ -388,6 +390,8 @@
 		CA6B6F7D1F9764D9004F50DC /* T_R_photo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "T_R_photo@2x.png"; sourceTree = "<group>"; };
 		CA752A0F1F7C838F00AE32B8 /* ChatCellViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChatCellViewController.h; sourceTree = "<group>"; };
 		CA752A101F7C838F00AE32B8 /* ChatCellViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChatCellViewController.m; sourceTree = "<group>"; };
+		CA7BB8961F9DE074001CBF1B /* arrow_fairy@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "arrow_fairy@2x.png"; sourceTree = "<group>"; };
+		CA7BB8971F9DE074001CBF1B /* arrow_front@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "arrow_front@2x.png"; sourceTree = "<group>"; };
 		CA8C37351F78CC6300FDCB58 /* ContentManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ContentManager.h; sourceTree = "<group>"; };
 		CA8C37361F78CC6300FDCB58 /* ContentManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ContentManager.m; sourceTree = "<group>"; };
 		CA8C37381F78CC7B00FDCB58 /* Content.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Content.h; sourceTree = "<group>"; };
@@ -917,6 +921,15 @@
 			path = Audio;
 			sourceTree = "<group>";
 		};
+		CA7BB8951F9DE074001CBF1B /* back */ = {
+			isa = PBXGroup;
+			children = (
+				CA7BB8961F9DE074001CBF1B /* arrow_fairy@2x.png */,
+				CA7BB8971F9DE074001CBF1B /* arrow_front@2x.png */,
+			);
+			path = back;
+			sourceTree = "<group>";
+		};
 		CA8C37341F78CC4D00FDCB58 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
@@ -935,6 +948,7 @@
 		CAC6E8EE1F8B503500072D01 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				CA7BB8951F9DE074001CBF1B /* back */,
 				CAC6E8EF1F8B503500072D01 /* character_gif */,
 				CAC6E8F51F8B503500072D01 /* final balloon_1@2x.png */,
 				CAC6E8F61F8B503500072D01 /* for test */,
@@ -1628,6 +1642,7 @@
 				CAC6EA031F8B504B00072D01 /* Icon-App-76x76@1x.png in Resources */,
 				CAC6EA041F8B504B00072D01 /* Icon-App-76x76@2x.png in Resources */,
 				CAC6EA051F8B504B00072D01 /* Icon-App-76x76@3x.png in Resources */,
+				CA7BB8991F9DE075001CBF1B /* arrow_front@2x.png in Resources */,
 				CAC6EA061F8B504B00072D01 /* Icon-App-83.5x83.5@2x.png in Resources */,
 				CAC6EA071F8B504B00072D01 /* Icon-Small-50x50@1x.png in Resources */,
 				CAC6EA081F8B504B00072D01 /* Icon-Small-50x50@2x.png in Resources */,
@@ -1724,6 +1739,7 @@
 				CAC6EA5E1F8B504B00072D01 /* #04_06_on@2x.png in Resources */,
 				CAC6EA5F1F8B504B00072D01 /* #04_01_translation@2x.png in Resources */,
 				CAC6EA601F8B504B00072D01 /* #04_02_translation@2x.png in Resources */,
+				CA7BB8981F9DE075001CBF1B /* arrow_fairy@2x.png in Resources */,
 				CAC6EA611F8B504B00072D01 /* #04_03_translation@2x.png in Resources */,
 				CAC6EA621F8B504B00072D01 /* #04_04_translation@2x.png in Resources */,
 				CAC6EA631F8B504B00072D01 /* #04_05_translation@2x.png in Resources */,

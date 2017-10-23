@@ -67,6 +67,11 @@
     
     NSError *error = nil;
     
+    BOOL isSetOk = [[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryRecord mode:AVAudioSessionModeVoiceChat options:AVAudioSessionCategoryOptionMixWithOthers error:&error];
+    if (!isSetOk)
+        NSLog(@"AvAudio Session set Error : %@", error);
+    
+    
     [engine startAndReturnError:&error];
     
     task = [speechRecognizer recognitionTaskWithRequest:request resultHandler:^(SFSpeechRecognitionResult * _Nullable result, NSError * _Nullable error) {
@@ -88,6 +93,11 @@
     task = nil;
     
     [engine stop];
+    
+    NSError *error = nil;
+    BOOL isSetOk = [[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryPlayback mode:AVAudioSessionModeMoviePlayback options:AVAudioSessionCategoryOptionMixWithOthers error:&error];
+    if (!isSetOk)
+        NSLog(@"AvAudio Session set Error : %@", error);
 }
 
 

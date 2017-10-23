@@ -30,16 +30,33 @@
                                     <constraint firstAttribute="height" constant="402" id="PKs-jg-QhA"/>
                                 </constraints>
                             </scrollView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow_front.png" translatesAutoresizingMaskIntoConstraints="NO" id="T46-Oy-MvW">
+                                <rect key="frame" x="43" y="40" width="12" height="19"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wng-KU-Ksx">
+                                <rect key="frame" x="19" y="19.5" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="9j8-vu-I99"/>
+                                    <constraint firstAttribute="width" constant="60" id="oKX-m6-k52"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="action_Back:" destination="P8c-dV-dqw" eventType="touchUpInside" id="po4-O4-hcj"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Rn8-uo-N7H" firstAttribute="top" secondItem="nh5-7H-nCz" secondAttribute="top" constant="80" id="5gl-Vc-UHR"/>
                             <constraint firstItem="0TX-Xc-ZLc" firstAttribute="leading" secondItem="Rn8-uo-N7H" secondAttribute="leading" id="EbQ-GT-Dff"/>
                             <constraint firstItem="owy-7J-y4F" firstAttribute="leading" secondItem="nh5-7H-nCz" secondAttribute="leading" id="M7l-K0-3Ma"/>
+                            <constraint firstItem="wng-KU-Ksx" firstAttribute="centerX" secondItem="T46-Oy-MvW" secondAttribute="centerX" id="NJU-c5-pb4"/>
+                            <constraint firstItem="T46-Oy-MvW" firstAttribute="top" secondItem="gOC-vl-GSh" secondAttribute="top" constant="40" id="Nca-5V-Gic"/>
+                            <constraint firstItem="wng-KU-Ksx" firstAttribute="centerY" secondItem="T46-Oy-MvW" secondAttribute="centerY" id="Pin-HI-vH9"/>
                             <constraint firstItem="0TX-Xc-ZLc" firstAttribute="top" secondItem="Rn8-uo-N7H" secondAttribute="bottom" constant="16" id="PpN-vT-jue"/>
                             <constraint firstItem="owy-7J-y4F" firstAttribute="top" secondItem="0TX-Xc-ZLc" secondAttribute="bottom" constant="36" id="T81-nI-1Lz"/>
                             <constraint firstItem="Rn8-uo-N7H" firstAttribute="leading" secondItem="nh5-7H-nCz" secondAttribute="leading" constant="43" id="Xm0-m5-mZC"/>
                             <constraint firstItem="nh5-7H-nCz" firstAttribute="trailing" secondItem="owy-7J-y4F" secondAttribute="trailing" id="k7m-W4-LJO"/>
+                            <constraint firstItem="T46-Oy-MvW" firstAttribute="leading" secondItem="nh5-7H-nCz" secondAttribute="leading" constant="43" id="kXp-0R-ddk"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="nh5-7H-nCz"/>
                     </view>
@@ -54,6 +71,7 @@
                         <outlet property="view_Popup" destination="87a-fh-AJP" id="rBC-mM-OYY"/>
                         <outlet property="view_Script" destination="q9R-4a-8F9" id="KRS-DH-J7f"/>
                         <segue destination="oXN-4Q-m8D" kind="show" identifier="ShowMovieSegue" animates="NO" id="pLe-es-3EZ"/>
+                        <segue destination="ltf-1I-4P3" kind="show" identifier="ShowChatSegue" id="Wcr-8i-KWE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KKf-Z9-iGg" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -435,6 +453,14 @@
             </objects>
             <point key="canvasLocation" x="159" y="255"/>
         </scene>
+        <!--ChatBot-->
+        <scene sceneID="LHr-oX-Nrt">
+            <objects>
+                <viewControllerPlaceholder storyboardName="ChatBot" id="ltf-1I-4P3" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tIi-z8-fkB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="851" y="202"/>
+        </scene>
         <!--Movie-->
         <scene sceneID="niD-c0-WaC">
             <objects>
@@ -452,6 +478,7 @@
         <image name="#01_05_off.png" width="137" height="18"/>
         <image name="#01_06_off.png" width="165" height="18"/>
         <image name="#01_07_off.png" width="123" height="18"/>
+        <image name="arrow_front.png" width="12" height="19"/>
         <image name="movie_nav_1.png" width="375" height="232"/>
         <image name="script_line.png" width="325" height="2"/>
         <image name="select3_B01.png" width="254" height="47"/>

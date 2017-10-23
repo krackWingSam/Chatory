@@ -21,10 +21,27 @@
     [super awakeFromNib];
     NSLog(@"awake from nib file");
     
+    [self initUI];
     [self initImages];
     [self initActions];
     
     [self setThumbImage:[array_Image objectAtIndex:0] forState:UIControlStateNormal];
+}
+
+-(void)initUI {
+    view_TintBack = [UIView new];
+    [view_TintBack setBackgroundColor:RGBA(216, 216, 216, 1)];
+    CGRect frame = [self bounds];
+    frame.size.height = self.frame.size.height / 6;
+    [view_TintBack setFrame:frame];
+    
+    view_Tint = [UIView new];
+    frame.size.height = self.bounds.size.height / 6;
+    [view_Tint setFrame:frame];
+    [view_Tint setBackgroundColor:RGBA(87, 163, 255, 1)];
+    
+    [self insertSubview:view_Tint atIndex:0];
+    [self insertSubview:view_TintBack atIndex:0];
 }
 
 -(void)initImages {
@@ -49,39 +66,41 @@
 - (void)drawRect:(CGRect)rect {
     // Drawing code
     // 그림을 그린다.
-    UIBezierPath *baackgroundPath = [UIBezierPath bezierPath];
-    [baackgroundPath setLineWidth:self.frame.size.height/3 * 2];
-    [baackgroundPath moveToPoint:CGPointMake(0, 0)];
-    [baackgroundPath addLineToPoint:CGPointMake(self.frame.size.width, 0)];
-    UIColor *backgroundColor = RGBA(216, 216, 216, 1);
-    [backgroundColor setFill];
-    [backgroundColor setStroke];
+}
+
+-(void)setValue:(float)value {
+    [super setValue:value];
     
-    [baackgroundPath stroke];
-    [baackgroundPath fill];
-    
-    UIBezierPath *fillPath = [UIBezierPath bezierPath];
+    [self action_ValueChange:self];
 }
 
 
 #pragma mark - for Actions
 -(void)action_ValueChange:(id)sender {
-    [self drawRect:self.bounds];
+//    dispatch_async(dispatch_get_main_queue(), ^{
+        [self drawRect:self.bounds];
+        
+        CGFloat value = self.value;
+        NSInteger index = 0;
+        if (value > 0 && value < 1.5)
+            index = 0;
+        else if (value >= 1.5 && value < 2.5)
+            index = 1;
+        else if (value >= 2.5 && value < 3.5)
+            index = 2;
+        else if (value >= 3.5 && value < 4.5)
+            index = 3;
+        else
+            index = 4;
     
-    CGFloat value = self.value;
-    NSInteger index = 0;
-    if (value > 0 && value < 1.5)
-        index = 0;
-    else if (value >= 1.5 && value < 2.5)
-        index = 1;
-    else if (value >= 2.5 && value < 3.5)
-        index = 2;
-    else if (value >= 3.5 && value < 4.5)
-        index = 3;
-    else
-        index = 4;
     
-    [self setThumbImage:[array_Image objectAtIndex:index] forState:UIControlStateNormal];
+        [self setThumbImage:[array_Image objectAtIndex:index] forState:UIControlStateNormal];
+    
+        CGRect frame = [view_Tint bounds];
+        frame.size.width = self.frame.size.width / 5 * value;
+        [view_Tint setFrame:frame];
+//    });
+    
 }
 
 @end

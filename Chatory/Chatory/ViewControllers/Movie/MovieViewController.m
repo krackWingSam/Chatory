@@ -56,6 +56,15 @@
     
 }
 
+-(void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    NSError *error = nil;
+    BOOL isSetOk = [[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryPlayback mode:AVAudioSessionModeMoviePlayback options:AVAudioSessionCategoryOptionMixWithOthers error:&error];
+    if (!isSetOk)
+        NSLog(@"AvAudio Session set Error : %@", error);
+}
+
 -(void)initUI {
     CGRect frame = [[UIScreen mainScreen] bounds];
     array_ScriptImageView = @[imageView_01_01, imageView_01_02, imageView_01_03, imageView_01_04, imageView_01_05, imageView_01_06, imageView_01_07,
@@ -321,10 +330,12 @@
 }
 
 -(IBAction)action_Replay:(id)sender {
+    [[SoundManager sharedManager] playSoundWithSoundID:SoundID_Select];
     [self startAutoPlay];
 }
 
 -(IBAction)action_Next:(id)sender {
+    [[SoundManager sharedManager] playSoundWithSoundID:SoundID_Select];
     NSInteger nextVideoIndex = currentVideoIndex + 1;
     
     if (nextVideoIndex >= [array_Player count]) {
@@ -348,6 +359,7 @@
 }
 
 -(IBAction)action_ConfirmSkip:(id)sender {
+    [[SoundManager sharedManager] playSoundWithSoundID:SoundID_Select];
     [self performSegueWithIdentifier:@"ShowCompleteSegue" sender:nil];
 }
 
