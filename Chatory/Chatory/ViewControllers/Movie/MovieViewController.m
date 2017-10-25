@@ -287,6 +287,7 @@
 }
 
 -(IBAction)action_Translate:(UIButton *)sender {
+    [[SoundManager sharedManager] playSoundWithSoundID:SoundID_Select];
     NSInteger currentIndex = [sender tag];
     UIImageView *currentImageView = [array_ScriptImageView objectAtIndex:currentIndex];
     UIImage *currentTranslatedImage = [array_ScriptTranslateImage objectAtIndex:currentIndex];
@@ -298,6 +299,7 @@
 }
 
 -(IBAction)action_PlayScript:(UIButton *)sender {
+    [[SoundManager sharedManager] playSoundWithSoundID:SoundID_Select];
     NSInteger currentIndex = [sender tag];
     
     [self hideVideoControl];
@@ -347,14 +349,17 @@
 }
 
 -(IBAction)action_Back:(id)sender {
+    [[SoundManager sharedManager] playSoundWithSoundID:SoundID_Select];
     [self.navigationController popViewControllerAnimated:YES];
 }
 
 -(IBAction)action_Skip:(id)sender {
+    [[SoundManager sharedManager] playSoundWithSoundID:SoundID_Select];
     [self showSkipView];
 }
 
 -(IBAction)action_CancelSkip:(id)sender {
+    [[SoundManager sharedManager] playSoundWithSoundID:SoundID_Select];
     [self hideSkipView];
 }
 

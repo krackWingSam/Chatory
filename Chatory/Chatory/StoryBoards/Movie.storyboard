@@ -5,7 +5,7 @@
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -152,7 +152,7 @@
                         <outlet property="view_Script05" destination="v5S-v5-alF" id="muN-eI-JwW"/>
                         <outlet property="view_Skip" destination="e2B-Fs-h06" id="T2w-jd-1Tw"/>
                         <outlet property="view_VideoControl" destination="X9w-RV-cnB" id="iLm-3q-e58"/>
-                        <segue destination="35h-8U-BaD" kind="show" identifier="ShowCompleteSegue" id="Sre-lu-SJp"/>
+                        <segue destination="acE-NW-9jH" kind="show" identifier="ShowCompleteSegue" id="jle-7W-Xzl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rtp-gE-Cai" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1225,77 +1225,13 @@
             </objects>
             <point key="canvasLocation" x="109.59999999999999" y="158.77061469265368"/>
         </scene>
-        <!--Movie Complete View Controller-->
-        <scene sceneID="HWW-yh-dcn">
+        <!--SelectStudy-->
+        <scene sceneID="tn8-Xy-aGq">
             <objects>
-                <viewController id="35h-8U-BaD" customClass="MovieCompleteViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Vye-4Z-dy1">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="complete_back.png" translatesAutoresizingMaskIntoConstraints="NO" id="rO4-zj-WPH">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="story_pop_up.png" translatesAutoresizingMaskIntoConstraints="NO" id="7nj-2m-2PR">
-                                <rect key="frame" x="38" y="86.5" width="299" height="494"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lz7-C1-lTQ">
-                                <rect key="frame" x="60" y="513.5" width="254" height="47"/>
-                                <state key="normal" image="roleplay_Practice_B.png"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NIE-Gb-RYf">
-                                <rect key="frame" x="60" y="446.5" width="254" height="47"/>
-                                <state key="normal" image="sentence_Practice_B.png"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cQs-tb-ucr">
-                                <rect key="frame" x="60" y="379.5" width="254" height="47"/>
-                                <state key="normal" image="word_Practice_B.png"/>
-                                <connections>
-                                    <segue destination="oBq-3F-v10" kind="show" id="o7R-ps-ha2"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nxO-ib-yl4">
-                                <rect key="frame" x="38" y="86" width="60" height="60"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="60" id="OnB-Jw-TfB"/>
-                                    <constraint firstAttribute="height" constant="60" id="dJn-Cc-U8v"/>
-                                </constraints>
-                                <connections>
-                                    <action selector="action_Back:" destination="35h-8U-BaD" eventType="touchUpInside" id="tFb-OC-mom"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="lz7-C1-lTQ" firstAttribute="centerX" secondItem="Vye-4Z-dy1" secondAttribute="centerX" id="63n-gA-sfF"/>
-                            <constraint firstItem="7nj-2m-2PR" firstAttribute="centerY" secondItem="Vye-4Z-dy1" secondAttribute="centerY" id="9Mo-Oq-hIJ"/>
-                            <constraint firstItem="lz7-C1-lTQ" firstAttribute="top" secondItem="NIE-Gb-RYf" secondAttribute="bottom" constant="20" id="BhQ-ST-aeq"/>
-                            <constraint firstItem="NIE-Gb-RYf" firstAttribute="centerX" secondItem="Vye-4Z-dy1" secondAttribute="centerX" id="DWf-1G-xzY"/>
-                            <constraint firstItem="NIE-Gb-RYf" firstAttribute="top" secondItem="cQs-tb-ucr" secondAttribute="bottom" constant="20" id="GFS-d2-H1S"/>
-                            <constraint firstItem="7nj-2m-2PR" firstAttribute="top" secondItem="nxO-ib-yl4" secondAttribute="top" id="QK3-VU-qh8"/>
-                            <constraint firstItem="7nj-2m-2PR" firstAttribute="centerX" secondItem="Vye-4Z-dy1" secondAttribute="centerX" id="Rn3-5L-Srb"/>
-                            <constraint firstItem="rO4-zj-WPH" firstAttribute="leading" secondItem="9d7-wx-geA" secondAttribute="leading" id="ZJD-fn-Q6b"/>
-                            <constraint firstItem="7nj-2m-2PR" firstAttribute="leading" secondItem="nxO-ib-yl4" secondAttribute="leading" id="aaK-pT-RTg"/>
-                            <constraint firstAttribute="trailing" secondItem="rO4-zj-WPH" secondAttribute="trailing" id="b1B-f8-Tr8"/>
-                            <constraint firstItem="9d7-wx-geA" firstAttribute="bottom" secondItem="rO4-zj-WPH" secondAttribute="bottom" id="ceW-nv-wJd"/>
-                            <constraint firstItem="lz7-C1-lTQ" firstAttribute="bottom" secondItem="7nj-2m-2PR" secondAttribute="bottom" constant="-20" id="fcj-Ph-eya"/>
-                            <constraint firstItem="cQs-tb-ucr" firstAttribute="centerX" secondItem="Vye-4Z-dy1" secondAttribute="centerX" id="szi-X3-lgZ"/>
-                            <constraint firstItem="rO4-zj-WPH" firstAttribute="top" secondItem="Vye-4Z-dy1" secondAttribute="top" id="tiE-xn-LZg"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="9d7-wx-geA"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="xgn-0c-WFp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardName="SelectStudy" id="acE-NW-9jH" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Tgs-EV-fSh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="109.59999999999999" y="927.88605697151434"/>
-        </scene>
-        <!--ChatBot-->
-        <scene sceneID="i0Q-MN-wrY">
-            <objects>
-                <viewControllerPlaceholder storyboardName="ChatBot" id="oBq-3F-v10" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Zvg-o1-VPP" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="710" y="927"/>
+            <point key="canvasLocation" x="732" y="158"/>
         </scene>
     </scenes>
     <resources>
@@ -1328,16 +1264,11 @@
         <image name="Back_movie.png" width="150" height="17"/>
         <image name="Skip_movie_popup.png" width="299" height="375"/>
         <image name="Skip_yes_B.png" width="254" height="47"/>
-        <image name="complete_back.png" width="375" height="667"/>
         <image name="movie_nav_1.png" width="375" height="232"/>
         <image name="movie_next.png" width="88" height="40"/>
         <image name="movie_replay.png" width="102" height="40"/>
-        <image name="roleplay_Practice_B.png" width="254" height="47"/>
         <image name="script_line.png" width="325" height="2"/>
-        <image name="sentence_Practice_B.png" width="254" height="47"/>
         <image name="sound_icon off.png" width="28" height="28"/>
         <image name="sound_icon_on.png" width="28" height="28"/>
-        <image name="story_pop_up.png" width="299" height="494"/>
-        <image name="word_Practice_B.png" width="254" height="47"/>
     </resources>
 </document>

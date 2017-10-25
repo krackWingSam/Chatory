@@ -11,22 +11,13 @@
 #import <AVKit/AVKit.h>
 
 @interface SelectFairyTaleViewController () <UIScrollViewDelegate> {
-    IBOutlet UIScrollView *scrollView;
-    IBOutlet UIView *contentView;
-    
-    IBOutlet UIView *view_Animated;
-    IBOutlet UIImageView *imageView_OriginImage;
-    
-    IBOutlet UIView *view_Background;
-    IBOutlet UIImageView *imageView_NewBackground;
-    
-    IBOutlet UIView *view_Popup;
-    
-    IBOutlet UIView *view_Menu;
-    IBOutlet UIView *view_Script;
-    
-    
     UserDataManager *manager;
+    
+    CGRect frame_view_Animated;
+    CGRect frame_imageView_OriginImage;
+    CGRect frame_view_Background;
+    CGRect frame_imageView_NewBackground;
+    CGRect frame_view_Script;
 }
 
 @end
@@ -37,7 +28,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    [self initUI];
+    [self getFrames];
+    [self initFrames];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -52,21 +44,49 @@
     BOOL isSetOk = [[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryPlayback mode:AVAudioSessionModeMoviePlayback options:AVAudioSessionCategoryOptionMixWithOthers error:&error];
     if (!isSetOk)
         NSLog(@"AvAudio Session set Error : %@", error);
+    
+    [self initFrames];
+}
+
+-(void)getFrames {
+    frame_view_Animated = [view_Animated frame];;
+    frame_imageView_OriginImage = [imageView_OriginImage frame];
+    frame_view_Background = [view_Background frame];
+    frame_imageView_NewBackground = [imageView_NewBackground frame];
+    frame_view_Script = [view_Script frame];
 }
 
 -(void)initUI {
     manager = [UserDataManager sharedManager];
     
+    [scrollView setAlpha:1.f];
     [scrollView addSubview:contentView];
     [scrollView setContentSize:contentView.frame.size];
     [scrollView setDelegate:self];
+    
+    [view_Animated removeFromSuperview];
+    [view_Menu removeFromSuperview];
+    [view_Script removeFromSuperview];
+    [view_Popup removeFromSuperview];
+}
+
+-(void)initFrames {
+    [view_Animated setFrame:frame_view_Animated];
+    [imageView_OriginImage setFrame:frame_imageView_OriginImage];
+    [view_Background setFrame:frame_view_Background];
+    [imageView_NewBackground setFrame:frame_imageView_NewBackground];
+    [view_Script setFrame:frame_view_Script];
+    
+    [self initUI];
 }
 
 
 #pragma mark - Animation
 -(void)startSwitchAnimation {
     [manager setContentKey:CONTENT_KEY_01];
-    [scrollView removeFromSuperview];
+//    [scrollView removeFromSuperview];
+    [imageView_OriginImage setAlpha:1.f];
+    [scrollView setAlpha:0.f];
     
     view_Background.layer.cornerRadius = 30.f;
     
@@ -101,6 +121,7 @@
 -(void)startPopup {
     [view_Popup setFrame:CGRectMake(0, self.view.frame.size.height, self.view.frame.size.width, self.view.frame.size.height)];
     [self.view addSubview:view_Popup];
+    [view_Popup setAlpha:1.f];
     [UIView animateWithDuration:0.3f animations:^{
         [view_Popup setFrame:CGRectMake(0, -30, view_Popup.frame.size.width, view_Popup.frame.size.height)];
     } completion:^(BOOL finished) {
@@ -180,6 +201,7 @@
 }
 
 -(IBAction)action_Back:(id)sender {
+    [[SoundManager sharedManager] playSoundWithSoundID:SoundID_Select];
     [self.navigationController popViewControllerAnimated:YES];
 }
 

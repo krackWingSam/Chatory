@@ -102,7 +102,6 @@
 
 #pragma mark - IBActions
 -(IBAction)action_SelectTeacher:(UIButton *)sender {
-//    NSLog(@"selected teacher : %d", (int)sender.tag);
     [[SoundManager sharedManager] playSoundWithSoundID:SoundID_Select];
     UserDataManager *manager = [UserDataManager sharedManager];
     switch (sender.tag) {
