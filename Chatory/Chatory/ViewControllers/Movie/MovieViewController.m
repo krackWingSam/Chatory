@@ -65,6 +65,12 @@
         NSLog(@"AvAudio Session set Error : %@", error);
 }
 
+-(void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    
+    [playerVC.player pause];
+}
+
 -(void)initUI {
     CGRect frame = [[UIScreen mainScreen] bounds];
     array_ScriptImageView = @[imageView_01_01, imageView_01_02, imageView_01_03, imageView_01_04, imageView_01_05, imageView_01_06, imageView_01_07,

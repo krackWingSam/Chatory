@@ -36,6 +36,7 @@
                                 <rect key="frame" x="60" y="379.5" width="254" height="47"/>
                                 <state key="normal" image="word_Practice_B.png"/>
                                 <connections>
+                                    <action selector="action_Select:" destination="Hob-Za-1Km" eventType="touchUpInside" id="VY2-wE-4qU"/>
                                     <segue destination="z50-tw-L9j" kind="show" id="gfF-Xf-kLy">
                                         <nil key="action"/>
                                     </segue>

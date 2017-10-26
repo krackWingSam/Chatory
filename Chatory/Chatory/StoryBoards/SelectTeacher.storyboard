@@ -5,7 +5,7 @@
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -30,14 +30,31 @@
                                     <constraint firstAttribute="height" constant="402" id="McD-lT-A5h"/>
                                 </constraints>
                             </scrollView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow_front.png" translatesAutoresizingMaskIntoConstraints="NO" id="tWi-WU-AiL">
+                                <rect key="frame" x="42" y="40" width="12" height="19"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yLc-Pa-2WM">
+                                <rect key="frame" x="18" y="19.5" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="2Nb-rt-kDK"/>
+                                    <constraint firstAttribute="width" constant="60" id="f8w-FE-IqN"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="action_Back:" destination="SYJ-Dj-k0f" eventType="touchUpInside" id="C04-4m-k2h"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.93333333330000001" green="0.93333333330000001" blue="0.93333333330000001" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="tWi-WU-AiL" firstAttribute="leading" secondItem="ltN-PJ-o19" secondAttribute="leading" constant="42" id="1KI-vw-jn7"/>
+                            <constraint firstItem="yLc-Pa-2WM" firstAttribute="centerX" secondItem="tWi-WU-AiL" secondAttribute="centerX" id="6qp-Kw-njA"/>
                             <constraint firstItem="NB3-n6-Z1L" firstAttribute="top" secondItem="ltN-PJ-o19" secondAttribute="top" constant="80" id="8LI-ue-KnR"/>
                             <constraint firstItem="aLM-8W-G2I" firstAttribute="top" secondItem="NB3-n6-Z1L" secondAttribute="bottom" constant="16" id="QTS-vQ-OtY"/>
                             <constraint firstItem="OdL-ga-jDg" firstAttribute="leading" secondItem="ltN-PJ-o19" secondAttribute="leading" id="Xei-of-i7S"/>
                             <constraint firstItem="NB3-n6-Z1L" firstAttribute="leading" secondItem="ltN-PJ-o19" secondAttribute="leading" constant="43" id="bxx-mM-0XB"/>
+                            <constraint firstItem="tWi-WU-AiL" firstAttribute="top" secondItem="y6x-O4-CSb" secondAttribute="top" constant="40" id="oCq-dr-2AV"/>
                             <constraint firstItem="ltN-PJ-o19" firstAttribute="trailing" secondItem="OdL-ga-jDg" secondAttribute="trailing" id="sBq-Yy-AG7"/>
+                            <constraint firstItem="yLc-Pa-2WM" firstAttribute="centerY" secondItem="tWi-WU-AiL" secondAttribute="centerY" id="sIF-x7-dnY"/>
                             <constraint firstItem="aLM-8W-G2I" firstAttribute="leading" secondItem="NB3-n6-Z1L" secondAttribute="leading" id="sTW-hF-sTl"/>
                             <constraint firstItem="OdL-ga-jDg" firstAttribute="top" secondItem="aLM-8W-G2I" secondAttribute="bottom" constant="35" id="vfm-S5-n8b"/>
                         </constraints>
@@ -159,6 +176,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="arrow_front.png" width="12" height="19"/>
         <image name="back_character_01.png" width="251" height="402"/>
         <image name="back_character_02.png" width="251" height="402"/>
         <image name="back_character_03.png" width="251" height="402"/>

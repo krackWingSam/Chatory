@@ -5,7 +5,7 @@
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -21,17 +21,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Initial ViewController" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bMP-cx-CCO">
-                                <rect key="frame" x="109" y="28" width="157" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="start_BG.png" translatesAutoresizingMaskIntoConstraints="NO" id="FvL-gO-sTf">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="bMP-cx-CCO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7w9-yT-QUZ"/>
-                            <constraint firstItem="bMP-cx-CCO" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="uq9-DL-QW7"/>
+                            <constraint firstItem="FvL-gO-sTf" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="07b-0b-lqa"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="FvL-gO-sTf" secondAttribute="bottom" id="Xkd-hK-ojn"/>
+                            <constraint firstItem="FvL-gO-sTf" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="ugi-SN-upr"/>
+                            <constraint firstAttribute="trailing" secondItem="FvL-gO-sTf" secondAttribute="trailing" id="vky-fL-MVW"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="SNq-iY-Uuz"/>
@@ -39,7 +38,7 @@
                     <nil key="simulatedBottomBarMetrics"/>
                     <connections>
                         <segue destination="V7l-Cb-mmO" kind="show" identifier="ShowDevModeSegue" id="eBE-sc-bvv"/>
-                        <segue destination="e4S-c1-VVT" kind="show" identifier="ShowMainSegue" id="6ds-fb-diS"/>
+                        <segue destination="MVk-Og-J44" kind="show" identifier="ShowMainSegue" animates="NO" id="oxa-HX-ueb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -60,7 +59,50 @@
                 <viewControllerPlaceholder storyboardName="SelectTeacher" id="e4S-c1-VVT" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dAB-0e-bU7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="142" y="667"/>
+            <point key="canvasLocation" x="1089" y="1002"/>
+        </scene>
+        <!--Start View Controller-->
+        <scene sceneID="5Dy-1D-4m9">
+            <objects>
+                <viewController id="MVk-Og-J44" customClass="StartViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="rEZ-uM-ZO7"/>
+                        <viewControllerLayoutGuide type="bottom" id="KU4-Xq-EGc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="U2k-9V-Gml">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="start_BG.png" translatesAutoresizingMaskIntoConstraints="NO" id="x2w-lQ-gin">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gNT-cR-KiL">
+                                <rect key="frame" x="62" y="552" width="277" height="73"/>
+                                <state key="normal" image="start_B.png"/>
+                                <connections>
+                                    <action selector="action_Button:" destination="MVk-Og-J44" eventType="touchUpInside" id="agv-xB-2x9"/>
+                                    <segue destination="e4S-c1-VVT" kind="show" id="QBS-C2-nCp"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="x2w-lQ-gin" firstAttribute="leading" secondItem="U2k-9V-Gml" secondAttribute="leading" id="3yC-Vv-uCq"/>
+                            <constraint firstItem="KU4-Xq-EGc" firstAttribute="top" secondItem="x2w-lQ-gin" secondAttribute="bottom" id="GdN-ud-V0Q"/>
+                            <constraint firstItem="gNT-cR-KiL" firstAttribute="leading" secondItem="U2k-9V-Gml" secondAttribute="leading" constant="62" id="M7P-Z2-Hgl"/>
+                            <constraint firstAttribute="trailing" secondItem="x2w-lQ-gin" secondAttribute="trailing" id="ill-ND-T32"/>
+                            <constraint firstItem="x2w-lQ-gin" firstAttribute="top" secondItem="U2k-9V-Gml" secondAttribute="top" id="qFY-Qx-HuY"/>
+                            <constraint firstAttribute="trailing" secondItem="gNT-cR-KiL" secondAttribute="trailing" constant="36" id="tuw-bu-Uo4"/>
+                            <constraint firstItem="KU4-Xq-EGc" firstAttribute="top" secondItem="gNT-cR-KiL" secondAttribute="bottom" constant="42" id="vWT-AL-gcu"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="button" destination="gNT-cR-KiL" id="uGE-F4-dsZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gah-0i-CGV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="481" y="1003"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="c1W-98-hfY">
@@ -81,4 +123,8 @@
             <point key="canvasLocation" x="-209" y="224"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="start_B.png" width="245" height="73"/>
+        <image name="start_BG.png" width="375" height="667"/>
+    </resources>
 </document>

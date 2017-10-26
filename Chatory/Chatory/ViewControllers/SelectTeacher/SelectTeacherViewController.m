@@ -101,6 +101,11 @@
 
 
 #pragma mark - IBActions
+-(IBAction)action_Back:(UIButton *)button {
+    [[SoundManager sharedManager] playSoundWithSoundID:SoundID_Select];
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
 -(IBAction)action_SelectTeacher:(UIButton *)sender {
     [[SoundManager sharedManager] playSoundWithSoundID:SoundID_Select];
     UserDataManager *manager = [UserDataManager sharedManager];

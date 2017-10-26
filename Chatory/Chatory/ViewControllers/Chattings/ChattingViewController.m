@@ -219,6 +219,7 @@
 
 #pragma mark - IBActions
 -(IBAction)action_Back:(id)sender {
+    [[SoundManager sharedManager] playSoundWithSoundID:SoundID_Select];
     [self.navigationController popViewControllerAnimated:YES];
 }
 

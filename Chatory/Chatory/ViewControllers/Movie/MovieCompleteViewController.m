@@ -31,6 +31,10 @@
     [self.navigationController popViewControllerAnimated:YES];
 }
 
+-(IBAction)action_Select:(id)sender {
+    [[SoundManager sharedManager] playSoundWithSoundID:SoundID_Select];
+}
+
 
 #pragma mark - Override
 -(BOOL)prefersStatusBarHidden {
