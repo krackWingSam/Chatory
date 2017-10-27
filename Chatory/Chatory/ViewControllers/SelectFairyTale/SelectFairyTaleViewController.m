@@ -91,10 +91,20 @@
 -(void)startSwitchAnimation {
     [manager setContentKey:CONTENT_KEY_01];
 //    [scrollView removeFromSuperview];
+    
+    [view_Animated setFrame:frame_view_Animated];
+    [imageView_OriginImage setFrame:frame_imageView_OriginImage];
+    [view_Background setFrame:frame_view_Background];
+    [imageView_NewBackground setFrame:frame_imageView_NewBackground];
+    [view_Script setFrame:frame_view_Script];
+    
     [imageView_OriginImage setAlpha:1.f];
+    [imageView_NewBackground setAlpha:1.f];
+    [view_Animated setAlpha:1.f];
     [scrollView setAlpha:0.f];
     
     view_Background.layer.cornerRadius = 30.f;
+    
     
     [self.view addSubview:view_Animated];
     
@@ -114,6 +124,7 @@
         } completion:^(BOOL finished) {
             [UIView animateWithDuration:0.3f animations:^{
                 [view_Background setFrame:view_Animated.frame];
+                [view_Animated setAlpha:1.f];
                 CGRect frame = [view_Animated frame];
                 [imageView_NewBackground setFrame:frame];
             } completion:^(BOOL finished) {
@@ -134,6 +145,18 @@
     } completion:^(BOOL finished) {
         [UIView animateWithDuration:0.2f animations:^{
             [view_Popup setFrame:CGRectMake(0, 0, view_Popup.frame.size.width, view_Popup.frame.size.height)];
+        }];
+    }];
+}
+
+-(void)hidePopup {
+    [UIView animateWithDuration:0.2f animations:^{
+        [view_Popup setFrame:CGRectMake(0, -30, view_Popup.frame.size.width, view_Popup.frame.size.height)];
+    } completion:^(BOOL finished) {
+        [UIView animateWithDuration:0.3f animations:^{
+            [view_Popup setFrame:CGRectMake(0, self.view.frame.size.height, self.view.frame.size.width, self.view.frame.size.height)];
+            [view_Animated setAlpha:0.f];
+            [scrollView setAlpha:1.f];
         }];
     }];
 }
@@ -214,6 +237,10 @@
 -(IBAction)action_Back:(id)sender {
     [[SoundManager sharedManager] playSoundWithSoundID:SoundID_Select];
     [self.navigationController popViewControllerAnimated:YES];
+}
+
+-(IBAction)action_BackSelect:(id)sender {
+    [self hidePopup];
 }
 
 -(IBAction)action_Movie:(id)sender {
