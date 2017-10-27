@@ -73,6 +73,7 @@
     [scrollView addSubview:contentView];
     [scrollView setContentSize:contentView.frame.size];
     [scrollView setDelegate:self];
+    
 }
 
 

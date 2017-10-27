@@ -65,6 +65,7 @@
                         <outlet property="imageView_NewBackground" destination="0NE-eF-7EA" id="thc-ii-WXJ"/>
                         <outlet property="imageView_OriginImage" destination="jii-3b-BHY" id="r8H-GK-FM7"/>
                         <outlet property="scrollView" destination="owy-7J-y4F" id="kHj-ai-C8F"/>
+                        <outlet property="slider" destination="B7n-ZV-d7S" id="SuJ-8x-AYh"/>
                         <outlet property="view_Animated" destination="Ank-7v-fXI" id="OoY-Wd-3eM"/>
                         <outlet property="view_Background" destination="XLG-rq-wdJ" id="gm5-kt-A9I"/>
                         <outlet property="view_Menu" destination="4cM-cE-d1Z" id="kFy-ty-KgI"/>
@@ -185,9 +186,8 @@
                                 <constraint firstAttribute="height" constant="232" id="5U9-bf-V0E"/>
                             </constraints>
                         </imageView>
-                        <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="5" translatesAutoresizingMaskIntoConstraints="NO" id="B7n-ZV-d7S" customClass="CTSlider">
+                        <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="5" translatesAutoresizingMaskIntoConstraints="NO" id="B7n-ZV-d7S" customClass="CTSlider">
                             <rect key="frame" x="-2" y="0.0" width="379" height="31"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         </slider>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yrW-6f-chp">
                             <rect key="frame" x="0.0" y="8" width="48" height="40"/>
@@ -208,10 +208,13 @@
                     </subviews>
                     <constraints>
                         <constraint firstItem="Zwu-9D-BJK" firstAttribute="centerY" secondItem="yrW-6f-chp" secondAttribute="centerY" id="1tI-t9-IDr"/>
+                        <constraint firstItem="B7n-ZV-d7S" firstAttribute="trailing" secondItem="LEs-B0-Q3p" secondAttribute="trailing" id="6Aa-J9-aWI"/>
                         <constraint firstItem="Q95-s6-yBI" firstAttribute="trailing" secondItem="LEs-B0-Q3p" secondAttribute="trailing" id="6ex-0J-MQm"/>
                         <constraint firstItem="yrW-6f-chp" firstAttribute="top" secondItem="LEs-B0-Q3p" secondAttribute="top" constant="8" id="8uW-aj-cIc"/>
                         <constraint firstItem="Q95-s6-yBI" firstAttribute="top" secondItem="4cM-cE-d1Z" secondAttribute="top" id="FiW-nc-L92"/>
+                        <constraint firstItem="B7n-ZV-d7S" firstAttribute="leading" secondItem="LEs-B0-Q3p" secondAttribute="leading" id="IsL-kS-zTR"/>
                         <constraint firstItem="Q95-s6-yBI" firstAttribute="leading" secondItem="LEs-B0-Q3p" secondAttribute="leading" id="KRR-bv-MiC"/>
+                        <constraint firstItem="B7n-ZV-d7S" firstAttribute="top" secondItem="LEs-B0-Q3p" secondAttribute="top" id="RKb-ua-adx"/>
                         <constraint firstItem="LEs-B0-Q3p" firstAttribute="trailing" secondItem="Zwu-9D-BJK" secondAttribute="trailing" constant="20" id="hHc-oq-6HN"/>
                         <constraint firstItem="yrW-6f-chp" firstAttribute="leading" secondItem="LEs-B0-Q3p" secondAttribute="leading" id="lYp-Q8-eFo"/>
                     </constraints>

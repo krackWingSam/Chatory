@@ -57,17 +57,23 @@
 }
 
 -(void)initUI {
-    manager = [UserDataManager sharedManager];
-    
-    [scrollView setAlpha:1.f];
-    [scrollView addSubview:contentView];
-    [scrollView setContentSize:contentView.frame.size];
-    [scrollView setDelegate:self];
-    
-    [view_Animated removeFromSuperview];
-    [view_Menu removeFromSuperview];
-    [view_Script removeFromSuperview];
-    [view_Popup removeFromSuperview];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        manager = [UserDataManager sharedManager];
+        
+        [scrollView setAlpha:1.f];
+        [scrollView addSubview:contentView];
+        [scrollView setContentSize:contentView.frame.size];
+        [scrollView setDelegate:self];
+        
+        [slider setValue:1.f];
+        
+        [view_Animated removeFromSuperview];
+        [view_Menu removeFromSuperview];
+        [view_Script removeFromSuperview];
+        [view_Popup removeFromSuperview];
+        
+        [view_Menu addSubview:slider];
+    });
 }
 
 -(void)initFrames {
@@ -108,7 +114,8 @@
         } completion:^(BOOL finished) {
             [UIView animateWithDuration:0.3f animations:^{
                 [view_Background setFrame:view_Animated.frame];
-                [imageView_NewBackground setFrame:view_Animated.frame];
+                CGRect frame = [view_Animated frame];
+                [imageView_NewBackground setFrame:frame];
             } completion:^(BOOL finished) {
                 dispatch_async(dispatch_get_main_queue(), ^{
                     [self startPopup];
@@ -138,6 +145,10 @@
         [view_Script setFrame:CGRectMake(0, self.view.frame.size.height, self.view.frame.size.width, view_Script.frame.size.height)];
         [self.view addSubview:view_Script];
         [UIView animateWithDuration:0.2f animations:^{
+            CGRect frame = [view_Animated frame];
+            frame.origin.x += 8;
+            frame.origin.y += 85;
+            [imageView_NewBackground setFrame:frame];
             [view_Background setFrame:CGRectMake(0, -167, view_Background.frame.size.width, view_Background.frame.size.height)];
             [view_Script setFrame:CGRectMake(0, self.view.frame.size.height - 167, view_Script.frame.size.width, view_Script.frame.size.height)];
         } completion:^(BOOL finished) {

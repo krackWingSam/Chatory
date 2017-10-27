@@ -22,6 +22,8 @@
     
     IBOutlet UIView *view_Menu;
     IBOutlet UIView *view_Script;
+    
+    IBOutlet UISlider *slider;
 }
 
 @end
