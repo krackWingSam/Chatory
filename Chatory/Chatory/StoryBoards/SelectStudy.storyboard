@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Hob-Za-1Km">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Movie Complete View Controller-->
+        <scene sceneID="qpT-yK-RVG">
+            <objects>
+                <viewController id="Hob-Za-1Km" customClass="MovieCompleteViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Pwa-u3-FuN">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="complete_back.png" translatesAutoresizingMaskIntoConstraints="NO" id="Saa-MS-xiV">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="story_pop_up.png" translatesAutoresizingMaskIntoConstraints="NO" id="Ahm-Ex-kfg">
+                                <rect key="frame" x="38" y="86.5" width="299" height="494"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yuF-YJ-rbY">
+                                <rect key="frame" x="60" y="513.5" width="254" height="47"/>
+                                <state key="normal" image="roleplay_Practice_B.png"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k3v-ek-0kB">
+                                <rect key="frame" x="60" y="446.5" width="254" height="47"/>
+                                <state key="normal" image="sentence_Practice_B.png"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b14-Qe-Gcz">
+                                <rect key="frame" x="60" y="379.5" width="254" height="47"/>
+                                <state key="normal" image="word_Practice_B.png"/>
+                                <connections>
+                                    <action selector="action_Select:" destination="Hob-Za-1Km" eventType="touchUpInside" id="VY2-wE-4qU"/>
+                                    <segue destination="z50-tw-L9j" kind="show" id="gfF-Xf-kLy">
+                                        <nil key="action"/>
+                                    </segue>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qTG-9n-ZH6">
+                                <rect key="frame" x="38" y="86" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="8ib-8P-rzx"/>
+                                    <constraint firstAttribute="width" constant="60" id="wmq-Kh-q28"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="action_Back:" destination="Hob-Za-1Km" eventType="touchUpInside" id="1Ya-Uk-vdo"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="yuF-YJ-rbY" firstAttribute="top" secondItem="k3v-ek-0kB" secondAttribute="bottom" constant="20" id="3Sn-E5-aXq"/>
+                            <constraint firstAttribute="trailing" secondItem="Saa-MS-xiV" secondAttribute="trailing" id="880-QU-8l0"/>
+                            <constraint firstItem="yuF-YJ-rbY" firstAttribute="bottom" secondItem="Ahm-Ex-kfg" secondAttribute="bottom" constant="-20" id="ExE-ZI-toZ"/>
+                            <constraint firstItem="w53-fN-nZ5" firstAttribute="bottom" secondItem="Saa-MS-xiV" secondAttribute="bottom" id="Gn6-H2-OHc"/>
+                            <constraint firstItem="Ahm-Ex-kfg" firstAttribute="centerY" secondItem="Pwa-u3-FuN" secondAttribute="centerY" id="H05-XK-iBO"/>
+                            <constraint firstItem="Ahm-Ex-kfg" firstAttribute="top" secondItem="qTG-9n-ZH6" secondAttribute="top" id="JDB-7Y-Np1"/>
+                            <constraint firstItem="Saa-MS-xiV" firstAttribute="leading" secondItem="w53-fN-nZ5" secondAttribute="leading" id="RZ5-29-7YE"/>
+                            <constraint firstItem="Saa-MS-xiV" firstAttribute="top" secondItem="Pwa-u3-FuN" secondAttribute="top" id="aGc-qP-vFC"/>
+                            <constraint firstItem="Ahm-Ex-kfg" firstAttribute="leading" secondItem="qTG-9n-ZH6" secondAttribute="leading" id="ct6-1e-V4P"/>
+                            <constraint firstItem="k3v-ek-0kB" firstAttribute="centerX" secondItem="Pwa-u3-FuN" secondAttribute="centerX" id="eA3-W9-wkE"/>
+                            <constraint firstItem="Ahm-Ex-kfg" firstAttribute="centerX" secondItem="Pwa-u3-FuN" secondAttribute="centerX" id="f5q-yg-EdF"/>
+                            <constraint firstItem="yuF-YJ-rbY" firstAttribute="centerX" secondItem="Pwa-u3-FuN" secondAttribute="centerX" id="i98-hI-d2R"/>
+                            <constraint firstItem="b14-Qe-Gcz" firstAttribute="centerX" secondItem="Pwa-u3-FuN" secondAttribute="centerX" id="pod-Wc-Zt6"/>
+                            <constraint firstItem="k3v-ek-0kB" firstAttribute="top" secondItem="b14-Qe-Gcz" secondAttribute="bottom" constant="20" id="tJQ-Ni-bF5"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="w53-fN-nZ5"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lnd-H3-eee" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="109.59999999999999" y="927.88605697151434"/>
+        </scene>
+        <!--ChatBot-->
+        <scene sceneID="u4n-LP-WcZ">
+            <objects>
+                <viewControllerPlaceholder storyboardName="ChatBot" id="z50-tw-L9j" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8NG-jR-Qoi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="710" y="927"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="complete_back.png" width="375" height="667"/>
+        <image name="roleplay_Practice_B.png" width="254" height="47"/>
+        <image name="sentence_Practice_B.png" width="254" height="47"/>
+        <image name="story_pop_up.png" width="299" height="494"/>
+        <image name="word_Practice_B.png" width="254" height="47"/>
+    </resources>
+</document>

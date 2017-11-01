@@ -16,6 +16,8 @@
     SystemSoundID sound_Send;
     SystemSoundID sound_Chat;
     SystemSoundID sound_Forest;
+    
+    SystemSoundID sound_Select;
 }
 
 @end
@@ -61,6 +63,10 @@
         path = [[NSBundle mainBundle] pathForResource:@"forest" ofType:@"wav"];
         url = (__bridge CFURLRef)[NSURL URLWithString:path];
         AudioServicesCreateSystemSoundID(url, &sound_Forest);
+        
+        path = [[NSBundle mainBundle] pathForResource:@"chat" ofType:@"wav"];
+        url = (__bridge CFURLRef)[NSURL URLWithString:path];
+        AudioServicesCreateSystemSoundID(url, &sound_Select);
     }
     return self;
 }
@@ -88,6 +94,10 @@
             
         case SoundID_Chat:
             currentID = sound_Chat;
+            break;
+            
+        case SoundID_Select:
+            currentID = sound_Select;
             break;
             
         case SoundID_Forest:
