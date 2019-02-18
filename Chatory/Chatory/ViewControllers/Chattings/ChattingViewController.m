@@ -219,6 +219,7 @@
 
 #pragma mark - IBActions
 -(IBAction)action_Back:(id)sender {
+    [[SoundManager sharedManager] playSoundWithSoundID:SoundID_Select];
     [self.navigationController popViewControllerAnimated:YES];
 }
 
@@ -334,6 +335,12 @@
     else
         [button_Send setHidden:YES];
     
+    return YES;
+}
+
+
+#pragma mark - Override
+-(BOOL)prefersStatusBarHidden {
     return YES;
 }
 

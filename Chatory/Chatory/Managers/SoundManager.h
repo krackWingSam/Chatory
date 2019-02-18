@@ -12,9 +12,10 @@ typedef enum : NSUInteger {
     SoundID_Correct     = 1,
     SoundID_Wrong       = 2,
     
-    SoundID_Choose      = 10,
-    SoundID_Send        = 11,
-    SoundID_Chat        = 12,
+    SoundID_Choose      = 11,
+    SoundID_Send        = 12,
+    SoundID_Chat        = 13,
+    SoundID_Select      = 14,
     
     SoundID_Forest      = 20
 } SoundID;

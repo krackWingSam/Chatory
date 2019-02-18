@@ -39,7 +39,7 @@
 
 -(id)init {
     if (self = [super init]) {
-        
+        [self initSTT];
     }
     return self;
 }
@@ -61,12 +61,16 @@
 
 #pragma mark - public
 -(void)start {
-    [self initSTT];
     
     if (task || speechRecognizer.isAvailable == NO)
         return;
     
     NSError *error = nil;
+    
+    BOOL isSetOk = [[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryRecord mode:AVAudioSessionModeVoiceChat options:AVAudioSessionCategoryOptionMixWithOthers error:&error];
+    if (!isSetOk)
+        NSLog(@"AvAudio Session set Error : %@", error);
+    
     
     [engine startAndReturnError:&error];
     
@@ -89,6 +93,11 @@
     task = nil;
     
     [engine stop];
+    
+    NSError *error = nil;
+    BOOL isSetOk = [[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryPlayback mode:AVAudioSessionModeMoviePlayback options:AVAudioSessionCategoryOptionMixWithOthers error:&error];
+    if (!isSetOk)
+        NSLog(@"AvAudio Session set Error : %@", error);
 }
 
 
